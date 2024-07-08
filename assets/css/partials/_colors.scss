@@ -1,0 +1,103 @@
+/* colors */
+
+$theme-colors: (
+  primary: #2ecc9b,
+  lightPrimary: #EAFAF5,
+  darkPrimary: #104736,
+  secondary: #7d9dff,
+  info: #01b8ff,
+  light: #eff1f9,
+  warning: #eb6f33,
+  success: #12a032,
+  danger: #EE1414,
+  dark: #313131,
+  lightDark: #646464,
+  grayClr: #4e4e4e,
+  lightGrayClr: #858585,
+  lightGrayClr2: #eceeee,
+  lightGrayClr3: #F5F5F5,
+  placeholder: #bfbfbf,
+  menuBg: #fcfcfc,
+  marquee: #2c3759,
+  lightBlue: #5A6279,
+  footerBg: #3C5256,
+  footerTitle: #304245,
+
+  selectionBg: #000,
+  selectionColor: #fff,
+  scrollTrackBg: #f1f1f1,
+  scrollThumbBg: #888,
+  scrollThumbHoverBg: #555,
+);
+
+// Tint a color: mix a color with white
+@function tint-color($color, $weight) {
+  @return mix(white, $color, $weight);
+}
+
+// Shade a color: mix a color with black
+@function shade-color($color, $weight) {
+  @return mix(black, $color, $weight);
+}
+
+@each $color, $value in $theme-colors {
+  .btn-light-#{$color},
+  .bg-light-#{$color} {
+    // color: $value !important;
+    background-color: tint-color($value, 20%) !important;
+  }
+
+  .btn-outline-#{$color} {
+    color: $value !important;
+    border-color: $value !important;
+  }
+
+  .btn-#{$color},
+  .bg-#{$color} {
+    // color: $value !important;
+    background-color: $value !important;
+  }
+
+  .btn-gradient-#{$color},
+  .bg-gradient-#{$color} {
+    background-image: linear-gradient(
+      to right,
+      shade-color($value, 22%),
+      tint-color($value, 5%)
+    ) !important;
+  }
+
+  .border-light-#{$color} {
+    border-color: tint-color($value, 20%) !important;
+  }
+
+  .border-#{$color} {
+    border-color: $value !important;
+  }
+
+  .text-light-#{$color} {
+    color: tint-color($value, 20%) !important;
+  }
+
+  .text-#{$color} {
+    color: $value !important;
+  }
+
+  .btn-light-#{$color} {
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $value !important;
+      color: tint-color($value, 20%) !important;
+    }
+  }
+
+  .btn-#{$color} {
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: shade-color($value, 5.5%) !important;
+      // color: $value !important;
+    }
+  }
+}

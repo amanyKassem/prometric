@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<!-- if arabic add lang="ar" dir="rtl" -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>prometric</title>
+    <link rel="shortcut icon" href="assets/img/fav.svg" />
+
+    <!-- bootstrap 5 if english -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- bootstrap 5 if arabic -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-DOXMLfHhQkvFFp+rWTZwVlPVqdIhpDVYT9csOnHSgWQWPX0v5MCGtjCJbY6ERspU"
+      crossorigin="anonymous"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      async
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- start loader -->
+    <div class="loader-container">
+      <div class="top-circles"></div>
+      <div id="loader">
+        <div id="logo">
+          <img
+            src="./assets/img/logo.svg"
+            alt="logo prometric"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+          />
+          <h3
+            class="text-grayClr mt-4"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <span class="text-dark">Welcome to Rx prometric</span> exam
+            <br />
+            preparation portal web
+          </h3>
+        </div>
+        <div id="progressbar"></div>
+      </div>
+      <div class="bottom-circles"></div>
+    </div>
+    <!-- end loader -->
+    <!-- start top bar -->
+    <div class="top-bar bg-white py-2">
+      <div class="container">
+        <div
+          class="d-flex justify-content-between align-items-center flex-wrap"
+        >
+          <div
+            class="d-flex align-items-center justify-content-between flex-sm-1 w-sm-100"
+          >
+            <img src="assets/img/logo.svg" alt="logo" class="logo" />
+            <h3 class="text-lightGrayClr ms-3">Online self-assessment tool</h3>
+          </div>
+          <div
+            class="d-flex align-items-center justify-content-between flex-wrap mt-3 mt-lg-0 flex-sm-1"
+          >
+            <a
+              href="#"
+              class="lang me-3 me-lg-5 d-flex align-items-center text-hover"
+            >
+              عربي
+              <img
+                src="assets/img/global.svg"
+                alt="lang"
+                width="20"
+                class="ms-2"
+              />
+            </a>
+            <div class="d-flex align-items-center">
+              <a href="#" class="social flex-center">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end top bar -->
+    <!--  Start nav  -->
+    <nav class="normal-nav pt-2">
+      <div class="container">
+        <div
+          class="menu-bar d-flex d-md-none justify-content-between align-items-center"
+        >
+          <!-- if user not logged in -->
+          <!-- <a href="login.html" class="btn btn-primary text-white custom-btn with-shadow"
+            >Login</a
+          > -->
+
+          <!-- if user logged in -->
+          <a href="profile.html" class="d-flex align-items-center user">
+            <div class="flex-shrink-0">
+              <img
+                src="assets/img/user.png"
+                alt="user"
+                class="rounded-circle wh-40"
+              />
+            </div>
+            <div class="flex-grow-1 ms-2">
+              <h6 class="text-dark">Hello ,</h6>
+              <h5 class="fw-normal fs-6">Amany Kassem</h5>
+            </div>
+          </a>
+          <div class="toggle">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class="overlay"></div>
+
+        <div class="menu d-flex flex-wrap align-items-center">
+          <div class="d-none d-md-block">
+            <!-- if user not logged in -->
+            <!-- <a href="login.html" class="btn btn-primary custom-btn with-shadow"
+            >Login</a
+          > -->
+
+            <!-- if user logged in -->
+            <a href="profile.html" class="d-flex align-items-center user">
+              <div class="flex-shrink-0">
+                <img
+                  src="assets/img/user.png"
+                  alt="user"
+                  class="rounded-circle wh-40"
+                />
+              </div>
+              <div class="flex-grow-1 ms-2">
+                <h6 class="text-dark">Hello ,</h6>
+                <h5 class="fw-normal fs-6">Amany Kassem</h5>
+              </div>
+            </a>
+          </div>
+
+          <div class="d-flex align-items-center">
+            <!-- add class active to image-container if user in notifications page -->
+            <div class="image-container position-relative notifications">
+              <!-- add condition to show pulse if there is new notification -->
+              <span class="pulse"></span>
+              <img src="assets/img/bell.svg" alt="bell" class="default-img" />
+              <img src="assets/img/bellAct.svg" alt="bell" class="hover-img" />
+              <div class="dropdown-content">
+                <div
+                  class="d-flex justify-content-between align-items-center flex-wrap"
+                >
+                  <span
+                    class="text-dark d-flex justify-content-between align-items-center fw-500"
+                  >
+                    <img
+                      src="assets/img/bellDot.svg"
+                      alt="bell"
+                      width="18"
+                      class="me-1 rotate-y-180"
+                    />
+                    Your Notification
+                  </span>
+                  <a href="notifications.html" class="hvr-secondary fs-6"
+                    >See More</a
+                  >
+                </div>
+                <ul>
+                  <li class="mt-3 bg-menub shadow p-2">
+                    <a
+                      href="#"
+                      class="d-flex align-items-center flex-column flex-md-row"
+                    >
+                      <div class="flex-shrink-0">
+                        <img
+                          src="assets/img/authBg.png"
+                          alt="image"
+                          class="noti-img"
+                        />
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <div
+                          class="d-flex justify-content-between align-items-center flex-wrap"
+                        >
+                          <h6 class="text-dark fs-15 mb-2">Anesthesia MCQs</h6>
+                          <span class="text-lightDark fs-14 mb-2"
+                            >12/5/2024</span
+                          >
+                        </div>
+                        <p class="fs-6 text-dark fs-14">
+                          You have started the Anesthesia MCQs test and must
+                          continue your progress
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mt-3 bg-menub shadow p-2">
+                    <a
+                      href="#"
+                      class="d-flex align-items-center flex-column flex-md-row"
+                    >
+                      <div class="flex-shrink-0">
+                        <img
+                          src="assets/img/authBg.png"
+                          alt="image"
+                          class="noti-img"
+                        />
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <div
+                          class="d-flex justify-content-between align-items-center flex-wrap"
+                        >
+                          <h6 class="text-dark fs-15 mb-2">Anesthesia MCQs</h6>
+                          <span class="text-lightDark fs-14 mb-2"
+                            >12/5/2024</span
+                          >
+                        </div>
+                        <p class="fs-6 text-dark fs-14">
+                          You have started the Anesthesia MCQs test and must
+                          continue your progress
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mt-3 bg-menub shadow p-2">
+                    <a
+                      href="#"
+                      class="d-flex align-items-center flex-column flex-md-row"
+                    >
+                      <div class="flex-shrink-0">
+                        <img
+                          src="assets/img/authBg.png"
+                          alt="image"
+                          class="noti-img"
+                        />
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <div
+                          class="d-flex justify-content-between align-items-center flex-wrap"
+                        >
+                          <h6 class="text-dark fs-15 mb-2">Anesthesia MCQs</h6>
+                          <span class="text-lightDark fs-14 mb-2"
+                            >12/5/2024</span
+                          >
+                        </div>
+                        <p class="fs-6 text-dark fs-14">
+                          You have started the Anesthesia MCQs test and must
+                          continue your progress
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a href="#" class="image-container position-relative mx-3">
+              <img
+                src="assets/img/search.svg"
+                alt="search"
+                class="default-img"
+              />
+              <img
+                src="assets/img/searchAct.svg"
+                alt="search"
+                class="hover-img"
+              />
+            </a>
+            <!-- add class active to image-container if user in cart page -->
+            <a href="cart.html" class="image-container position-relative">
+              <img src="assets/img/cart.svg" alt="cart" class="default-img" />
+              <img src="assets/img/cartAct.svg" alt="cart" class="hover-img" />
+            </a>
+          </div>
+
+          <ul class="menu-links">
+            <li class="active">
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="categories.html">Categories Test</a>
+            </li>
+            <li>
+              <a href="plans.html">Plans</a>
+            </li>
+            <li>
+              <a href="blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="syllabus.html">Syllabus</a>
+            </li>
+            <li>
+              <a href="refer.html">
+                <img
+                  src="assets/img/gift.svg"
+                  alt="gift"
+                  width="20"
+                  class="me-1"
+                />
+                Refer & Earn
+              </a>
+            </li>
+            <li>
+              <a href="faq.html">FAQs</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact Us</a>
+            </li>
+            <li>
+              <a href="about.html">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--end nav-->
+
+    <!-- start marquee -->
+    <div class="scrolling-text-container">
+      <div class="scrolling-text">
+        <span>
+          Now! Send the code to invite friends and get discounts when you
+          subscribe in the tests.
+        </span>
+        <span>
+          Now! Send the code to invite friends and get discounts when you
+          subscribe in the tests.
+        </span>
+      </div>
+    </div>
+    <!-- end marquee -->
+
+    <!-- start page unique content -->
+    <main>
+      <!-- start header -->
+      <header class="py-3 py-md-5">
+        <div class="container">
+          <div class="row align-items-center flex-column-reverse flex-md-row">
+            <div class="col-md-6">
+              <h1 class="text-dark fw-bold fs-50 lh-sm mb-4">
+                <span class="text-primary">Start your career</span>
+                as a pharmacist in the Gulf countries by passing the Prometric
+                pharmacy exam question
+              </h1>
+              <p class="text-lightBlue mb-2">
+                We help you prepare for the Pharmacy prometric exam in the Gulf
+                countries.
+              </p>
+              <p class="text-lightBlue mb-2">
+                You can enjoy a completely free experience!
+              </p>
+              <p class="text-dark mb-4">
+                <span class="text-lightBlue"
+                  >Are you ready to pass the prometric exam?</span
+                >
+                Let the Rx Prometric test help you prepare.
+              </p>
+              <a href="#" class="btn btn-primary w-240 with-shadow">
+                Try Now!
+              </a>
+            </div>
+            <div
+              class="col-md-6 d-flex align-items-center justify-content-center justify-content-md-end mb-4 mb-md-0"
+            >
+              <img
+                src="assets/img/header.png"
+                alt="doctor"
+                class="h-500 rounded-5"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- end header -->
+      <!-- start statistics -->
+      <div class="statistics pb-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3 mb-3">
+              <div
+                class="border border-dark p-3 text-center d-flex align-items-center statistic-item h-100"
+              >
+                <span class="fw-bold me-2 fs-2">+250</span>
+                students completed the certificate
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-3">
+              <div
+                class="border border-dark p-3 text-center d-flex align-items-center statistic-item h-100"
+              >
+                <span class="fw-bold me-2 fs-2">+400</span>
+                Student subscriptions to various packages
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-3">
+              <div
+                class="border border-dark p-3 text-center d-flex align-items-center statistic-item h-100"
+              >
+                <span class="fw-bold me-2 fs-2">+100</span>
+                Instructors profissional
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-3">
+              <div
+                class="border border-dark p-3 text-center d-flex align-items-center statistic-item h-100"
+              >
+                <span class="fw-bold me-2 fs-2">+50</span>
+                qualifying tests
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end statistics -->
+
+      <!-- start exam categories -->
+      <div class="exam-categories pb-4">
+        <div class="container">
+          <h2 class="fw-bold text-bold mb-4">
+            <span class="text-primary">Select your</span> prometric pharmacy
+            License category exam
+          </h2>
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <a
+                href="category.html"
+                class="d-flex align-items-center category border border-dark p-3 h-100"
+              >
+                <div
+                  class="flex-shrink-0 img-container bg-menuBg border border-dark rounded-circle"
+                >
+                  <img
+                    src="assets/img/cat1.png"
+                    alt="Saudi Pharmacy Prometric exam"
+                  />
+                </div>
+                <div class="flex-grow-1 ms-2 fs-15">
+                  <h5 class="fw-bold mb-2">Saudi Pharmacy Prometric exam</h5>
+                  SPLE - Saudi Pharmacist Licensure Examination - Saudi Arabia
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 mb-3">
+              <a
+                href="category.html"
+                class="d-flex align-items-center category border border-dark p-3 h-100"
+              >
+                <div
+                  class="flex-shrink-0 img-container bg-menuBg border border-dark rounded-circle"
+                >
+                  <img
+                    src="assets/img/cat2.png"
+                    alt="UAE MOH  Pharmacy Prometric exam "
+                  />
+                </div>
+                <div class="flex-grow-1 ms-2 fs-15">
+                  <h5 class="fw-bold mb-2">UAE MOH Pharmacy Prometric exam</h5>
+                  MOH – ministry of health - Ajman , Ras Al Khaimah ,Sharjah,
+                  Fujairah , Umm Al Quwain - united Arab Emirates
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 mb-3">
+              <a
+                href="category.html"
+                class="d-flex align-items-center category border border-dark p-3 h-100"
+              >
+                <div
+                  class="flex-shrink-0 img-container bg-menuBg border border-dark rounded-circle"
+                >
+                  <img
+                    src="assets/img/cat3.png"
+                    alt="Dubai Pharmacy Prometric exam"
+                  />
+                </div>
+                <div class="flex-grow-1 ms-2 fs-15">
+                  <h5 class="fw-bold mb-2">Dubai Pharmacy Prometric exam</h5>
+                  DHA - Dubai health authority - Dubai - united Arab Emirates
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 mb-3">
+              <a
+                href="category.html"
+                class="d-flex align-items-center category border border-dark p-3 h-100"
+              >
+                <div
+                  class="flex-shrink-0 img-container bg-menuBg border border-dark rounded-circle"
+                >
+                  <img
+                    src="assets/img/cat4.png"
+                    alt="Abu Dhabi Pharmacy Prometric exam "
+                  />
+                </div>
+                <div class="flex-grow-1 ms-2 fs-15">
+                  <h5 class="fw-bold mb-2">
+                    Abu Dhabi Pharmacy Prometric exam
+                  </h5>
+                  DOH ( Haad) – Department of health (Health Authority of Abu
+                  Dhabi ) -Abu Dhabi – united Arab Emirates
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 mb-3">
+              <a
+                href="category.html"
+                class="d-flex align-items-center category border border-dark p-3 h-100"
+              >
+                <div
+                  class="flex-shrink-0 img-container bg-menuBg border border-dark rounded-circle"
+                >
+                  <img
+                    src="assets/img/cat5.png"
+                    alt="Bahrain Pharmacy Prometric exam"
+                  />
+                </div>
+                <div class="flex-grow-1 ms-2 fs-15">
+                  <h5 class="fw-bold mb-2">Bahrain Pharmacy Prometric exam</h5>
+                  NHRA (BPLE ) - National Health regulatory authority (Bahrain
+                  pharmacy Licensing Exam) - Bahrain
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 mb-3">
+              <a
+                href="category.html"
+                class="d-flex align-items-center category border border-dark p-3 h-100"
+              >
+                <div
+                  class="flex-shrink-0 img-container bg-menuBg border border-dark rounded-circle"
+                >
+                  <img
+                    src="assets/img/cat6.png"
+                    alt="Kuwait MOH Pharmacy Prometric exam"
+                  />
+                </div>
+                <div class="flex-grow-1 ms-2 fs-15">
+                  <h5 class="fw-bold mb-2">
+                    Kuwait MOH Pharmacy Prometric exam
+                  </h5>
+                  KMLE - Kuwait Medical Licensing Exam - Kuwait
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 mb-3">
+              <a
+                href="category.html"
+                class="d-flex align-items-center category border border-dark p-3 h-100"
+              >
+                <div
+                  class="flex-shrink-0 img-container bg-menuBg border border-dark rounded-circle"
+                >
+                  <img
+                    src="assets/img/cat7.png"
+                    alt="Qatar Pharmacy Prometric exam "
+                  />
+                </div>
+                <div class="flex-grow-1 ms-2 fs-15">
+                  <h5 class="fw-bold mb-2">Qatar Pharmacy Prometric exam</h5>
+                  QCHP - Qatar Council for Healthcare Practitioners - Qatar
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 mb-3">
+              <a
+                href="category.html"
+                class="d-flex align-items-center category border border-dark p-3 h-100"
+              >
+                <div
+                  class="flex-shrink-0 img-container bg-menuBg border border-dark rounded-circle"
+                >
+                  <img
+                    src="assets/img/cat8.png"
+                    alt="Oman Person Vue  Pharmacy Prometric exam "
+                  />
+                </div>
+                <div class="flex-grow-1 ms-2 fs-15">
+                  <h5 class="fw-bold mb-2">
+                    Oman Person Vue Pharmacy Prometric exam
+                  </h5>
+                  QCHP - Qatar Council for Healthcare Practitioners - Qatar
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end exam categories -->
+
+      <!-- start ads -->
+      <div class="ads pb-4">
+        <div class="container">
+          <div class="owl-carousel ads-carusel overflow-hidden">
+            <div class="item">
+              <div class="d-flex align-items-center flex-column flex-md-row">
+                <div class="d-flex align-items-center me-md-4">
+                  <img
+                    src="assets/img/receipt.png"
+                    class="ad-img me-2"
+                    alt="ad image"
+                  />
+                  <h2 class="text-white fw-bold">
+                    20% <br />
+                    OFF
+                  </h2>
+                </div>
+                <div>
+                  <h4 class="text-white fw-bold lh-base">
+                    <span class="text-dark">Refer A Friend</span> A far better
+                    option is for you to join our Ambassador's Program and refer
+                    your friends
+                  </h4>
+                  <p class="text-white fs-15">
+                    to us and earn a 30% commission on any notes they purchase
+                    via invitation code return to your wallet Plus, your
+                    referral code gives them a 15% discount on all displayed
+                    prices. Win-Win! To learn more
+                  </p>
+                  <a
+                    href="#"
+                    class="btn btn-menuBg w-240 with-shadow text-primary fw-bold shrink-hvr"
+                  >
+                    Click to apply Now!
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="d-flex align-items-center flex-column flex-md-row">
+                <div class="d-flex align-items-center me-md-4">
+                  <img
+                    src="assets/img/offer.png"
+                    class="ad-img me-2"
+                    alt="ad image"
+                  />
+                  <h2 class="text-white fw-bold">
+                    40% <br />
+                    OFF
+                  </h2>
+                </div>
+                <div>
+                  <h4 class="text-white fw-bold lh-base">
+                    <span class="text-dark">Refer A Friend</span> A far better
+                    option is for you to join our Ambassador's Program and refer
+                    your friends
+                  </h4>
+                  <p class="text-white fs-15">
+                    to us and earn a 30% commission on any notes they purchase
+                    via invitation code return to your wallet Plus, your
+                    referral code gives them a 15% discount on all displayed
+                    prices. Win-Win! To learn more
+                  </p>
+                  <a
+                    href="#"
+                    class="btn btn-menuBg w-240 with-shadow text-primary fw-bold shrink-hvr"
+                  >
+                    Click to apply Now!
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="d-flex align-items-center flex-column flex-md-row">
+                <div class="d-flex align-items-center me-md-4">
+                  <img
+                    src="assets/img/receipt.png"
+                    class="ad-img me-2"
+                    alt="ad image"
+                  />
+                  <h2 class="text-white fw-bold">
+                    50% <br />
+                    OFF
+                  </h2>
+                </div>
+                <div>
+                  <h4 class="text-white fw-bold lh-base">
+                    <span class="text-dark">Refer A Friend</span> A far better
+                    option is for you to join our Ambassador's Program and refer
+                    your friends
+                  </h4>
+                  <p class="text-white fs-15">
+                    to us and earn a 30% commission on any notes they purchase
+                    via invitation code return to your wallet Plus, your
+                    referral code gives them a 15% discount on all displayed
+                    prices. Win-Win! To learn more
+                  </p>
+                  <a
+                    href="#"
+                    class="btn btn-menuBg w-240 with-shadow text-primary fw-bold shrink-hvr"
+                  >
+                    Click to apply Now!
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end ads -->
+      <!-- start self assessment -->
+      <div class="self-assessment pb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h2 class="fw-bold text-bold mb-3 lh-base">
+                <span class="text-secondary"
+                  >The self-assessment application</span
+                >
+                will help you prepare for the Pharmacy prometric exam:
+              </h2>
+              <p class="fw-500 text-lightDark lh-base">
+                The syllabus materials for the Prometric exam are an assessment
+                and qualification test for pharmacists who want to work in the
+                Kingdom of Saudi Arabia, the United Arab Emirates, Qatar, Oman,
+                Bahrain and Kuwait.
+              </p>
+              <img
+                src="assets/img/assesment.png"
+                class="self-assessment-img"
+                alt="self assessment"
+              />
+            </div>
+
+            <div class="col-md-6">
+              <ul class="text-lightDark list-dot fw-500">
+                <li>
+                  Saudi Pharmacy Prometric exam SPLE - Saudi Pharmacist
+                  Licensure Examination - Saudi Arabia
+                </li>
+                <li>
+                  Dubai Pharmacy Prometric exam DHA - Dubai health authority -
+                  Dubai - united Arab Emirates
+                </li>
+                <li>
+                  Abu Dhabi Pharmacy Prometric exam DOH ( Haad) – Department of
+                  health (Health Authority of Abu Dhabi ) -Abu Dhabi – united
+                  Arab Emirates
+                </li>
+                <li>
+                  UAE MOH Pharmacy Prometric exam MOH – ministry of health -
+                  Ajman , Ras Al Khaimah , Sharjah, Fujairah , Umm Al Quwain -
+                  united Arab Emirates
+                </li>
+                <li>
+                  Oman Person Vue Pharmacy Prometric exam OMSB – Oman medical
+                  specialty Board - Oman
+                </li>
+                <li>
+                  Bahrain Pharmacy Prometric exam NHRA(BPLE ) - National Health
+                  regulatory authority (Bahrain pharmacy Licensing Exam) -
+                  Bahrain
+                </li>
+                <li>
+                  Qatar Pharmacy Prometric exam QCHP - Qatar Council for
+                  Healthcare Practitioners - Qatar
+                </li>
+                <li>
+                  Kuwait MOH Pharmacy Prometric exam KMLE - Kuwait Medical
+                  Licensing Exam - Kuwait
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end self assessment -->
+
+      <!-- start banner -->
+      <div class="banner text-white text-center p-3 p-md-4 mb-5">
+        <div class="container">
+          <div class="w-57 mx-auto">
+            <h2 class="fw-bold mb-3 lh-base">
+              <span class="text-primary">The primary resource</span>
+              for preparing for the exam is the Rx Prometric exam website.
+            </h2>
+
+            <p class="mb-3">
+              Trusted by more than 1,300 pharmacists around the Arab world
+            </p>
+            <p class="mb-3">
+              We help you prepare for the actual test by providing comprehensive
+              pre-test MCQs to prepare for the test.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- end banner -->
+
+      <!-- start some exams -->
+      <div class="some-exams pb-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <h2 class="fw-bold text-bold mb-3 mb-md-4 lh-base">
+                Some exams for Pharmacy prometric
+                <span class="text-secondary">MCQs</span>
+              </h2>
+            </div>
+
+            <div class="col-md-5">
+              <p class="text-lightDark text-center fw-500 mb-3 mb-md-4">
+                Browse through our extensive list of MCQ test packages tailored
+                to your practice area
+              </p>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-4 col-xl-3 mb-4">
+              <a href="examDetails.html" class="exam-block h-100">
+                <div
+                  class="top-info d-flex align-items-center justify-content-between"
+                >
+                  <div class="offer bg-danger text-white fw-500 rounded-30">
+                    40%
+                  </div>
+                  <!-- check add-to-cart function for toggling image using active class -->
+                  <div class="image-container position-relative add-to-cart">
+                    <img
+                      src="assets/img/addCart.svg"
+                      alt="cart"
+                      class="default-img"
+                    />
+                    <img
+                      src="assets/img/cartCheck.svg"
+                      alt="cart"
+                      class="hover-img"
+                    />
+                  </div>
+                </div>
+                <img
+                  src="assets/img/loader.gif"
+                  data-src="assets/img/exam1.jpg"
+                  class="lazyload exam-img"
+                  alt="exam"
+                />
+                <div class="overlay-info rounded-30 text-white">
+                  <span class="d-block">KSA SPLE</span>
+                  <span class="d-block my-2 fs-4">Anesthesia MCQs</span>
+                  <div class="price">
+                    <span class="old text-decoration-line-through me-2"
+                      >$59</span
+                    >
+                    <span class="new">$79</span>
+                  </div>
+                </div>
+
+                <div class="bottom-info">
+                  <div class="first-info">
+                    <span class="d-block mb-1">Free Test</span>
+                    <span class="tries mb-2">
+                      <i class="fa-solid fa-circle-exclamation me-2"></i>
+                      Only have 3 free tries</span
+                    >
+                  </div>
+                  <div class="last-info">
+                    Subscribe
+                    <img
+                      src="assets/img/arrow-right.svg"
+                      alt="arrow"
+                      class="transfrom-180-reverse arrow-right ms-2"
+                    />
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-xl-3 mb-4">
+              <a href="examDetails.html" class="exam-block h-100">
+                <div
+                  class="top-info d-flex align-items-center justify-content-between"
+                >
+                  <div class="offer bg-danger text-white fw-500 rounded-30">
+                    40%
+                  </div>
+                  <div class="image-container position-relative add-to-cart">
+                    <img
+                      src="assets/img/addCart.svg"
+                      alt="cart"
+                      class="default-img"
+                    />
+                    <img
+                      src="assets/img/cartCheck.svg"
+                      alt="cart"
+                      class="hover-img"
+                    />
+                  </div>
+                </div>
+                <img
+                  src="assets/img/loader.gif"
+                  data-src="assets/img/exam2.png"
+                  class="lazyload exam-img"
+                  alt="exam"
+                />
+                <div class="overlay-info rounded-30 text-white">
+                  <span class="d-block">KSA SPLE</span>
+                  <span class="d-block my-2 fs-4">Anesthesia MCQs</span>
+                  <div class="price">
+                    <span class="old text-decoration-line-through me-2"
+                      >$59</span
+                    >
+                    <span class="new">$79</span>
+                  </div>
+                </div>
+
+                <div class="bottom-info">
+                  <div class="first-info">
+                    <span class="d-block mb-1">Free Test</span>
+                    <span class="tries mb-2">
+                      <i class="fa-solid fa-circle-exclamation me-2"></i>
+                      Only have 3 free tries</span
+                    >
+                  </div>
+                  <div class="last-info">
+                    Subscribe
+                    <img
+                      src="assets/img/arrow-right.svg"
+                      alt="arrow"
+                      class="transfrom-180-reverse arrow-right ms-2"
+                    />
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-xl-3 mb-4">
+              <a href="examDetails.html" class="exam-block h-100">
+                <div
+                  class="top-info d-flex align-items-center justify-content-between"
+                >
+                  <div class="offer bg-danger text-white fw-500 rounded-30">
+                    40%
+                  </div>
+                  <div class="image-container position-relative add-to-cart">
+                    <img
+                      src="assets/img/addCart.svg"
+                      alt="cart"
+                      class="default-img"
+                    />
+                    <img
+                      src="assets/img/cartCheck.svg"
+                      alt="cart"
+                      class="hover-img"
+                    />
+                  </div>
+                </div>
+                <img
+                  src="assets/img/loader.gif"
+                  data-src="assets/img/exam3.jpg"
+                  class="lazyload exam-img"
+                  alt="exam"
+                />
+                <div class="overlay-info rounded-30 text-white">
+                  <span class="d-block">KSA SPLE</span>
+                  <span class="d-block my-2 fs-4">Anesthesia MCQs</span>
+                  <div class="price">
+                    <span class="old text-decoration-line-through me-2"
+                      >$59</span
+                    >
+                    <span class="new">$79</span>
+                  </div>
+                </div>
+
+                <div class="bottom-info">
+                  <div class="first-info">
+                    <span class="d-block mb-1">Free Test</span>
+                    <span class="tries mb-2">
+                      <i class="fa-solid fa-circle-exclamation me-2"></i>
+                      Only have 3 free tries</span
+                    >
+                  </div>
+                  <div class="last-info">
+                    Subscribe
+                    <img
+                      src="assets/img/arrow-right.svg"
+                      alt="arrow"
+                      class="transfrom-180-reverse arrow-right ms-2"
+                    />
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-xl-3 mb-4">
+              <a href="examDetails.html" class="exam-block h-100">
+                <div
+                  class="top-info d-flex align-items-center justify-content-between"
+                >
+                  <div class="offer bg-danger text-white fw-500 rounded-30">
+                    40%
+                  </div>
+                  <div class="image-container position-relative add-to-cart">
+                    <img
+                      src="assets/img/addCart.svg"
+                      alt="cart"
+                      class="default-img"
+                    />
+                    <img
+                      src="assets/img/cartCheck.svg"
+                      alt="cart"
+                      class="hover-img"
+                    />
+                  </div>
+                </div>
+                <img
+                  src="assets/img/loader.gif"
+                  data-src="assets/img/exam4.jpg"
+                  class="lazyload exam-img"
+                  alt="exam"
+                />
+                <div class="overlay-info rounded-30 text-white">
+                  <span class="d-block">KSA SPLE</span>
+                  <span class="d-block my-2 fs-4">Anesthesia MCQs</span>
+                  <div class="price">
+                    <span class="old text-decoration-line-through me-2"
+                      >$59</span
+                    >
+                    <span class="new">$79</span>
+                  </div>
+                </div>
+
+                <div class="bottom-info">
+                  <div class="first-info">
+                    <span class="d-block mb-1">Free Test</span>
+                    <span class="tries mb-2">
+                      <i class="fa-solid fa-circle-exclamation me-2"></i>
+                      Only have 3 free tries</span
+                    >
+                  </div>
+                  <div class="last-info">
+                    Subscribe
+                    <img
+                      src="assets/img/arrow-right.svg"
+                      alt="arrow"
+                      class="transfrom-180-reverse arrow-right ms-2"
+                    />
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-4 col-xl-3 mb-4">
+              <a href="examDetails.html" class="exam-block h-100">
+                <div
+                  class="top-info d-flex align-items-center justify-content-between"
+                >
+                  <div class="offer bg-danger text-white fw-500 rounded-30">
+                    40%
+                  </div>
+                  <div class="image-container position-relative add-to-cart">
+                    <img
+                      src="assets/img/addCart.svg"
+                      alt="cart"
+                      class="default-img"
+                    />
+                    <img
+                      src="assets/img/cartCheck.svg"
+                      alt="cart"
+                      class="hover-img"
+                    />
+                  </div>
+                </div>
+                <img
+                  src="assets/img/loader.gif"
+                  data-src="assets/img/exam2.png"
+                  class="lazyload exam-img"
+                  alt="exam"
+                />
+                <div class="overlay-info rounded-30 text-white">
+                  <span class="d-block">KSA SPLE</span>
+                  <span class="d-block my-2 fs-4">Anesthesia MCQs</span>
+                  <div class="price">
+                    <span class="old text-decoration-line-through me-2"
+                      >$59</span
+                    >
+                    <span class="new">$79</span>
+                  </div>
+                </div>
+
+                <div class="bottom-info">
+                  <div class="first-info">
+                    <span class="d-block mb-1">Free Test</span>
+                    <span class="tries mb-2">
+                      <i class="fa-solid fa-circle-exclamation me-2"></i>
+                      Only have 3 free tries</span
+                    >
+                  </div>
+                  <div class="last-info">
+                    Subscribe
+                    <img
+                      src="assets/img/arrow-right.svg"
+                      alt="arrow"
+                      class="transfrom-180-reverse arrow-right ms-2"
+                    />
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 col-xl-3 mb-4">
+              <a href="examDetails.html" class="exam-block h-100">
+                <div
+                  class="top-info d-flex align-items-center justify-content-between"
+                >
+                  <div class="offer bg-danger text-white fw-500 rounded-30">
+                    40%
+                  </div>
+                  <div class="image-container position-relative add-to-cart">
+                    <img
+                      src="assets/img/addCart.svg"
+                      alt="cart"
+                      class="default-img"
+                    />
+                    <img
+                      src="assets/img/cartCheck.svg"
+                      alt="cart"
+                      class="hover-img"
+                    />
+                  </div>
+                </div>
+                <img
+                  src="assets/img/loader.gif"
+                  data-src="assets/img/exam3.jpg"
+                  class="lazyload exam-img"
+                  alt="exam"
+                />
+                <div class="overlay-info rounded-30 text-white">
+                  <span class="d-block">KSA SPLE</span>
+                  <span class="d-block my-2 fs-4">Anesthesia MCQs</span>
+                  <div class="price">
+                    <span class="old text-decoration-line-through me-2"
+                      >$59</span
+                    >
+                    <span class="new">$79</span>
+                  </div>
+                </div>
+
+                <div class="bottom-info">
+                  <div class="first-info">
+                    <span class="d-block mb-1">Free Test</span>
+                    <span class="tries mb-2">
+                      <i class="fa-solid fa-circle-exclamation me-2"></i>
+                      Only have 3 free tries</span
+                    >
+                  </div>
+                  <div class="last-info">
+                    Subscribe
+                    <img
+                      src="assets/img/arrow-right.svg"
+                      alt="arrow"
+                      class="transfrom-180-reverse arrow-right ms-2"
+                    />
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end some exams -->
+
+      <!-- start medical slider -->
+      <div class="medical-slider bg-lightGrayClr2 py-3 mb-5">
+        <div class="owl-carousel medical-carusel overflow-hidden">
+          <div class="item">
+            <img
+              src="assets/img/loader.gif"
+              data-src="assets/img/medical1.png"
+              class="lazyload medical-img"
+              alt="medical"
+            />
+          </div>
+          <div class="item">
+            <img
+              src="assets/img/loader.gif"
+              data-src="assets/img/medical2.png"
+              class="lazyload medical-img"
+              alt="medical"
+            />
+          </div>
+          <div class="item">
+            <img
+              src="assets/img/loader.gif"
+              data-src="assets/img/exam3.jpg"
+              class="lazyload medical-img"
+              alt="medical"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- end medical slider -->
+
+      <!-- start ultimate source  -->
+      <div class="ultimate-source pb-5">
+        <div class="container">
+          <h2 class="fw-bold text-bold mb-2 lh-base">
+            The ultimate source for preparing for
+            <span class="text-primary">the Prometric pharmacy exam</span>
+          </h2>
+          <p class="text-lightDark lh-base mb-3">
+            Are you a pharmacist looking for a job abroad in the GCC? If you
+            want to enhance your chances of finding a job with legal status, you
+            cannot do without taking the Prometric pharmacy Exam, which tests
+            your competence in the specialty of pharmacy. The Prometric Test is
+            your path to comprehensive guidance on preparing for the
+            Pharmaceutical Prometric Exam and extensive practice to achieve high
+            scores on the test.
+          </p>
+          <h2 class="fw-bold text-bold mb-2 lh-base">
+            We help prepare applicants to take the following exams:
+            <span class="text-secondary fs-25"
+              >KSA SPLE, UAE DHA, UAE DOH ( Haad), UAE SHA, UAE MOH, OMSB,
+              NHRA(BPLE ),QCHP and KMLE.m</span
+            >
+          </h2>
+          <h2 class="fw-500 text-bold mb-2 lh-base fs-4">
+            Boost your preparation with Pharmacy prometric exam preparation
+            questions
+          </h2>
+          <p class="text-lightDark lh-base mb-2">
+            The Pharmacy prometric exam is your first step to passing the exam.
+            We have everything to help you prepare, including a personalized
+            study plan and an online test simulator to practice Prometric test
+            questions.
+          </p>
+          <h2 class="fw-500 text-bold mb-2 lh-base fs-4">
+            After joining us, you'll have access to all the resources you need,
+            including:
+          </h2>
+          <ul class="text-lightDark list-dot">
+            <li>A database containing thousands of questions and answers</li>
+            <li>Practice tests</li>
+            <li>Study guides and explanations</li>
+          </ul>
+        </div>
+      </div>
+      <!-- end ultimate source  -->
+
+      <!-- start footer -->
+      <footer class="main-footer bg-footerBg text-white">
+        <div class="container">
+          <div class="row mb-3">
+            <div class="col-md-4 col-lg-5">
+              <img
+                src="assets/img/footerLogo.svg"
+                class="footer-logo"
+                alt="logo"
+              />
+              <h2 class="fw-bold text-bold mb-2 lh-base fs-2">
+                <span class="text-primary">Start your career </span>
+                as a pharmacist in the Gulf countries
+              </h2>
+            </div>
+            <div class="col-md-8 col-lg-7">
+              <div class="row">
+                <div class="col-md-4 text-center">
+                  <h5 class="footer-title mb-3">Quick links</h5>
+                  <ul class="footer-links">
+                    <li class="mb-3"><a href="index.html">Home</a></li>
+                    <li class="mb-3"><a href="plans.html">Plans</a></li>
+                    <li class="mb-3"><a href="blog.html">Blog</a></li>
+                    <li class="mb-3"><a href="syllabus.html">Syllabus</a></li>
+                    <li class="mb-3"><a href="refer.html">Refer & Earn</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="d-flex align-items-center">
+                <a href="#" class="social mb-3 flex-center">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social mb-3 flex-center ms-2">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="social mb-3 flex-center ms-2">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social mb-3 flex-center ms-2">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="#" class="social mb-3 flex-center ms-2">
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- start footer -->
+    </main>
+    <!-- end page unique content -->
+
+    <!-- start scroll-top-->
+    <div id="scroll-top" class="text-center">
+      <i class="fas fa-angle-up"></i>
+    </div>
+    <!-- end scroll-top-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap 5 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="assets/js/scripts.js"></script>
+    <script>
+      $(document).ready(function () {
+        let isRtl = $('html[lang="ar"]').length > 0;
+        $(".ads-carusel").owlCarousel({
+          items: 1,
+          loop: true,
+          rtl: isRtl,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          autoplayTimeout: 3000,
+          smartSpeed: 2000,
+          nav: false,
+          dots: true,
+          animateOut: "animate__fadeOut",
+          animateIn: "animate__fadeIn",
+        });
+        $(".medical-carusel").owlCarousel({
+          center: true,
+          items: 3,
+          loop: true,
+          rtl: isRtl,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          autoplayTimeout: 3000,
+          smartSpeed: 2000,
+          nav: false,
+          dots: false,
+          margin: 10,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            768: {
+              items: 2,
+            },
+            992: {
+              items: 3,
+            },
+          },
+        });
+
+        // add to cart
+        $(".add-to-cart").on("click", function (e) {
+          e.preventDefault();
+          $(this).toggleClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

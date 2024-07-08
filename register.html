@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<!-- if arabic add lang="ar" dir="rtl" -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>prometric</title>
+    <link rel="shortcut icon" href="assets/img/fav.svg" />
+
+    <!-- bootstrap 5 if english -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- bootstrap 5 if arabic -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-DOXMLfHhQkvFFp+rWTZwVlPVqdIhpDVYT9csOnHSgWQWPX0v5MCGtjCJbY6ERspU"
+      crossorigin="anonymous"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      async
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- start loader -->
+    <div class="loader-container">
+      <div class="top-circles"></div>
+      <div id="loader">
+        <div id="logo">
+          <img
+            src="./assets/img/logo.svg"
+            alt="logo prometric"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+          />
+          <h3
+            class="text-grayClr mt-4"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <span class="text-dark">Welcome to Rx prometric</span> exam
+            <br />
+            preparation portal web
+          </h3>
+        </div>
+        <div id="progressbar"></div>
+      </div>
+      <div class="bottom-circles"></div>
+    </div>
+    <!-- end loader -->
+    <!-- start top bar -->
+    <div class="top-bar bg-white py-2">
+      <div class="container">
+        <div
+          class="d-flex justify-content-between align-items-center flex-wrap"
+        >
+          <div
+            class="d-flex align-items-center justify-content-between flex-sm-1 w-sm-100"
+          >
+            <img src="assets/img/logo.svg" alt="logo" class="logo" />
+            <h3 class="text-lightGrayClr ms-3">Online self-assessment tool</h3>
+          </div>
+          <div
+            class="d-flex align-items-center justify-content-between flex-wrap mt-3 mt-lg-0 flex-sm-1"
+          >
+            <a
+              href="#"
+              class="lang me-3 me-lg-5 d-flex align-items-center text-hover"
+            >
+              عربي
+              <img
+                src="assets/img/global.svg"
+                alt="lang"
+                width="20"
+                class="ms-2"
+              />
+            </a>
+            <div class="d-flex align-items-center">
+              <a href="#" class="social flex-center">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end top bar -->
+
+    <!-- start page unique content -->
+    <main class="auth-block">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-5">
+            <h1 class="text-white fs-80 mb-4 mb-md-0">
+              <span class="text-secondary">The Rx Prometric exam</span> website
+              is your gateway to success
+            </h1>
+          </div>
+          <div
+            class="col-md-7 d-flex justify-content-center justify-content-md-end"
+          >
+            <form action="verifyAcc.html" class="auth-form">
+              <h2 class="text-dark mb-3">Create Your Account</h2>
+              <div class="row">
+                <div class="col-xl-6">
+                  <div class="mb-3">
+                    <label for="name" class="form-label"
+                      >Full Name <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="your name"
+                    />
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="mb-3">
+                    <label for="Country" class="form-label"
+                      >Country <span class="text-danger">*</span></label
+                    >
+
+                    <select
+                      id="Country"
+                      class="select2 w-100"
+                      data-placeholder="select country"
+                    >
+                      <option label="select country"></option>
+                      <option value="Egypt">Egypt</option>
+                      <option value="United States">United States</option>
+                      <option value="Canada">Canada</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="mb-3">
+                    <label for="phone" class="form-label"
+                      >Phone Number <span class="text-danger">*</span></label
+                    >
+                    <div class="input-phone d-flex align-items-center">
+                      <select class="country-select">
+                        <!-- Options will be dynamically populated here -->
+                      </select>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="phone"
+                        placeholder="0123456789"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="mb-3">
+                    <label for="emai" class="form-label"
+                      >Email <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="emai"
+                      placeholder="aaa@example.com"
+                    />
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="mb-3">
+                    <label for="password" class="form-label"
+                      >Password <span class="text-danger">*</span></label
+                    >
+                    <div class="input-group">
+                      <input
+                        type="password"
+                        id="password"
+                        class="form-control password-radius"
+                        placeholder="**********"
+                      />
+                      <span
+                        class="input-group-text bg-white border-0 cursor-pointer icon"
+                      >
+                        <i class="fa-regular fa-eye toggle-password"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6">
+                  <div class="mb-3">
+                    <label for="confirmPass" class="form-label"
+                      >Confirm Password
+                      <span class="text-danger">*</span></label
+                    >
+                    <div class="input-group">
+                      <input
+                        type="password"
+                        id="confirmPass"
+                        class="form-control password-radius"
+                        placeholder="**********"
+                      />
+                      <span
+                        class="input-group-text bg-white border-0 cursor-pointer icon"
+                      >
+                        <i class="fa-regular fa-eye toggle-password"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-check mb-4">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="acceptTerms"
+                />
+                <label
+                  class="form-check-label text-lightDark d-flex align-items-center flex-wrap fs-15"
+                  for="acceptTerms"
+                >
+                  I accept the
+                  <a href="terms.html" class="text-primary shrink-hvr ms-2"
+                    >Terms and Condition</a
+                  >
+                </label>
+              </div>
+
+              <button
+                type="submit"
+                class="btn btn-primary mb-3 w-100 fw-bold mb-4 with-shadow"
+              >
+                Sign up
+              </button>
+              <span class="both-line position-relative">Or</span>
+              <div
+                class="d-flex align-items-center justify-content-between flex-wrap pt-2 mb-2"
+              >
+                <a href="#" class="btn btn-light mb-3 mb-3 with-shadow w-48">
+                  <img
+                    src="assets/img/google.svg"
+                    alt="google"
+                    class="me-2 w-25px"
+                  />
+                  With Google</a
+                >
+                <a href="#" class="btn btn-light mb-3 mb-3 with-shadow w-48">
+                  <img
+                    src="assets/img/apple.svg"
+                    alt="apple"
+                    class="me-2 w-25px"
+                  />
+                  With Apple</a
+                >
+              </div>
+              <div
+                class="text-lightDark d-flex align-items-center flex-wrap fs-15 text-center justify-content-center"
+              >
+                Already a member?
+                <a href="login.html" class="text-primary shrink-hvr ms-2"
+                  >Sign In</a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- end page unique content -->
+
+    <!-- start footer -->
+    <footer class="bg-darkPrimary text-white text-center py-2 fs-15">
+      <div class="container">
+        <span class="text-uppercase">Prometric pharmacy global</span>@ 2024. All
+        rights reserved.
+      </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- start scroll-top-->
+    <div id="scroll-top" class="text-center">
+      <i class="fas fa-angle-up"></i>
+    </div>
+    <!-- end scroll-top-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap 5 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="assets/js/scripts.js"></script>
+    <script>
+      $(document).ready(function () {
+        // select2
+        $(".select2").select2({
+          width: "100%",
+        });
+        // Dummy data for demonstration
+        var countryData = [
+          {
+            id: "+20",
+            text: "Egypt",
+            image: "https://www.worldometers.info/img/flags/eg-flag.gif",
+          },
+          {
+            id: "+1",
+            text: "United States",
+            image: "https://www.worldometers.info/img/flags/us-flag.gif",
+          },
+          {
+            id: "+1",
+            text: "Canada",
+            image: "https://www.worldometers.info/img/flags/ca-flag.gif",
+          },
+          {
+            id: "+44",
+            text: "United Kingdom",
+            image: "https://www.worldometers.info/img/flags/uk-flag.gif",
+          },
+          {
+            id: "+966",
+            text: "Saudi Arabia",
+            image: "https://www.worldometers.info/img/flags/sa-flag.gif",
+          },
+        ];
+
+        // Initialize Select2
+        $(".country-select").select2({
+          data: countryData,
+          templateResult: formatCountry,
+          templateSelection: formatCountrySelection,
+        });
+
+        // Custom formatting function for displaying country with image and code
+        function formatCountry(country) {
+          if (!country.id) {
+            return country.text;
+          }
+          var $country = $(
+            "<span>" +
+              ' <img src="' +
+              country.image +
+              '"  class="flag me-2" /> ' +
+              country.id +
+              "</span>"
+          );
+          return $country;
+        }
+
+        // Custom formatting function for displaying selected country
+        function formatCountrySelection(country) {
+          if (!country.id) {
+            return country.text;
+          }
+          var $country = $(
+            "<span>" +
+              ' <img src="' +
+              country.image +
+              '" class="flag me-2" /> ' +
+              country.id +
+              "</span>"
+          );
+          return $country;
+        }
+      });
+    </script>
+  </body>
+</html>

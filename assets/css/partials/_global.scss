@@ -1,0 +1,1092 @@
+@use "./colors";
+@use "./mixins";
+
+// fonts
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("../fonts/DINNextLTArabic-Black.eot");
+  src: url("../fonts/DINNextLTArabic-Black.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-Black.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-Black.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-Black.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-Black.svg#DINNextLTArabic-Black")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("../fonts/DINNextLTArabic-Black_1.eot");
+  src: url("../fonts/DINNextLTArabic-Black_1.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-Black_1.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-Black_1.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-Black_1.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-Black_1.svg#DINNextLTArabic-Black")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("../fonts/DINNextLTArabic-Black_2.eot");
+  src: url("../fonts/DINNextLTArabic-Black_2.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-Black_2.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-Black_2.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-Black_2.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-Black_2.svg#DINNextLTArabic-Black")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("../fonts/DINNextLTArabic-Bold.eot");
+  src: url("../fonts/DINNextLTArabic-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-Bold.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-Bold.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-Bold.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-Bold.svg#DINNextLTArabic-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("../fonts/DINNextLTArabic-Bold_1.eot");
+  src: url("../fonts/DINNextLTArabic-Bold_1.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-Bold_1.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-Bold_1.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-Bold_1.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-Bold_1.svg#DINNextLTArabic-Bold")
+      format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("../fonts/DINNextLTArabic-Bold_2.eot");
+  src: url("../fonts/DINNextLTArabic-Bold_2.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-Bold_2.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-Bold_2.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-Bold_2.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-Bold_2.svg#DINNextLTArabic-Bold")
+      format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("../fonts/DINNextLTArabic-Heavy.eot");
+  src: url("../fonts/DINNextLTArabic-Heavy.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-Heavy.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-Heavy.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-Heavy.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-Heavy.svg#DINNextLTArabic-Heavy")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("../fonts/DINNextLTArabic-Heavy_1.eot");
+  src: url("../fonts/DINNextLTArabic-Heavy_1.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-Heavy_1.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-Heavy_1.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-Heavy_1.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-Heavy_1.svg#DINNextLTArabic-Heavy")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("../fonts/DINNextLTArabic-Heavy_2.eot");
+  src: url("../fonts/DINNextLTArabic-Heavy_2.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-Heavy_2.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-Heavy_2.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-Heavy_2.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-Heavy_2.svg#DINNextLTArabic-Heavy")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("../fonts/DINNextLTArabic-Light.eot");
+  src: url("../fonts/DINNextLTArabic-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-Light.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-Light.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-Light.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-Light.svg#DINNextLTArabic-Light")
+      format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("../fonts/DINNextLTArabic-Medium.eot");
+  src: url("../fonts/DINNextLTArabic-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-Medium.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-Medium.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-Medium.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-Medium.svg#DINNextLTArabic-Medium")
+      format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("../fonts/DINNextLTArabic-Light_1.eot");
+  src: url("../fonts/DINNextLTArabic-Light_1.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-Light_1.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-Light_1.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-Light_1.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-Light_1.svg#DINNextLTArabic-Light")
+      format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("../fonts/DINNextLTArabic-Medium_1.eot");
+  src: url("../fonts/DINNextLTArabic-Medium_1.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-Medium_1.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-Medium_1.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-Medium_1.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-Medium_1.svg#DINNextLTArabic-Medium")
+      format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("../fonts/DINNextLTArabic-Medium_2.eot");
+  src: url("../fonts/DINNextLTArabic-Medium_2.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-Medium_2.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-Medium_2.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-Medium_2.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-Medium_2.svg#DINNextLTArabic-Medium")
+      format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("../fonts/DINNextLTArabic-Regular.eot");
+  src: url("../fonts/DINNextLTArabic-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-Regular.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-Regular.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-Regular.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-Regular.svg#DINNextLTArabic-Regular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("../fonts/DINNextLTArabic-Regular_1.eot");
+  src: url("../fonts/DINNextLTArabic-Regular_1.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-Regular_1.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-Regular_1.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-Regular_1.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-Regular_1.svg#DINNextLTArabic-Regular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("../fonts/DINNextLTArabic-Regular_2.eot");
+  src: url("../fonts/DINNextLTArabic-Regular_2.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-Regular_2.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-Regular_2.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-Regular_2.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-Regular_2.svg#DINNextLTArabic-Regular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic Ultra";
+  src: url("../fonts/DINNextLTArabic-UltraLight.eot");
+  src: url("../fonts/DINNextLTArabic-UltraLight.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-UltraLight.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-UltraLight.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-UltraLight.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-UltraLight.svg#DINNextLTArabic-UltraLight")
+      format("svg");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic Ultra";
+  src: url("../fonts/DINNextLTArabic-UltraLight_1.eot");
+  src: url("../fonts/DINNextLTArabic-UltraLight_1.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-UltraLight_1.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-UltraLight_1.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-UltraLight_1.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-UltraLight_1.svg#DINNextLTArabic-UltraLight")
+      format("svg");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic Ultra";
+  src: url("../fonts/DINNextLTArabic-UltraLight_2.eot");
+  src: url("../fonts/DINNextLTArabic-UltraLight_2.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-UltraLight_2.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-UltraLight_2.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-UltraLight_2.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-UltraLight_2.svg#DINNextLTArabic-UltraLight")
+      format("svg");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DIN Next LT Arabic Ultra";
+  src: url("../fonts/DINNextLTArabic-UltraLight_3.eot");
+  src: url("../fonts/DINNextLTArabic-UltraLight_3.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/DINNextLTArabic-UltraLight_3.woff2") format("woff2"),
+    url("../fonts/DINNextLTArabic-UltraLight_3.woff") format("woff"),
+    url("../fonts/DINNextLTArabic-UltraLight_3.ttf") format("truetype"),
+    url("../fonts/DINNextLTArabic-UltraLight_3.svg#DINNextLTArabic-UltraLight")
+      format("svg");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+::-moz-selection {
+  color: map_get(colors.$theme-colors, selectionColor);
+  background: map_get(colors.$theme-colors, selectionBg);
+}
+
+::selection {
+  color: map_get(colors.$theme-colors, selectionColor);
+  background: map_get(colors.$theme-colors, selectionBg);
+}
+
+::-webkit-scrollbar-track {
+  background: map_get(colors.$theme-colors, scrollTrackBg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: map_get(colors.$theme-colors, scrollThumbBg);
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: map_get(colors.$theme-colors, scrollThumbHoverBg);
+  }
+}
+
+/* start common style*/
+
+* {
+  @include mixins.prefix(box-sizing, border-box, webkit ms o);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "DIN Next LT Arabic";
+  background-color: map_get(colors.$theme-colors, body);
+  text-align: left;
+  direction: ltr;
+  // overflow: hidden;
+  font-size: 17px;
+  color: map_get(colors.$theme-colors, dark);
+}
+
+.rotate-y-180 {
+  transform: rotateY(-180deg);
+}
+
+html[lang="ar"] {
+  body {
+    direction: rtl;
+    text-align: right;
+  }
+  [type="email"],
+  [type="number"],
+  [type="tel"],
+  [type="url"] {
+    direction: rtl;
+  }
+  .rotate-y-180 {
+    transform: rotateY(0deg);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  @include mixins.transition(background 0.3s ease-in-out);
+}
+
+::-webkit-scrollbar-track {
+  @include mixins.border-radius(50px);
+}
+
+::-webkit-scrollbar-thumb {
+  @include mixins.border-radius(50px);
+}
+
+.btn {
+  @include mixins.border-radius(20px);
+  border: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    outline: none;
+    @include mixins.prefix(box-shadow, none, webkit ms o);
+  }
+  &.with-shadow {
+    @include mixins.prefix(
+      box-shadow,
+      0px 12px 12px 0px rgba(20, 20, 20, 0.14),
+      webkit ms o
+    );
+  }
+  &.custom-btn {
+    height: 45px;
+    min-width: 100px;
+  }
+  &.w-48 {
+    width: 48%;
+  }
+  &.w-240 {
+    width: 240px;
+  }
+}
+
+.modal {
+  overflow-y: auto;
+}
+
+a,
+button,
+img {
+  @include mixins.transition(all 0.5s ease-in-out);
+}
+
+:placeholder-shown::-webkit-input-placeholder {
+  opacity: 1;
+  color: map_get(colors.$theme-colors, placeholder);
+}
+
+.owl-carousel {
+  direction: ltr;
+  touch-action: manipulation;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  &.text-hover {
+    color: map_get(colors.$theme-colors, dark);
+    &:hover,
+    &:focus {
+      color: map_get(colors.$theme-colors, primary);
+      img {
+        filter: invert(38%) sepia(87%) saturate(477%) hue-rotate(112deg)
+          brightness(112%) contrast(91%);
+      }
+    }
+  }
+  &.hvr-secondary {
+    color: map_get(colors.$theme-colors, primary);
+    &:hover,
+    &:focus {
+      color: map_get(colors.$theme-colors, secondary);
+    }
+  }
+}
+
+ul {
+  @include mixins.reset-list;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+// lazyload
+img.lazyload:not([src]) {
+  visibility: hidden;
+}
+
+.w-57 {
+  width: 57%;
+}
+.w-25px {
+  width: 25px;
+}
+.wh-40 {
+  @include mixins.shape(40px);
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fs-80 {
+  font-size: 80px !important;
+}
+.fs-50 {
+  font-size: 50px !important;
+}
+.fs-25 {
+  font-size: 25px !important;
+}
+.h-500 {
+  height: 500px;
+  max-width: 100%;
+  object-fit: cover;
+}
+.fs-15 {
+  font-size: 15px !important;
+}
+
+.fs-14 {
+  font-size: 14px !important;
+}
+h5 {
+  font-size: 1.1rem !important;
+}
+h2 {
+  font-size: 1.6rem !important;
+}
+.rounded-30 {
+  @include mixins.border-radius(30px);
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.transition {
+  @include mixins.transition(all 0.5s ease-in-out);
+}
+
+.scale-hvr {
+  &:hover {
+    scale: (1.1);
+  }
+}
+
+.shrink-hvr {
+  &:hover {
+    scale: (0.97);
+  }
+}
+/* end common style*/
+
+/*start loader */
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #fff;
+  overflow: hidden;
+  // @include mixins.prefix(display, flex, webkit moz ms o);
+  display: none;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  img {
+    max-width: 470px;
+    max-height: 470px;
+    object-fit: cover;
+  }
+
+  @keyframes progress-bar {
+    0% {
+      left: -6vw;
+    }
+    100% {
+      left: 70%;
+    }
+  }
+
+  #loader {
+    position: relative;
+    margin: 0 auto;
+
+    #logo {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      padding-bottom: 35px;
+      text-align: center;
+
+      img {
+        width: 100%;
+        max-width: 390px;
+      }
+      h3 {
+        font-weight: 700;
+        font-size: 34px;
+      }
+    }
+    #progressbar {
+      background-color: #f0f0f0;
+      height: 3px;
+      border-radius: 30px;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+      overflow: hidden;
+      width: 100px;
+
+      &::before {
+        width: 5vw;
+        position: relative;
+        left: -7vw;
+        background-color: map_get(colors.$theme-colors, primary);
+        content: " ";
+        display: block;
+        height: 3px;
+        border-radius: 30px;
+        animation: 1.2s progress-bar 0.5s infinite alternate ease-in-out;
+      }
+    }
+  }
+}
+
+.top-circles {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  @include mixins.shape(300px);
+  z-index: 10000;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+      151deg,
+      rgba(46, 204, 155, 0.08) 18.96%,
+      rgba(125, 157, 255, 0.08) 82.31%
+    );
+  }
+  &:before {
+    top: 0;
+    right: 0;
+    @include mixins.shape(250px, 50%);
+  }
+
+  &:after {
+    top: 130px;
+    right: 25px;
+    @include mixins.shape(170px, 50%);
+  }
+}
+
+.bottom-circles {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  @include mixins.shape(300px);
+  z-index: 10000;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+      151deg,
+      rgba(46, 204, 155, 0.08) 18.96%,
+      rgba(125, 157, 255, 0.08) 82.31%
+    );
+  }
+  &:before {
+    bottom: 65px;
+    left: 25px;
+    @include mixins.shape(220px, 50%);
+  }
+
+  &:after {
+    bottom: 20px;
+    left: 60px;
+    @include mixins.shape(170px, 50%);
+  }
+}
+
+/*end loader */
+
+// start form
+.form-control {
+  height: 50px;
+  background: #fff;
+  color: map_get(colors.$theme-colors, lightGrayClr);
+  @include mixins.border-radius(20px);
+  border: 0;
+  font-size: 15px;
+  &:focus {
+    @include mixins.prefix(box-shadow, none, webkit ms o);
+  }
+}
+.form-label {
+  text-transform: capitalize;
+}
+.input-group-text {
+  @include mixins.border-radius(0 20px 20px 0);
+  &.icon {
+    color: map_get(colors.$theme-colors, placeholder);
+    @include mixins.transition(all 0.5s ease-in-out);
+    &:hover {
+      color: map_get(colors.$theme-colors, primary);
+    }
+  }
+}
+.password-radius {
+  @include mixins.border-radius(20px 0 0 20px);
+}
+
+.form-check-input {
+  @include mixins.shape(1.2em);
+  border-color: map_get(colors.$theme-colors, lightGrayClr);
+  background-color: transparent;
+  border-width: 2px;
+  @include mixins.transition(all 0.5s ease-in-out);
+  cursor: pointer;
+  &:checked {
+    // filter: invert(1) brightness(1) contrast(0.3);
+    border-color: map_get(colors.$theme-colors, primary);
+    background-color: map_get(colors.$theme-colors, primary);
+  }
+  &:focus {
+    @include mixins.prefix(box-shadow, none, webkit ms o);
+  }
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__placeholder {
+  color: map_get(colors.$theme-colors, placeholder) !important;
+}
+
+.select2-container {
+  .select2-selection--single {
+    height: 50px;
+    background: #fff;
+    @include mixins.border-radius(20px);
+    border: 0;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    padding: 5px;
+    .select2-selection__rendered {
+      display: flex;
+      align-items: center;
+      color: map_get(colors.$theme-colors, lightGrayClr);
+      span {
+        display: flex;
+        align-items: center;
+        color: map_get(colors.$theme-colors, lightGrayClr);
+      }
+    }
+
+    .select2-selection__arrow {
+      top: 50%;
+      transform: translateY(-50%);
+      right: 5px;
+    }
+  }
+}
+.select2-container--default
+  .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: map_get(colors.$theme-colors, secondary);
+}
+.select2-results__option--selectable {
+  @include mixins.transition(all 0.5s ease-in-out);
+  font-size: 13px;
+}
+.gray-filter {
+  filter: grayscale(1);
+}
+
+html[lang="ar"] {
+  .input-group-text {
+    @include mixins.border-radius(20px 0 0 20px);
+  }
+  .password-radius {
+    @include mixins.border-radius(0 20px 20px 0);
+  }
+  .select2-container {
+    .select2-selection--single {
+      .select2-selection__arrow {
+        left: 5px;
+        right: auto;
+      }
+    }
+  }
+  .transfrom-180 {
+    transform: rotateY(180deg);
+  }
+  .transfrom-180-reverse {
+    transform: rotateY(-180deg);
+  }
+}
+// end form
+
+// start top bar
+
+.top-bar {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  @include mixins.transition(all 0.5s ease-in-out);
+
+  &.change-bg {
+    top: 0;
+  }
+  .logo {
+    width: 100px;
+  }
+  h3 {
+    font-weight: 400;
+    font-size: 17px;
+  }
+}
+
+.social {
+  @include mixins.shape(35px, 50%);
+  background-color: map_get(colors.$theme-colors, dark);
+  color: #fff;
+  &:hover,
+  &:focus {
+    background-color: map_get(colors.$theme-colors, primary);
+  }
+}
+// end top bar
+
+// start footer
+.main-footer {
+  @include mixins.border-radius(30px 30px 0 0);
+  color: #fff;
+  padding-block: 60px 10px;
+  .footer-logo {
+    width: 120px;
+    margin-bottom: 20px;
+  }
+  .social {
+    background-color: map_get(colors.$theme-colors, menuBg);
+    color: map_get(colors.$theme-colors, footerBg);
+    @include mixins.shape(40px, 50%);
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: map_get(colors.$theme-colors, primary);
+      transform: scale(.9);
+    }
+  }
+  .footer-title{
+    color: map_get(colors.$theme-colors, menuBg);
+    background-color: map_get(colors.$theme-colors, footerTitle);
+    padding: 10px 30px;
+    width: fit-content;
+    margin-inline: auto;
+    @include mixins.border-radius(30px);
+    font-size: 15px !important;
+  }
+  .footer-links{
+    a{
+      font-size: 14px;
+      color: map_get(colors.$theme-colors, menuBg);
+      justify-content: center;
+      &:hover,
+      &:focus{
+        color: map_get(colors.$theme-colors, primary);
+      }
+    }
+  }
+}
+// end footer
+
+/*start scroll top */
+
+#scroll-top {
+  @include mixins.shape(40px);
+  @include mixins.border-radius(50%);
+  line-height: 35px;
+  color: #fff;
+  background-color: map_get(colors.$theme-colors, primary);
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  z-index: 3;
+  cursor: pointer;
+  display: none;
+  @include mixins.transition(all 0.5s ease-in-out);
+  border: 2px solid transparent;
+  left: 15px;
+  &:hover {
+    background-color: #fff;
+    color: map_get(colors.$theme-colors, primary);
+    border: 2px solid map_get(colors.$theme-colors, primary);
+  }
+}
+html[lang="ar"] {
+  #scroll-top {
+    right: 15px;
+    left: auto;
+  }
+}
+
+/*end scroll-top*/
+/* Start Media Query */
+
+@media (max-width: 767px) {
+  body {
+    font-size: 15px;
+  }
+
+  .w-57 {
+    width: 100%;
+  }
+
+  .flex-sm-1 {
+    flex-grow: 1;
+  }
+
+  .w-sm-100 {
+    width: 100%;
+  }
+
+  .w-25px {
+    width: 20px;
+  }
+
+  .wh-40 {
+    @include mixins.shape(35px);
+  }
+
+  h3 {
+    font-size: 17px !important;
+  }
+
+  h2 {
+    font-size: 1.3rem !important;
+  }
+  h5 {
+    font-size: 1rem !important;
+  }
+  h4 {
+    font-size: 16px !important;
+  }
+  .statistic-item {
+    min-height: 100px;
+  }
+
+  .user {
+    .fs-6,
+    h6 {
+      font-size: 14px !important;
+    }
+  }
+
+  .fs-80 {
+    font-size: 30px !important;
+    text-align: center;
+  }
+  .fs-50 {
+    font-size: 25px !important;
+  }
+
+  .form-control {
+    font-size: 13px;
+  }
+  .fs-15 {
+    font-size: 14px !important;
+  }
+  .select2-container {
+    .select2-selection--single {
+      font-size: 13px;
+    }
+  }
+
+  .btn {
+    font-size: 14px;
+    &.w-48 {
+      width: 100%;
+    }
+    &.custom-btn {
+      height: 40px;
+    }
+    &.w-240 {
+      width: 210px;
+    }
+  }
+
+  .h-500 {
+    height: 300px;
+  }
+
+  .top-bar {
+    h3 {
+      font-size: 14px !important;
+    }
+    .logo {
+      width: 65px;
+    }
+  }
+
+  .social {
+    @include mixins.shape(27px, 50%);
+    font-size: 12px;
+  }
+
+  .top-circles {
+    @include mixins.shape(250px);
+    &:before {
+      @include mixins.shape(200px, 50%);
+    }
+
+    &:after {
+      @include mixins.shape(120px, 50%);
+    }
+  }
+
+  .bottom-circles {
+    @include mixins.shape(250px);
+
+    &:before {
+      @include mixins.shape(170px, 50%);
+    }
+
+    &:after {
+      @include mixins.shape(120px, 50%);
+    }
+  }
+
+  .loader-container {
+    #loader {
+      #logo {
+        img {
+          max-width: 185px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .w-57 {
+    width: 85%;
+  }
+  h3 {
+    font-size: 27px !important;
+  }
+  h4 {
+    font-size: 20px !important;
+  }
+  h2 {
+    font-size: 1.4rem !important;
+  }
+  .fs-80 {
+    font-size: 60px !important;
+  }
+  body {
+    font-size: 16px;
+  }
+
+  .loader-container {
+    #loader {
+      #logo {
+        img {
+          max-width: 250px;
+        }
+      }
+    }
+  }
+
+  .top-bar {
+    h3 {
+      font-size: 15px !important;
+    }
+  }
+
+  .social {
+    @include mixins.shape(30px, 50%);
+    font-size: 14px;
+  }
+}
