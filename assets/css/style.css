@@ -1917,30 +1917,47 @@ html[lang=ar] .transfrom-180-reverse {
   color: #fff;
   padding-block: 60px 10px;
 }
+.main-footer h2 {
+  font-size: 45px !important;
+}
 .main-footer .footer-logo {
-  width: 120px;
+  width: 160px;
   margin-bottom: 20px;
 }
 .main-footer .social {
   background-color: #fcfcfc;
   color: #3C5256;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
   -moz-border-radius: 50% !important;
   -ms-border-radius: 50% !important;
   -o-border-radius: 50% !important;
+  font-size: 25px;
 }
 .main-footer .social:hover, .main-footer .social:focus {
   color: #fff;
   background-color: #2ecc9b;
   transform: scale(0.9);
 }
+.main-footer .pay {
+  width: 70px;
+  height: 50px;
+  border-radius: 3px !important;
+  -webkit-border-radius: 3px !important;
+  -moz-border-radius: 3px !important;
+  -ms-border-radius: 3px !important;
+  -o-border-radius: 3px !important;
+}
+.main-footer .pay:hover, .main-footer .pay:focus {
+  transform: scale(0.9);
+}
 .main-footer .footer-title {
   color: #fcfcfc;
   background-color: #304245;
-  padding: 10px 30px;
+  padding: 10px 15px;
+  min-width: 135px;
   width: -moz-fit-content;
   width: fit-content;
   margin-inline: auto;
@@ -1955,9 +1972,19 @@ html[lang=ar] .transfrom-180-reverse {
   font-size: 14px;
   color: #fcfcfc;
   justify-content: center;
+  padding: 8px 13px;
+  min-width: 135px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 30px !important;
+  -webkit-border-radius: 30px !important;
+  -moz-border-radius: 30px !important;
+  -ms-border-radius: 30px !important;
+  -o-border-radius: 30px !important;
+  margin-inline: auto;
 }
 .main-footer .footer-links a:hover, .main-footer .footer-links a:focus {
-  color: #2ecc9b;
+  background-color: #364a4d;
 }
 
 /*start scroll top */
@@ -2027,8 +2054,8 @@ html[lang=ar] #scroll-top {
   h4 {
     font-size: 16px !important;
   }
-  .statistic-item {
-    min-height: 100px;
+  .fs-25 {
+    font-size: 21px !important;
   }
   .user .fs-6,
   .user h6 {
@@ -2925,6 +2952,35 @@ html[lang=ar] .list-dot li:before {
   }
   .ads .ads-carusel h2 {
     font-size: 30px !important;
+  }
+  .statistic-item {
+    min-height: 100px;
+  }
+  .some-exams .exam-block {
+    min-height: 340px;
+  }
+  .some-exams .exam-block .bottom-info {
+    font-size: 18px;
+  }
+  .some-exams .exam-block .bottom-info .first-info,
+  .some-exams .exam-block .bottom-info .last-info {
+    height: 60px;
+  }
+  .some-exams .exam-block .overlay-info {
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    padding: 10px;
+    font-size: 18px;
+  }
+  .some-exams .exam-block .overlay-info .price .old {
+    font-size: 20px;
+  }
+  .some-exams .exam-block .overlay-info .price .new {
+    font-size: 27px;
+  }
+  .medical-carusel .item img {
+    height: 180px;
   }
 }
 /*Small Screen*/

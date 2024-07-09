@@ -844,38 +844,57 @@ html[lang="ar"] {
   @include mixins.border-radius(30px 30px 0 0);
   color: #fff;
   padding-block: 60px 10px;
+  h2 {
+    font-size: 45px !important;
+  }
   .footer-logo {
-    width: 120px;
+    width: 160px;
     margin-bottom: 20px;
   }
   .social {
     background-color: map_get(colors.$theme-colors, menuBg);
     color: map_get(colors.$theme-colors, footerBg);
-    @include mixins.shape(40px, 50%);
+    @include mixins.shape(50px, 50%);
+    font-size: 25px;
     &:hover,
     &:focus {
       color: #fff;
       background-color: map_get(colors.$theme-colors, primary);
-      transform: scale(.9);
+      transform: scale(0.9);
     }
   }
-  .footer-title{
+  .pay {
+    width: 70px;
+    height: 50px;
+    @include mixins.border-radius(3px);
+    &:hover,
+    &:focus {
+      transform: scale(0.9);
+    }
+  }
+  .footer-title {
     color: map_get(colors.$theme-colors, menuBg);
     background-color: map_get(colors.$theme-colors, footerTitle);
-    padding: 10px 30px;
+    padding: 10px 15px;
+    min-width: 135px;
     width: fit-content;
     margin-inline: auto;
     @include mixins.border-radius(30px);
     font-size: 15px !important;
   }
-  .footer-links{
-    a{
+  .footer-links {
+    a {
       font-size: 14px;
       color: map_get(colors.$theme-colors, menuBg);
       justify-content: center;
+      padding: 8px 13px;
+      min-width: 135px;
+      width: fit-content;
+      @include mixins.border-radius(30px);
+      margin-inline: auto;
       &:hover,
-      &:focus{
-        color: map_get(colors.$theme-colors, primary);
+      &:focus {
+        background-color: #364a4d;
       }
     }
   }
@@ -953,8 +972,9 @@ html[lang="ar"] {
   h4 {
     font-size: 16px !important;
   }
-  .statistic-item {
-    min-height: 100px;
+
+  .fs-25 {
+    font-size: 21px !important;
   }
 
   .user {
