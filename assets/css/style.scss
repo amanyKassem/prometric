@@ -100,16 +100,13 @@ nav {
   cursor: pointer;
   box-shadow: 0 0 0 rgba(40, 163, 38, 0.7);
   animation: pulse 2s infinite;
-  -webkit-animation: pulse 2s infinite;
-  -moz-animation: pulse 2s infinite;
-  -ms-animation: pulse 2s infinite;
-  -o-animation: pulse 2s infinite;
+  @include mixins.animation("pulse 2s infinite");
   &:hover {
     animation: none;
   }
 }
 
-@keyframes pulse {
+@include mixins.keyframes(pulse) {
   0% {
     -moz-box-shadow: 0 0 0 0 rgba(93, 255, 61, 0.9);
     box-shadow: 0 0 0 0 rgba(40, 163, 38, 0.7);
@@ -339,6 +336,14 @@ html[lang="ar"] {
     );
   }
 }
+
+html[dir="rtl"] {
+  .statistic-item {
+    &:hover {
+      @include mixins.prefix(transform, rotateZ(3deg), webkit ms o);
+    }
+  }
+}
 // end statistics
 
 // start exam categories
@@ -409,7 +414,7 @@ html[lang="ar"] {
   .self-assessment-img {
     width: 100%;
     max-height: 350px;
-    object-fit: cover;
+    @include mixins.prefix(object-fit, cover, webkit ms o);
     @include mixins.border-radius(50px);
   }
 }
@@ -462,12 +467,15 @@ html[lang="ar"] {
       position: absolute;
       height: 100%;
       width: 100%;
-      object-fit: cover;
-      @include mixins.border-radius(30px);
+      @include mixins.prefix(object-fit, cover, webkit ms o);
       @include mixins.prefix(filter, blur(1px), webkit ms o);
       top: 0;
       left: 0;
       z-index: -1;
+    }
+    .exam-title {
+      @include mixins.text-shorten();
+      max-width: 98%;
     }
 
     .top-info {
@@ -605,21 +613,178 @@ html[lang="ar"] {
     }
   }
 }
+
+html[dir="rtl"] {
+  .some-exams {
+    .exam-block {
+      .bottom-info {
+        .last-info {
+          .arrow-right {
+            left: -20px;
+            right: auto;
+            transform: rotateY(-180deg) translateY(-50%);
+          }
+        }
+      }
+      &:hover {
+        .bottom-info {
+          .last-info {
+            .arrow-right {
+              left: 65px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 // end exams
 
 // start medical-carusel
 .medical-carusel {
   .item {
+    width: 560px;
     img {
       width: 100%;
       height: 280px;
-      object-fit: cover;
+      @include mixins.prefix(object-fit, cover, webkit ms o);
       @include mixins.border-radius(50px);
       margin-bottom: 15px;
     }
   }
 }
 // end medical-carusel
+
+// start categories page
+.categories-header {
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+  @include mixins.border-radius(50px);
+  padding: 70px;
+  display: flex;
+  align-items: center;
+
+  h1 {
+    width: 60%;
+    font-size: 50px;
+    line-height: normal;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(1px);
+    background: linear-gradient(
+        0deg,
+        rgba(60, 82, 86, 0.4) 0%,
+        rgba(60, 82, 86, 0.4) 100%
+      ),
+      url(../img/categoriesBg.png) lightgray no-repeat center left/cover;
+  }
+}
+.online-assessment-img {
+  height: 100%;
+  min-height: 400px;
+  @include mixins.border-radius(50px);
+  @include mixins.prefix(object-fit, cover, webkit ms o);
+  @include mixins.prefix(object-position, center, webkit ms o);
+}
+// end categories page
+
+// start plans page
+.features {
+  padding: 35px 80px 15px;
+  .feat-img {
+    height: 40px;
+  }
+  .feat-item {
+    p {
+      width: 80%;
+    }
+  }
+}
+
+.text-carusel {
+  padding-block: 7px;
+  background-color: map_get(colors.$theme-colors, dark);
+  @include mixins.prefix(transform, rotate(-1deg), webkit ms o);
+  margin-block: 20px 40px;
+
+  .item {
+    // width: 560px;
+    color: #fff;
+    img {
+      @include mixins.shape(60px);
+      @include mixins.prefix(object-fit, cover, webkit ms o);
+      @include mixins.border-radius(30px);
+    }
+  }
+}
+
+.plan {
+  @include mixins.transition(all 0.5s ease-in-out);
+  background-color: map_get(colors.$theme-colors, lightGrayClr3);
+  border: 1px solid map_get(colors.$theme-colors, dark);
+  padding: 25px;
+  .number {
+    @include mixins.transition(all 0.5s ease-in-out);
+    padding: 5px;
+    @extend .flex-center;
+    background-color: map_get(colors.$theme-colors, dark);
+    color: #fff;
+    @include mixins.shape(50px);
+    @include mixins.border-radius(50%);
+    font-size: 30px;
+    font-weight: bold;
+    flex-shrink: 0;
+    span {
+      position: relative;
+      top: -2px;
+    }
+  }
+  .rate {
+    font-size: 23px;
+  }
+  .review {
+    font-size: 13px;
+  }
+  .price {
+    h5 {
+      font-size: 20px !important;
+    }
+    p {
+      @include mixins.transition(all 0.5s ease-in-out);
+      flex: 2;
+      font-size: 16px;
+      .new {
+        font-size: 24px;
+      }
+      .old {
+        color: map_get(colors.$theme-colors, grayClr);
+        font-size: 21px;
+      }
+    }
+  }
+
+  &:hover {
+    border-color: map_get(colors.$theme-colors, primary);
+    .number {
+      background-color: map_get(colors.$theme-colors, primary);
+    }
+    .price {
+      p {
+        color: map_get(colors.$theme-colors, primary);
+      }
+    }
+  }
+}
+// end plans page
 
 /* Start Media Query */
 
@@ -824,8 +989,45 @@ html[lang="ar"] {
   }
   .medical-carusel {
     .item {
+      width: auto;
       img {
         height: 180px;
+      }
+    }
+  }
+  .categories-header {
+    padding: 30px;
+    min-height: auto;
+    h1 {
+      font-size: 25px;
+      width: 100%;
+    }
+  }
+
+  .features {
+    padding: 20px 20px 5px;
+    .feat-item {
+      p {
+        width: 100%;
+      }
+      .feat-img {
+        height: 30px;
+      }
+    }
+  }
+
+  .plan {
+    .number {
+      @include mixins.shape(40px);
+      font-size: 20px;
+    }
+    .price {
+      h5 {
+        font-size: 19px !important;
+      }
+      p {
+        flex: unset;
+        font-size: 14px;
       }
     }
   }
@@ -854,7 +1056,9 @@ html[lang="ar"] {
       }
     }
   }
-
+  .fs-25 {
+    font-size: 21px !important;
+  }
   .fs-50 {
     font-size: 30px !important;
   }
@@ -872,12 +1076,49 @@ html[lang="ar"] {
   .dropdown-content {
     right: -25px;
     left: auto;
+    &::before {
+      right: 36px;
+      left: auto;
+    }
+  }
+
+  .some-exams {
+    .exam-block {
+      min-height: 370px;
+      .bottom-info {
+        font-size: 20px;
+        .first-info,
+        .last-info {
+          height: 65px;
+        }
+      }
+      .overlay-info {
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -35%);
+        padding: 10px;
+        font-size: 21px;
+        .price {
+          .old {
+            font-size: 20px;
+          }
+          .new {
+            font-size: 30px;
+          }
+        }
+      }
+    }
   }
 
   html[lang="ar"] {
     .dropdown-content {
       left: -25px;
       right: auto;
+
+      &::before {
+        left: 35px;
+        right: auto;
+      }
     }
   }
 
@@ -905,6 +1146,31 @@ html[lang="ar"] {
       }
     }
   }
+  .medical-carusel {
+    .item {
+      width: 350px;
+      img {
+        height: 200px;
+      }
+    }
+  }
+
+  .categories-header {
+    padding: 40px;
+    min-height: auto;
+    h1 {
+      font-size: 35px;
+      width: 80%;
+    }
+  }
+
+  .features {
+    .feat-item {
+      p {
+        width: 100%;
+      }
+    }
+  }
 }
 
 /*Medium Screen*/
@@ -924,15 +1190,28 @@ html[lang="ar"] {
       }
     }
   }
+  .fs-25 {
+    font-size: 23px !important;
+  }
   .dropdown-content {
     right: -25px;
     left: auto;
+
+    &::before {
+      right: 36px;
+      left: auto;
+    }
   }
 
   html[lang="ar"] {
     .dropdown-content {
       left: -25px;
       right: auto;
+
+      &::before {
+        left: 35px;
+        right: auto;
+      }
     }
   }
 
@@ -941,9 +1220,57 @@ html[lang="ar"] {
       max-width: 100%;
     }
   }
+  .medical-carusel {
+    .item {
+      width: 370px;
+      img {
+        height: 210px;
+      }
+    }
+  }
+
+  .categories-header {
+    padding: 50px;
+    min-height: auto;
+    h1 {
+      font-size: 45px;
+      width: 70%;
+    }
+  }
+  .features {
+    .feat-item {
+      p {
+        width: 95%;
+      }
+    }
+  }
 }
 
 @media (min-width: 1200px) {
+}
+
+@media (min-width: 1280px) and (max-width: 1366px) {
+  .dropdown-content {
+    right: -25px;
+    left: auto;
+
+    &::before {
+      right: 36px;
+      left: auto;
+    }
+  }
+
+  html[lang="ar"] {
+    .dropdown-content {
+      left: -25px;
+      right: auto;
+
+      &::before {
+        left: 36px;
+        right: auto;
+      }
+    }
+  }
 }
 
 /*Larger Screen*/

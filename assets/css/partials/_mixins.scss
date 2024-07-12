@@ -15,6 +15,21 @@
   transition: $args !important;
 }
 
+/* Mixins */
+@mixin MQ($canvas) {
+  @media (max-width: $canvas) {
+    @content;
+  }
+}
+
+@mixin transform($args...) {
+  -webkit-transform: $args;
+  -moz-transform: $args;
+  -ms-transform: $args;
+  -o-transform: $args;
+  transform: $args;
+}
+
 @mixin reset-list {
   margin: 0;
   padding: 0;
@@ -46,44 +61,34 @@
   #{$property}: $value;
 }
 
-@mixin keyframes($animation-name) {
-  @-webkit-keyframes #{$animation-name} {
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: "";
+
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+  -webkit-animation: $animations;
+  -moz-animation: $animations;
+  -o-animation: $animations;
+  animation: $animations;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
     @content;
   }
-  @-moz-keyframes #{$animation-name} {
+  @-moz-keyframes #{$animationName} {
     @content;
   }
-  @-ms-keyframes #{$animation-name} {
+  @-o-keyframes #{$animationName} {
     @content;
   }
-  @-o-keyframes #{$animation-name} {
-    @content;
-  }
-  @keyframes #{$animation-name} {
+  @keyframes #{$animationName} {
     @content;
   }
 }
-
-@mixin animation($str) {
-  -webkit-animation: #{$str};
-  -moz-animation: #{$str};
-  -ms-animation: #{$str};
-  -o-animation: #{$str};
-  animation: #{$str};
-}
-
-// @include mixins.keyframes(fade) {
-//   0% {
-//     opacity: 1;
-//   }
-//   50% {
-//     opacity: 0;
-//   }
-// }
-
-// .anim {
-//   width: 100px;
-//   height: 100px;
-//   background: black;
-//   @include mixins.animation("fade 5s infinite");
-// }

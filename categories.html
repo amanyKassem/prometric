@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<!-- if arabic add lang="ar" dir="rtl" -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>prometric</title>
+    <link rel="shortcut icon" href="assets/img/fav.svg" />
+
+    <!-- bootstrap 5 if english -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- bootstrap 5 if arabic -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-DOXMLfHhQkvFFp+rWTZwVlPVqdIhpDVYT9csOnHSgWQWPX0v5MCGtjCJbY6ERspU"
+      crossorigin="anonymous"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      async
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- start loader -->
+    <div class="loader-container">
+      <div class="top-circles"></div>
+      <div id="loader">
+        <div id="logo">
+          <img
+            src="./assets/img/logo.svg"
+            alt="logo prometric"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+          />
+          <h3
+            class="text-grayClr mt-4"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <span class="text-dark">Welcome to Rx prometric</span> exam
+            <br />
+            preparation portal web
+          </h3>
+        </div>
+        <div id="progressbar"></div>
+      </div>
+      <div class="bottom-circles"></div>
+    </div>
+    <!-- end loader -->
+    <!-- start top bar -->
+    <div class="top-bar bg-white py-2">
+      <div class="container">
+        <div
+          class="d-flex justify-content-between align-items-center flex-wrap"
+        >
+          <div
+            class="d-flex align-items-center justify-content-between flex-sm-1 w-sm-100"
+          >
+            <img src="assets/img/logo.svg" alt="logo" class="logo" />
+            <h3 class="text-lightGrayClr ms-3">Online self-assessment tool</h3>
+          </div>
+          <div
+            class="d-flex align-items-center justify-content-between flex-wrap mt-3 mt-lg-0 flex-sm-1"
+          >
+            <a
+              href="#"
+              class="lang me-3 me-lg-5 d-flex align-items-center text-hover"
+            >
+              عربي
+              <img
+                src="assets/img/global.svg"
+                alt="lang"
+                width="20"
+                class="ms-2"
+              />
+            </a>
+            <div class="d-flex align-items-center">
+              <a href="#" class="social flex-center">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end top bar -->
+    <!--  Start nav  -->
+    <nav class="normal-nav pt-2">
+      <div class="container">
+        <div
+          class="menu-bar d-flex d-md-none justify-content-between align-items-center"
+        >
+          <!-- if user not logged in -->
+          <!-- <a href="login.html" class="btn btn-primary text-white custom-btn with-shadow"
+            >Login</a
+          > -->
+
+          <!-- if user logged in -->
+          <a href="profile.html" class="d-flex align-items-center user">
+            <div class="flex-shrink-0">
+              <img
+                src="assets/img/user.png"
+                alt="user"
+                class="rounded-circle wh-40"
+              />
+            </div>
+            <div class="flex-grow-1 ms-2">
+              <h6 class="text-dark">Hello ,</h6>
+              <h5 class="fw-normal fs-6">Amany Kassem</h5>
+            </div>
+          </a>
+          <div class="toggle">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class="overlay"></div>
+
+        <div class="menu d-flex flex-wrap align-items-center">
+          <div class="d-none d-md-block">
+            <!-- if user not logged in -->
+            <!-- <a href="login.html" class="btn btn-primary custom-btn with-shadow"
+            >Login</a
+          > -->
+
+            <!-- if user logged in -->
+            <a href="profile.html" class="d-flex align-items-center user">
+              <div class="flex-shrink-0">
+                <img
+                  src="assets/img/user.png"
+                  alt="user"
+                  class="rounded-circle wh-40"
+                />
+              </div>
+              <div class="flex-grow-1 ms-2">
+                <h6 class="text-dark">Hello ,</h6>
+                <h5 class="fw-normal fs-6">Amany Kassem</h5>
+              </div>
+            </a>
+          </div>
+
+          <div class="d-flex align-items-center">
+            <!-- add class active to image-container if user in notifications page -->
+            <div class="image-container position-relative notifications">
+              <!-- add condition to show pulse if there is new notification -->
+              <span class="pulse"></span>
+              <img src="assets/img/bell.svg" alt="bell" class="default-img" />
+              <img src="assets/img/bellAct.svg" alt="bell" class="hover-img" />
+              <div class="dropdown-content">
+                <div
+                  class="d-flex justify-content-between align-items-center flex-wrap"
+                >
+                  <span
+                    class="text-dark d-flex justify-content-between align-items-center fw-500"
+                  >
+                    <img
+                      src="assets/img/bellDot.svg"
+                      alt="bell"
+                      width="18"
+                      class="me-1 rotate-y-180"
+                    />
+                    Your Notification
+                  </span>
+                  <a href="notifications.html" class="hvr-secondary fs-6"
+                    >See More</a
+                  >
+                </div>
+                <ul>
+                  <li class="mt-3 bg-menub shadow p-2">
+                    <a
+                      href="#"
+                      class="d-flex align-items-center flex-column flex-md-row"
+                    >
+                      <div class="flex-shrink-0">
+                        <img
+                          src="assets/img/authBg.png"
+                          alt="image"
+                          class="noti-img"
+                        />
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <div
+                          class="d-flex justify-content-between align-items-center flex-wrap"
+                        >
+                          <h6 class="text-dark fs-15 mb-2">Anesthesia MCQs</h6>
+                          <span class="text-lightDark fs-14 mb-2"
+                            >12/5/2024</span
+                          >
+                        </div>
+                        <p class="fs-6 text-dark fs-14">
+                          You have started the Anesthesia MCQs test and must
+                          continue your progress
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mt-3 bg-menub shadow p-2">
+                    <a
+                      href="#"
+                      class="d-flex align-items-center flex-column flex-md-row"
+                    >
+                      <div class="flex-shrink-0">
+                        <img
+                          src="assets/img/authBg.png"
+                          alt="image"
+                          class="noti-img"
+                        />
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <div
+                          class="d-flex justify-content-between align-items-center flex-wrap"
+                        >
+                          <h6 class="text-dark fs-15 mb-2">Anesthesia MCQs</h6>
+                          <span class="text-lightDark fs-14 mb-2"
+                            >12/5/2024</span
+                          >
+                        </div>
+                        <p class="fs-6 text-dark fs-14">
+                          You have started the Anesthesia MCQs test and must
+                          continue your progress
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mt-3 bg-menub shadow p-2">
+                    <a
+                      href="#"
+                      class="d-flex align-items-center flex-column flex-md-row"
+                    >
+                      <div class="flex-shrink-0">
+                        <img
+                          src="assets/img/authBg.png"
+                          alt="image"
+                          class="noti-img"
+                        />
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <div
+                          class="d-flex justify-content-between align-items-center flex-wrap"
+                        >
+                          <h6 class="text-dark fs-15 mb-2">Anesthesia MCQs</h6>
+                          <span class="text-lightDark fs-14 mb-2"
+                            >12/5/2024</span
+                          >
+                        </div>
+                        <p class="fs-6 text-dark fs-14">
+                          You have started the Anesthesia MCQs test and must
+                          continue your progress
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a href="#" class="image-container position-relative mx-3">
+              <img
+                src="assets/img/search.svg"
+                alt="search"
+                class="default-img"
+              />
+              <img
+                src="assets/img/searchAct.svg"
+                alt="search"
+                class="hover-img"
+              />
+            </a>
+            <!-- add class active to image-container if user in cart page -->
+            <a href="cart.html" class="image-container position-relative">
+              <img src="assets/img/cart.svg" alt="cart" class="default-img" />
+              <img src="assets/img/cartAct.svg" alt="cart" class="hover-img" />
+            </a>
+          </div>
+
+          <ul class="menu-links">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li class="active">
+              <a href="categories.html">Categories Test</a>
+            </li>
+            <li>
+              <a href="plans.html">Plans</a>
+            </li>
+            <li>
+              <a href="blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="syllabus.html">Syllabus</a>
+            </li>
+            <li>
+              <a href="refer.html">
+                <img
+                  src="assets/img/gift.svg"
+                  alt="gift"
+                  width="20"
+                  class="me-1"
+                />
+                Refer & Earn
+              </a>
+            </li>
+            <li>
+              <a href="faq.html">FAQs</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact Us</a>
+            </li>
+            <li>
+              <a href="about.html">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--end nav-->
+
+    <!-- start page unique content -->
+    <main>
+      <!-- start categories header -->
+      <header class="py-4">
+        <div class="container">
+          <div class="categories-header">
+            <h1 class="text-white fw-bold mb-0 lh-base">
+              Are you preparing for the Prometric pharmacy Exam in the Gulf
+              Countries ?
+            </h1>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <h2 class="fw-bold text-bold mb-2 text-primary">Hello Aspirant,</h2>
+        <p class="fw-bold">
+          Hello Aspirant, Are you preparing for the Prometric pharmacy Exam in
+          the Gulf Countries ? If your answer is Yes - We are here to help you
+          to get succeed in your LIFE DREAM. Our Prometric pharmacy mcq web site
+          make an effort into creating the most significant question bank and
+          mock exams t prepare and practice for your upcoming Prometric pharmacy
+          Exams in the gulf countries such as Dubai Prometric DHA Exam, Sharjah
+          MOH Exam, Abu Dhabi HAAD (DOH) Exam, Oman Prometric OMSB Exam, Saudi
+          SPLE Prometric Exam, Qatar Prometric QCHP Exam, Kuwait MOH Prometric
+          Exam KMLE Exam & Bahrain Prometric NHRA exam.
+        </p>
+      </div>
+      <!-- end categories header -->
+      
+      <!-- start category exams -->
+      <div class="exam-categories py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <h2 class="fw-bold text-bold mb-3 mb-md-4 lh-base">
+                <span class="text-secondary">Select your</span>
+                prometric pharmacy License category exam
+              </h2>
+            </div>
+
+            <div class="col-md-5">
+              <p class="text-lightDark text-center fw-500 mb-3 mb-md-4">
+                Browse through our extensive list of MCQ test packages tailored
+                to your practice area
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <a
+                href="category.html"
+                class="d-flex align-items-center category border border-dark p-3 h-100"
+              >
+                <div
+                  class="flex-shrink-0 img-container bg-menuBg border border-dark rounded-circle"
+                >
+                  <img
+                    src="assets/img/cat1.png"
+                    alt="Saudi Pharmacy Prometric exam"
+                  />
+                </div>
+                <div class="flex-grow-1 ms-2 fs-15">
+                  <h5 class="fw-bold mb-2 lh-base">
+                    Saudi Pharmacy Prometric exam
+                  </h5>
+                  SPLE - Saudi Pharmacist Licensure Examination - Saudi Arabia
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 mb-3">
+              <a
+                href="category.html"
+                class="d-flex align-items-center category border border-dark p-3 h-100"
+              >
+                <div
+                  class="flex-shrink-0 img-container bg-menuBg border border-dark rounded-circle"
+                >
+                  <img
+                    src="assets/img/cat2.png"
+                    alt="UAE MOH  Pharmacy Prometric exam "
+                  />
+                </div>
+                <div class="flex-grow-1 ms-2 fs-15">
+                  <h5 class="fw-bold mb-2 lh-base">
+                    UAE MOH Pharmacy Prometric exam
+                  </h5>
+                  MOH – ministry of health - Ajman , Ras Al Khaimah ,Sharjah,
+                  Fujairah , Umm Al Quwain - united Arab Emirates
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 mb-3">
+              <a
+                href="category.html"
+                class="d-flex align-items-center category border border-dark p-3 h-100"
+              >
+                <div
+                  class="flex-shrink-0 img-container bg-menuBg border border-dark rounded-circle"
+                >
+                  <img
+                    src="assets/img/cat3.png"
+                    alt="Dubai Pharmacy Prometric exam"
+                  />
+                </div>
+                <div class="flex-grow-1 ms-2 fs-15">
+                  <h5 class="fw-bold mb-2 lh-base">
+                    Dubai Pharmacy Prometric exam
+                  </h5>
+                  DHA - Dubai health authority - Dubai - united Arab Emirates
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 mb-3">
+              <a
+                href="category.html"
+                class="d-flex align-items-center category border border-dark p-3 h-100"
+              >
+                <div
+                  class="flex-shrink-0 img-container bg-menuBg border border-dark rounded-circle"
+                >
+                  <img
+                    src="assets/img/cat4.png"
+                    alt="Abu Dhabi Pharmacy Prometric exam "
+                  />
+                </div>
+                <div class="flex-grow-1 ms-2 fs-15">
+                  <h5 class="fw-bold mb-2 lh-base">
+                    Abu Dhabi Pharmacy Prometric exam
+                  </h5>
+                  DOH ( Haad) – Department of health (Health Authority of Abu
+                  Dhabi ) -Abu Dhabi – united Arab Emirates
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 mb-3">
+              <a
+                href="category.html"
+                class="d-flex align-items-center category border border-dark p-3 h-100"
+              >
+                <div
+                  class="flex-shrink-0 img-container bg-menuBg border border-dark rounded-circle"
+                >
+                  <img
+                    src="assets/img/cat5.png"
+                    alt="Bahrain Pharmacy Prometric exam"
+                  />
+                </div>
+                <div class="flex-grow-1 ms-2 fs-15">
+                  <h5 class="fw-bold mb-2 lh-base">
+                    Bahrain Pharmacy Prometric exam
+                  </h5>
+                  NHRA (BPLE ) - National Health regulatory authority (Bahrain
+                  pharmacy Licensing Exam) - Bahrain
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 mb-3">
+              <a
+                href="category.html"
+                class="d-flex align-items-center category border border-dark p-3 h-100"
+              >
+                <div
+                  class="flex-shrink-0 img-container bg-menuBg border border-dark rounded-circle"
+                >
+                  <img
+                    src="assets/img/cat6.png"
+                    alt="Kuwait MOH Pharmacy Prometric exam"
+                  />
+                </div>
+                <div class="flex-grow-1 ms-2 fs-15">
+                  <h5 class="fw-bold mb-2 lh-base">
+                    Kuwait MOH Pharmacy Prometric exam
+                  </h5>
+                  KMLE - Kuwait Medical Licensing Exam - Kuwait
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 mb-3">
+              <a
+                href="category.html"
+                class="d-flex align-items-center category border border-dark p-3 h-100"
+              >
+                <div
+                  class="flex-shrink-0 img-container bg-menuBg border border-dark rounded-circle"
+                >
+                  <img
+                    src="assets/img/cat7.png"
+                    alt="Qatar Pharmacy Prometric exam "
+                  />
+                </div>
+                <div class="flex-grow-1 ms-2 fs-15">
+                  <h5 class="fw-bold mb-2 lh-base">
+                    Qatar Pharmacy Prometric exam
+                  </h5>
+                  QCHP - Qatar Council for Healthcare Practitioners - Qatar
+                </div>
+              </a>
+            </div>
+            <div class="col-md-6 mb-3">
+              <a
+                href="category.html"
+                class="d-flex align-items-center category border border-dark p-3 h-100"
+              >
+                <div
+                  class="flex-shrink-0 img-container bg-menuBg border border-dark rounded-circle"
+                >
+                  <img
+                    src="assets/img/cat8.png"
+                    alt="Oman Person Vue  Pharmacy Prometric exam "
+                  />
+                </div>
+                <div class="flex-grow-1 ms-2 fs-15">
+                  <h5 class="fw-bold mb-2 lh-base">
+                    Oman Person Vue Pharmacy Prometric exam
+                  </h5>
+                  QCHP - Qatar Council for Healthcare Practitioners - Qatar
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end category exams -->
+
+      <!-- start online assessment -->
+      <div class="online-assessment pb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7 col-lg-8 mb-3 mb-md-0">
+              <h2 class="fw-bold text-bold mb-3 text-footerBg fs-2 lh-base">
+                Online assessment application
+              </h2>
+              <p class="fw-500 text-lightDark fs-18">
+                One of the surest ways to know what to expect or rather what a
+                Prometric test will look like is to try MCQs. However, note that
+                you will not get all the answers in the practice questions on
+                the actual exam. But you will have the best concept and know how
+                to set up tests and which areas you need to focus on improving
+                before taking the actual test.
+              </p>
+              <h5 class="text-blueLight mb-2 h5_2 lh-base">
+                Features of the online Prometric exam training application
+              </h5>
+              <p class="align-items-baseline d-flex text-darkx">
+                <i class="fa-solid fa-circle me-2 fs-6px"></i>
+                Systems tests typically take several hours to complete. Since
+                the world we live in today has so many distractions, sitting for
+                3 to 5 hours straight to answer exam questions can be stressful
+                and difficult. Prometric test questions help you build stamina
+                and maintain focus for hours.
+              </p>
+              <h5 class="text-blueLight mb-2 h5_2 lh-base">
+                Discover the knowledge gap
+              </h5>
+              <p class="align-items-baseline d-flex text-darkx">
+                <i class="fa-solid fa-circle me-2 fs-6px"></i>
+                When you don't know anything about something, you need to learn
+                more and research it. Practice tests can help you learn a lot of
+                things that you had no idea existed or could be determined on
+                the test. Although you may get poor results on your tests, it
+                allows you to focus on areas of weakness or potential.
+              </p>
+              <h5 class="text-blueLight mb-2 h5_2 lh-base">Reduce anxiety</h5>
+              <p class="align-items-baseline d-flex text-darkx">
+                <i class="fa-solid fa-circle me-2 fs-6px"></i>
+                Anxiety usually creeps up on us when we encounter something
+                we're not completely sure about, or aren't prepared for. You
+                will feel the same way if you do not prepare for the Prometric
+                exam. Prometric tests are designed to help you gain confidence
+                in facing the actual test, thus significantly reducing your
+                anxiety levels.
+              </p>
+              <h5 class="text-blueLight mb-2 h5_2 lh-base">
+                Monitor your progress
+              </h5>
+              <p class="align-items-baseline d-flex text-darkx">
+                <i class="fa-solid fa-circle me-2 fs-6px"></i>
+                You won't know where you're going unless you know where you came
+                from. Monitoring your progress is the best way to know whether
+                your study method is productive or not. Prometric tests help you
+                do this.
+              </p>
+            </div>
+
+            <div class="col-md-5 col-lg-4">
+              <img
+                src="assets/img/online.png"
+                class="online-assessment-img w-100"
+                alt="online assessment"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end online assessment -->
+
+      <!-- start exam strategy -->
+      <div class="exam-strategy pb-4">
+        <div class="container">
+          <div
+            class="bg-lightGrayClr3 rounded-30 p-3 px-md-4 text-dark fw-bold text-center"
+          >
+            <p class="mb-0 fs-3">
+              One exam strategy to overcome stress while preparing for the
+              <span class="text-primary"> GCC Pharmacy Prometric exam</span>
+              is to give yourself plenty of practice, focus on one question at a
+              time, and relax. And if you need help, we're always here for you.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- end exam strategy -->
+
+      <!-- start tips -->
+      <div class="tips pb-3 mb-3">
+        <div class="container">
+          <h2 class="fw-bold text-bold mb-3 lh-base">
+            Important tips to prepare for the Pharmacy prometric exam, and
+            succeed in your attempts next time
+          </h2>
+          <ul class="text-grayClr list-dot">
+            <li>
+              Here are the exam-tested things you can do when preparing for the
+              exam:
+            </li>
+            <li>
+              Practice the tests on the computer to get a feel for what the
+              actual prometric test will look like.
+            </li>
+            <li>
+              Try to answer the questions in light of time constraints. It is a
+              timed test, so you should be able to answer the questions quickly
+              and accurately.
+            </li>
+            <li>
+              Take your time and read the questions carefully to avoid rushing
+              through them and panicking along the way.
+            </li>
+            <li>
+              Keep calm and remember that you have studied long and worked hard
+              for this test, so you are prepared and will do well.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- end tips -->
+    </main>
+    <!-- end page unique content -->
+
+    <!-- start footer -->
+    <footer class="main-footer bg-footerBg text-white">
+      <div class="container">
+        <div class="row mb-4">
+          <div
+            class="col-lg-5 d-flex flex-column align-items-center align-items-lg-start mb-4 mb-lg-0"
+          >
+            <img
+              src="assets/img/footerLogo.svg"
+              class="footer-logo"
+              alt="logo"
+            />
+            <h2 class="fw-bold text-bold mb-2 lh-base w-75">
+              <span class="text-primary">Start your career </span>
+              as a pharmacist in the Gulf countries
+            </h2>
+          </div>
+          <div class="col-lg-7">
+            <div class="row">
+              <div class="col-md-4 mb-3 mb-md-0 text-center">
+                <h5 class="footer-title mb-3">Quick links</h5>
+                <ul class="footer-links">
+                  <li class="mb-1"><a href="index.html">Home</a></li>
+                  <li class="mb-1"><a href="plans.html">Plans</a></li>
+                  <li class="mb-1"><a href="blog.html">Blog</a></li>
+                  <li class="mb-1"><a href="syllabus.html">Syllabus</a></li>
+                  <li class="mb-1"><a href="refer.html">Refer & Earn</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4 mb-3 mb-md-0 text-center">
+                <h5 class="footer-title mb-3">prometric pharmacy category</h5>
+                <ul class="footer-links">
+                  <li class="mb-1">
+                    <a href="category.html">SPLE Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">MOH Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">DHA Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">DOH Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">BPLE Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">KMLE Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">QCHP Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">OMSB Exam Preparation MCQ's</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4 mb-3 mb-md-0 text-center">
+                <h5 class="footer-title mb-3">About</h5>
+                <ul class="footer-links">
+                  <li class="mb-1"><a href="about.html">About us</a></li>
+                  <li class="mb-1"><a href="contact.html">Contact us</a></li>
+                  <li class="mb-1"><a href="faq.html">FAQs</a></li>
+                  <li class="mb-1">
+                    <a href="refund.html">Refund policy</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="privacy.html">privacy policy</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div
+              class="d-flex align-items-center justify-content-center justify-content-lg-start flex-wrap"
+            >
+              <a href="#" class="social mb-3 flex-center">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social mb-3 flex-center ms-2">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="social mb-3 flex-center ms-2">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social mb-3 flex-center ms-2">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="#" class="social mb-3 flex-center ms-2">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div
+              class="d-flex align-items-center justify-content-center justify-content-lg-end flex-wrap"
+            >
+              <a href="#" class="pay mb-3 flex-center">
+                <img src="assets/img/Visa.svg" alt="visa" />
+              </a>
+              <a href="#" class="pay mb-3 flex-center ms-2">
+                <img src="assets/img/Mastercard.svg" alt="master" />
+              </a>
+              <a href="#" class="pay mb-3 flex-center ms-2">
+                <img src="assets/img/PayPal.svg" alt="paypal" />
+              </a>
+              <a href="#" class="pay mb-3 flex-center ms-2">
+                <img src="assets/img/Stripe.svg" alt="stripe" />
+              </a>
+              <a href="#" class="pay mb-3 flex-center ms-2">
+                <img src="assets/img/Wise.svg" alt="wise" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright border-menuBg border-top row fs-15 pt-3 mt-2">
+          <div class="col-md-6 mb-2">
+            Prometric pharmacy global@ 2024. All rights reserved.
+          </div>
+          <div class="col-md-6 mb-2 text-md-end">
+            Terms & conditions. privacy policy
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- start footer -->
+
+    <!--start whatsapp  -->
+
+    <div id="wpp-fix" class="shake">
+      <button id="wpp-link" class="wpp-form wpp-link">
+        <span>Chamar no WhatsApp</span>
+        <img src="assets/img/headset.svg" alt="headset" class="headset" />
+      </button>
+
+      <div class="contact-wpp">
+        <div class="head-wpp cursor-pointer" id="close-bt">
+          <img src="assets/img/headset.svg" alt="headset" class="headset" />
+          <h6 class="text-white">Chat with Consultant</h6>
+          <i class="fas fa-angle-down text-white"></i>
+        </div>
+
+        <div class="contacting-info bg-white">
+          <h5 class="fw-bold text-dark mb-0">Chat now:</h5>
+          <a
+            href="https://wa.me/+020100000000"
+            target="_blank"
+            class="btn btn-whatspapp text-white fs-15 my-3"
+          >
+            <i class="fa-brands fa-whatsapp me-2 fs-2"></i>
+            WhatsApp NOW!
+          </a>
+          <h5 class="fw-bold text-dark mb-2">Worktime</h5>
+          <p class="mb-2">Sunday - Thursday, 9am to 7pm</p>
+          <p class="mb-3">
+            click on the options to send an instant Whatsapp message or call at
+          </p>
+          <h5 class="fw-bold text-dark mb-2">+020100000000</h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- end whatsapp -->
+
+    <!-- start scroll-top-->
+    <div id="scroll-top" class="text-center">
+      <i class="fas fa-angle-up"></i>
+    </div>
+    <!-- end scroll-top-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap 5 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="assets/js/scripts.js"></script>
+  </body>
+</html>
