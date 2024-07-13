@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<!-- if arabic add lang="ar" dir="rtl" -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>prometric</title>
+    <link rel="shortcut icon" href="assets/img/fav.svg" />
+
+    <!-- bootstrap 5 if english -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- bootstrap 5 if arabic -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-DOXMLfHhQkvFFp+rWTZwVlPVqdIhpDVYT9csOnHSgWQWPX0v5MCGtjCJbY6ERspU"
+      crossorigin="anonymous"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      async
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- start loader -->
+    <div class="loader-container">
+      <div class="top-circles"></div>
+      <div id="loader">
+        <div id="logo">
+          <img
+            src="./assets/img/logo.svg"
+            alt="logo prometric"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+          />
+          <h3
+            class="text-grayClr mt-4"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <span class="text-dark">Welcome to Rx prometric</span> exam
+            <br />
+            preparation portal web
+          </h3>
+        </div>
+        <div id="progressbar"></div>
+      </div>
+      <div class="bottom-circles"></div>
+    </div>
+    <!-- end loader -->
+    <!-- start top bar -->
+    <div class="top-bar bg-white py-2">
+      <div class="container">
+        <div
+          class="d-flex justify-content-between align-items-center flex-wrap"
+        >
+          <div
+            class="d-flex align-items-center justify-content-between flex-sm-1 w-sm-100"
+          >
+            <img src="assets/img/logo.svg" alt="logo" class="logo" />
+            <h3 class="text-lightGrayClr ms-3">Online self-assessment tool</h3>
+          </div>
+          <div
+            class="d-flex align-items-center justify-content-between flex-wrap mt-3 mt-lg-0 flex-sm-1"
+          >
+            <a
+              href="#"
+              class="lang me-3 me-lg-5 d-flex align-items-center text-hover"
+            >
+              عربي
+              <img
+                src="assets/img/global.svg"
+                alt="lang"
+                width="20"
+                class="ms-2"
+              />
+            </a>
+            <div class="d-flex align-items-center">
+              <a href="#" class="social flex-center">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end top bar -->
+    <!--  Start nav  -->
+    <nav class="normal-nav pt-2">
+      <div class="container">
+        <div
+          class="menu-bar d-flex d-md-none justify-content-between align-items-center"
+        >
+          <!-- if user not logged in -->
+          <!-- <a href="login.html" class="btn btn-primary text-white custom-btn with-shadow"
+            >Login</a
+          > -->
+
+          <!-- if user logged in -->
+          <a href="profile.html" class="d-flex align-items-center user">
+            <div class="flex-shrink-0">
+              <img
+                src="assets/img/user.png"
+                alt="user"
+                class="rounded-circle wh-40"
+              />
+            </div>
+            <div class="flex-grow-1 ms-2">
+              <h6 class="text-dark">Hello ,</h6>
+              <h5 class="fw-normal fs-6">Amany Kassem</h5>
+            </div>
+          </a>
+          <div class="toggle">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class="overlay"></div>
+
+        <div class="menu d-flex flex-wrap align-items-center">
+          <div class="d-none d-md-block">
+            <!-- if user not logged in -->
+            <!-- <a href="login.html" class="btn btn-primary custom-btn with-shadow"
+            >Login</a
+          > -->
+
+            <!-- if user logged in -->
+            <a href="profile.html" class="d-flex align-items-center user">
+              <div class="flex-shrink-0">
+                <img
+                  src="assets/img/user.png"
+                  alt="user"
+                  class="rounded-circle wh-40"
+                />
+              </div>
+              <div class="flex-grow-1 ms-2">
+                <h6 class="text-dark">Hello ,</h6>
+                <h5 class="fw-normal fs-6">Amany Kassem</h5>
+              </div>
+            </a>
+          </div>
+
+          <div class="d-flex align-items-center">
+            <!-- add class active to image-container if user in notifications page -->
+            <div class="image-container position-relative notifications">
+              <!-- add condition to show pulse if there is new notification -->
+              <span class="pulse"></span>
+              <img src="assets/img/bell.svg" alt="bell" class="default-img" />
+              <img src="assets/img/bellAct.svg" alt="bell" class="hover-img" />
+              <div class="dropdown-content">
+                <div
+                  class="d-flex justify-content-between align-items-center flex-wrap"
+                >
+                  <span
+                    class="text-dark d-flex justify-content-between align-items-center fw-500"
+                  >
+                    <img
+                      src="assets/img/bellDot.svg"
+                      alt="bell"
+                      width="18"
+                      class="me-1 rotate-y-180"
+                    />
+                    Your Notification
+                  </span>
+                  <a href="notifications.html" class="hvr-secondary fs-6"
+                    >See More</a
+                  >
+                </div>
+                <ul>
+                  <li class="mt-3 bg-menub shadow p-2">
+                    <a
+                      href="#"
+                      class="d-flex align-items-center flex-column flex-md-row"
+                    >
+                      <div class="flex-shrink-0">
+                        <img
+                          src="assets/img/authBg.png"
+                          alt="image"
+                          class="noti-img"
+                        />
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <div
+                          class="d-flex justify-content-between align-items-center flex-wrap"
+                        >
+                          <h6 class="text-dark fs-15 mb-2">Anesthesia MCQs</h6>
+                          <span class="text-lightDark fs-14 mb-2"
+                            >12/5/2024</span
+                          >
+                        </div>
+                        <p class="fs-6 text-dark fs-14">
+                          You have started the Anesthesia MCQs test and must
+                          continue your progress
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mt-3 bg-menub shadow p-2">
+                    <a
+                      href="#"
+                      class="d-flex align-items-center flex-column flex-md-row"
+                    >
+                      <div class="flex-shrink-0">
+                        <img
+                          src="assets/img/authBg.png"
+                          alt="image"
+                          class="noti-img"
+                        />
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <div
+                          class="d-flex justify-content-between align-items-center flex-wrap"
+                        >
+                          <h6 class="text-dark fs-15 mb-2">Anesthesia MCQs</h6>
+                          <span class="text-lightDark fs-14 mb-2"
+                            >12/5/2024</span
+                          >
+                        </div>
+                        <p class="fs-6 text-dark fs-14">
+                          You have started the Anesthesia MCQs test and must
+                          continue your progress
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mt-3 bg-menub shadow p-2">
+                    <a
+                      href="#"
+                      class="d-flex align-items-center flex-column flex-md-row"
+                    >
+                      <div class="flex-shrink-0">
+                        <img
+                          src="assets/img/authBg.png"
+                          alt="image"
+                          class="noti-img"
+                        />
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <div
+                          class="d-flex justify-content-between align-items-center flex-wrap"
+                        >
+                          <h6 class="text-dark fs-15 mb-2">Anesthesia MCQs</h6>
+                          <span class="text-lightDark fs-14 mb-2"
+                            >12/5/2024</span
+                          >
+                        </div>
+                        <p class="fs-6 text-dark fs-14">
+                          You have started the Anesthesia MCQs test and must
+                          continue your progress
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a href="#" class="image-container position-relative mx-3">
+              <img
+                src="assets/img/search.svg"
+                alt="search"
+                class="default-img"
+              />
+              <img
+                src="assets/img/searchAct.svg"
+                alt="search"
+                class="hover-img"
+              />
+            </a>
+            <!-- add class active to image-container if user in cart page -->
+            <a href="cart.html" class="image-container position-relative">
+              <!-- add condition to show count if some item in cart -->
+              <span class="count">+9</span>
+              <img src="assets/img/cart.svg" alt="cart" class="default-img" />
+              <img src="assets/img/cartAct.svg" alt="cart" class="hover-img" />
+            </a>
+          </div>
+
+          <ul class="menu-links">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="categories.html">Categories Test</a>
+            </li>
+            <li>
+              <a href="plans.html">Plans</a>
+            </li>
+            <li class="active">
+              <a href="blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="syllabus.html">Syllabus</a>
+            </li>
+            <li>
+              <a href="refer.html">
+                <img
+                  src="assets/img/gift.svg"
+                  alt="gift"
+                  width="20"
+                  class="me-1"
+                />
+                Refer & Earn
+              </a>
+            </li>
+            <li>
+              <a href="faq.html">FAQs</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact Us</a>
+            </li>
+            <li>
+              <a href="about.html">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--end nav-->
+
+    <!-- start page unique content -->
+    <main>
+      <!-- start blog header -->
+      <header class="py-4">
+        <div class="container">
+          <div class="categories-header blog-header">
+            <h1 class="text-white fw-bold mb-0 lh-base">
+              Your ultimate guide and resource center
+            </h1>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <p class="fw-bold">
+          Welcome to the ultimate source for passing Pharmacy prometric exam.
+          Our blog provides expert tips, step-by-step strategies, and
+          comprehensive insights to help you excel on your scorecard test
+          questions. See our articles for guidance and support tailored to your
+          exam preparation journey.
+        </p>
+      </div>
+      <!-- end blog header -->
+
+      <!-- start blog content -->
+      <div class="blog-content pt-3 pb-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7 col-lg-8 mb-3 mb-md-0">
+              <!-- loop through blog-info -->
+              <div class="blog-info mb-4">
+                <div class="blog-img-container position-relative">
+                  <img
+                    src="assets/img/whiteLogo.svg"
+                    class="logo"
+                    alt="prometric logo"
+                  />
+                  <img
+                    src="assets/img/blog1.png"
+                    alt="blog image"
+                    class="w-100 blog-img"
+                  />
+                </div>
+
+                <h2 class="fw-500 mt-3 mb-2 lh-base">
+                  Preparations for the Dubai Health Authority exam curriculum
+                </h2>
+                <p class="fs-18 mb-1">
+                  Are you ready to pass your Dubai Health Authority (DHA) exam
+                  and take your healthcare career to new heights in the bustling
+                  city of Dubai? Picture this: You've put your heart and soul
+                  into your career, and now it's time to showcase your expertise
+                  through the DHA exam. But overcoming the complexities of the
+                  exam and the comprehensive DHA exam syllabus can seem like a
+                  daunting mountain to climb. This is where we have
+                  comprehensive
+                  <a href="blogDetails.html" class="hvr-secondary d-inline-flex"
+                    >Read More</a
+                  >
+                </p>
+                <span class="date text-lightDark fs-15"
+                  >Webmaster <i class="fa-solid fa-circle mx-1 fs-6px"></i> May
+                  3, 2024
+                </span>
+              </div>
+              <div class="blog-info mb-4">
+                <div class="blog-img-container position-relative">
+                  <img
+                    src="assets/img/whiteLogo.svg"
+                    class="logo"
+                    alt="prometric logo"
+                  />
+                  <img
+                    src="assets/img/blog2.png"
+                    alt="blog image"
+                    class="w-100 blog-img"
+                  />
+                </div>
+
+                <h2 class="fw-500 mt-3 mb-2 lh-base">
+                  DHA Assistant Nurse Exam Best Preparation Tips
+                </h2>
+                <p class="fs-18 mb-1">
+                  Are you ready to pass your Dubai Health Authority (DHA) exam
+                  and take your healthcare career to new heights in the bustling
+                  city of Dubai? Picture this: You've put your heart and soul
+                  into your career, and now it's time to showcase your expertise
+                  through the DHA exam. But overcoming the complexities of the
+                  exam and the comprehensive DHA exam syllabus can seem like a
+                  daunting mountain to climb. This is where we have
+                  comprehensive
+                  <a href="blogDetails.html" class="hvr-secondary d-inline-flex"
+                    >Read More</a
+                  >
+                </p>
+                <span class="date text-lightDark fs-15"
+                  >Webmaster <i class="fa-solid fa-circle mx-1 fs-6px"></i> May
+                  3, 2024
+                </span>
+              </div>
+
+              <!-- pagination -->
+              <ul class="pagination flex-center mb-2">
+                <li class="page-item disabled">
+                  <a
+                    class="page-link"
+                    href="#"
+                    tabindex="-1"
+                    aria-disabled="true"
+                    ><i class="fa-solid fa-chevron-left"></i
+                  ></a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active" aria-current="page">
+                  <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#"
+                    ><i class="fa-solid fa-chevron-right"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-5 col-lg-4">
+              <div class="blog-categories border border-dark">
+                <h2 class="fw-500 text-center mb-3 lh-base fs-3">
+                  Share on social media
+                </h2>
+                <ul class="flex-center flex-wrap mb-2">
+                  <li class="soc">
+                    <a href="https://www.facebook.com" target="_blank">
+                      <img src="assets/img/facebook.svg" alt="facebook" />
+                    </a>
+                  </li>
+                  <li class="soc">
+                    <a href="https://wa.me/+020100000000" target="_blank">
+                      <img src="assets/img/whats.svg" alt="WhatsApp" />
+                    </a>
+                  </li>
+                  <l class="soc" i>
+                    <a href="https://www.linkedin.com" target="_blank">
+                      <img src="assets/img/linkedin.svg" alt="linkedin" />
+                    </a>
+                  </l>
+                  <li class="soc">
+                    <a href="https://www.twitter.com" target="_blank">
+                      <img src="assets/img/twitter.svg" alt="twitter" />
+                    </a>
+                  </li>
+                </ul>
+                <h4 class="fw-500 mb-3 lh-base">Blog categories</h4>
+                <ul class="blog-categories-list">
+                  <li class="mb-3">
+                    <a href="blogCats.html">
+                      <span class="title">Dubai Health Authority Exam</span>
+                      (15)
+                      <div class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-3">
+                    <a href="blogCats.html">
+                      <span class="title">Dubai Health Authority license</span>
+                      (15)
+                      <div class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-3">
+                    <a href="blogCats.html">
+                      <span class="title">General instructions</span>
+                      (15)
+                      <div class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-3">
+                    <a href="blogCats.html">
+                      <span class="title">Ministry of Health Exam</span>
+                      (15)
+                      <div class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-3">
+                    <a href="blogCats.html">
+                      <span class="title">Prometric exam</span>
+                      (15)
+                      <div class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-3">
+                    <a href="blogCats.html">
+                      <span class="title">Qatari Prometric Exam</span>
+                      (15)
+                      <div class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-3">
+                    <a href="blogCats.html">
+                      <span class="title">QCHP Exam</span>
+                      (15)
+                      <div class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-3">
+                    <a href="blogCats.html">
+                      <span class="title"
+                        >Saudi Dental Licensing Examination (SDLE)</span
+                      >
+                      (15)
+                      <div class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-3">
+                    <a href="blogCats.html">
+                      <span class="title"
+                        >Saudi Medical Licensing Examination (SMLE)</span
+                      >
+                      (15)
+                      <div class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-3">
+                    <a href="blogCats.html">
+                      <span class="title">Saudi Prometric Exams</span>
+                      (15)
+                      <div class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mb-3">
+                    <a href="blogCats.html">
+                      <span class="title">SCFHS Exam and SCFHS Licensing</span>
+                      (15)
+                      <div class="arrow">
+                        <i class="fa-solid fa-arrow-right"></i>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+
+                <h4 class="fw-500 mb-3 lh-base">Recent Post</h4>
+
+                <div class="owl-carousel posts-carusel overflow-hidden">
+                  <div class="item">
+                    <a href="post.html" class="post d-flex align-items-center">
+                      <div class="flex-shrink-0">
+                        <img src="assets/img/blog2.png" alt="doctor" />
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <h5 class="fw-bold lh-base">
+                          DHA Assistant Nurse Exam Best Preparation Tips
+                        </h5>
+                        <span class="text-lightDark">May 3, 2024</span>
+                      </div>
+                    </a>
+
+                    <a href="post.html" class="post d-flex align-items-center">
+                      <div class="flex-shrink-0">
+                        <img src="assets/img/blog2.png" alt="doctor" />
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <h5 class="fw-bold lh-base">
+                          DHA Assistant Nurse Exam Best Preparation Tips
+                        </h5>
+                        <span class="text-lightDark">May 3, 2024</span>
+                      </div>
+                    </a>
+
+                    <a href="post.html" class="post d-flex align-items-center">
+                      <div class="flex-shrink-0">
+                        <img src="assets/img/blog2.png" alt="doctor" />
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <h5 class="fw-bold lh-base">
+                          DHA Assistant Nurse Exam Best Preparation Tips
+                        </h5>
+                        <span class="text-lightDark">May 3, 2024</span>
+                      </div>
+                    </a>
+
+                    <a href="post.html" class="post d-flex align-items-center">
+                      <div class="flex-shrink-0">
+                        <img src="assets/img/blog2.png" alt="doctor" />
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <h5 class="fw-bold lh-base">
+                          DHA Assistant Nurse Exam Best Preparation Tips
+                        </h5>
+                        <span class="text-lightDark">May 3, 2024</span>
+                      </div>
+                    </a>
+
+                    <a href="post.html" class="post d-flex align-items-center">
+                      <div class="flex-shrink-0">
+                        <img src="assets/img/blog2.png" alt="doctor" />
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <h5 class="fw-bold lh-base">
+                          DHA Assistant Nurse Exam Best Preparation Tips
+                        </h5>
+                        <span class="text-lightDark">May 3, 2024</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="post.html" class="post d-flex align-items-center">
+                      <div class="flex-shrink-0">
+                        <img src="assets/img/blog2.png" alt="doctor" />
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <h5 class="fw-bold lh-base">
+                          DHA Assistant Nurse Exam Best Preparation Tips
+                        </h5>
+                        <span class="text-lightDark">May 3, 2024</span>
+                      </div>
+                    </a>
+
+                    <a href="post.html" class="post d-flex align-items-center">
+                      <div class="flex-shrink-0">
+                        <img src="assets/img/blog2.png" alt="doctor" />
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <h5 class="fw-bold lh-base">
+                          DHA Assistant Nurse Exam Best Preparation Tips
+                        </h5>
+                        <span class="text-lightDark">May 3, 2024</span>
+                      </div>
+                    </a>
+
+                    <a href="post.html" class="post d-flex align-items-center">
+                      <div class="flex-shrink-0">
+                        <img src="assets/img/blog2.png" alt="doctor" />
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <h5 class="fw-bold lh-base">
+                          DHA Assistant Nurse Exam Best Preparation Tips
+                        </h5>
+                        <span class="text-lightDark">May 3, 2024</span>
+                      </div>
+                    </a>
+
+                    <a href="post.html" class="post d-flex align-items-center">
+                      <div class="flex-shrink-0">
+                        <img src="assets/img/blog2.png" alt="doctor" />
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <h5 class="fw-bold lh-base">
+                          DHA Assistant Nurse Exam Best Preparation Tips
+                        </h5>
+                        <span class="text-lightDark">May 3, 2024</span>
+                      </div>
+                    </a>
+
+                    <a href="post.html" class="post d-flex align-items-center">
+                      <div class="flex-shrink-0">
+                        <img src="assets/img/blog2.png" alt="doctor" />
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <h5 class="fw-bold lh-base">
+                          DHA Assistant Nurse Exam Best Preparation Tips
+                        </h5>
+                        <span class="text-lightDark">May 3, 2024</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="post.html" class="post d-flex align-items-center">
+                      <div class="flex-shrink-0">
+                        <img src="assets/img/blog2.png" alt="doctor" />
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <h5 class="fw-bold lh-base">
+                          DHA Assistant Nurse Exam Best Preparation Tips
+                        </h5>
+                        <span class="text-lightDark">May 3, 2024</span>
+                      </div>
+                    </a>
+
+                    <a href="post.html" class="post d-flex align-items-center">
+                      <div class="flex-shrink-0">
+                        <img src="assets/img/blog2.png" alt="doctor" />
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <h5 class="fw-bold lh-base">
+                          DHA Assistant Nurse Exam Best Preparation Tips
+                        </h5>
+                        <span class="text-lightDark">May 3, 2024</span>
+                      </div>
+                    </a>
+
+                    <a href="post.html" class="post d-flex align-items-center">
+                      <div class="flex-shrink-0">
+                        <img src="assets/img/blog2.png" alt="doctor" />
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <h5 class="fw-bold lh-base">
+                          DHA Assistant Nurse Exam Best Preparation Tips
+                        </h5>
+                        <span class="text-lightDark">May 3, 2024</span>
+                      </div>
+                    </a>
+
+                    <a href="post.html" class="post d-flex align-items-center">
+                      <div class="flex-shrink-0">
+                        <img src="assets/img/blog2.png" alt="doctor" />
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <h5 class="fw-bold lh-base">
+                          DHA Assistant Nurse Exam Best Preparation Tips
+                        </h5>
+                        <span class="text-lightDark">May 3, 2024</span>
+                      </div>
+                    </a>
+
+                    <a href="post.html" class="post d-flex align-items-center">
+                      <div class="flex-shrink-0">
+                        <img src="assets/img/blog2.png" alt="doctor" />
+                      </div>
+                      <div class="flex-grow-1 ms-3">
+                        <h5 class="fw-bold lh-base">
+                          DHA Assistant Nurse Exam Best Preparation Tips
+                        </h5>
+                        <span class="text-lightDark">May 3, 2024</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <h4 class="fw-500 mb-3 lh-base">Tags</h4>
+                <div class="tags d-flex align-items-center flex-wrap">
+                  <a href="tag.html" class="tag fs-15">
+                    Dubai Health Authority
+                  </a>
+                  <a href="tag.html" class="tag fs-15">
+                    Dubai Health Authority Exam
+                  </a>
+                  <a href="tag.html" class="tag fs-15">
+                    Ministry of Health exam
+                  </a>
+                  <a href="tag.html" class="tag fs-15"> Qatar </a>
+                  <a href="tag.html" class="tag fs-15">
+                    Saudi Prometric Exam
+                  </a>
+                  <a href="tag.html" class="tag fs-15"> SCFHS Exam </a>
+                  <a href="tag.html" class="tag fs-15">
+                    Ministry of Health exam for doctors
+                  </a>
+                  <a href="tag.html" class="tag fs-15">
+                    Ministry of Health license
+                  </a>
+                  <a href="tag.html" class="tag fs-15"> QCHP </a>
+                  <a href="tag.html" class="tag fs-15"> Ministry of Health </a>
+                  <a href="tag.html" class="tag fs-15"> Prometric SMLE </a>
+                  <a href="tag.html" class="tag fs-15"> SMLE </a>
+                  <a href="tag.html" class="tag fs-15"> QCHP Qatar Exam </a>
+                  <a href="tag.html" class="tag fs-15"> Saudi Prometric </a>
+                  <a href="tag.html" class="tag fs-15"> SDLE </a>
+                  <a href="tag.html" class="tag fs-15"> SPLE </a>
+                  <a href="tag.html" class="tag fs-15">
+                    Dubai Health Authority Licensing
+                  </a>
+                  <a href="tag.html" class="tag fs-15">
+                    Dubai Health Authority Prometric Exam
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end blog content -->
+    </main>
+    <!-- end page unique content -->
+
+    <!-- start footer -->
+    <footer class="main-footer bg-footerBg text-white">
+      <div class="container">
+        <div class="row mb-4">
+          <div
+            class="col-lg-5 d-flex flex-column align-items-center align-items-lg-start mb-4 mb-lg-0"
+          >
+            <img
+              src="assets/img/footerLogo.svg"
+              class="footer-logo mb-3"
+              alt="logo"
+            />
+            <h2 class="fw-bold mb-2 lh-base w-75">
+              <span class="text-primary">Start your career </span>
+              as a pharmacist in the Gulf countries
+            </h2>
+          </div>
+          <div class="col-lg-7">
+            <div class="row">
+              <div class="col-md-4 mb-3 mb-md-0 text-center">
+                <h5 class="footer-title mb-3">Quick links</h5>
+                <ul class="footer-links">
+                  <li class="mb-1"><a href="index.html">Home</a></li>
+                  <li class="mb-1"><a href="plans.html">Plans</a></li>
+                  <li class="mb-1">
+                    <a class="active" href="blog.html">Blog</a>
+                  </li>
+                  <li class="mb-1"><a href="syllabus.html">Syllabus</a></li>
+                  <li class="mb-1"><a href="refer.html">Refer & Earn</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4 mb-3 mb-md-0 text-center">
+                <h5 class="footer-title mb-3">prometric pharmacy category</h5>
+                <ul class="footer-links">
+                  <li class="mb-1">
+                    <a href="category.html">SPLE Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">MOH Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">DHA Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">DOH Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">BPLE Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">KMLE Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">QCHP Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">OMSB Exam Preparation MCQ's</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4 mb-3 mb-md-0 text-center">
+                <h5 class="footer-title mb-3">About</h5>
+                <ul class="footer-links">
+                  <li class="mb-1"><a href="about.html">About us</a></li>
+                  <li class="mb-1"><a href="contact.html">Contact us</a></li>
+                  <li class="mb-1"><a href="faq.html">FAQs</a></li>
+                  <li class="mb-1">
+                    <a href="refund.html">Refund policy</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="privacy.html">privacy policy</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div
+              class="d-flex align-items-center justify-content-center justify-content-lg-start flex-wrap"
+            >
+              <a href="#" class="social mb-3 flex-center">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social mb-3 flex-center ms-2">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="social mb-3 flex-center ms-2">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social mb-3 flex-center ms-2">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="#" class="social mb-3 flex-center ms-2">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div
+              class="d-flex align-items-center justify-content-center justify-content-lg-end flex-wrap"
+            >
+              <a href="#" class="pay mb-3 flex-center">
+                <img src="assets/img/Visa.svg" alt="visa" />
+              </a>
+              <a href="#" class="pay mb-3 flex-center ms-2">
+                <img src="assets/img/Mastercard.svg" alt="master" />
+              </a>
+              <a href="#" class="pay mb-3 flex-center ms-2">
+                <img src="assets/img/PayPal.svg" alt="paypal" />
+              </a>
+              <a href="#" class="pay mb-3 flex-center ms-2">
+                <img src="assets/img/Stripe.svg" alt="stripe" />
+              </a>
+              <a href="#" class="pay mb-3 flex-center ms-2">
+                <img src="assets/img/Wise.svg" alt="wise" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright border-menuBg border-top row fs-15 pt-3 mt-2">
+          <div class="col-md-6 mb-2">
+            Prometric pharmacy global@ 2024. All rights reserved.
+          </div>
+          <div class="col-md-6 mb-2 text-md-end">
+            Terms & conditions. privacy policy
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- start footer -->
+
+    <!--start whatsapp  -->
+
+    <div id="wpp-fix" class="shake">
+      <button id="wpp-link" class="wpp-form wpp-link">
+        <span>Chamar no WhatsApp</span>
+        <img src="assets/img/headset.svg" alt="headset" class="headset" />
+      </button>
+
+      <div class="contact-wpp">
+        <div class="head-wpp cursor-pointer" id="close-bt">
+          <img src="assets/img/headset.svg" alt="headset" class="headset" />
+          <h6 class="text-white">Chat with Consultant</h6>
+          <i class="fas fa-angle-down text-white"></i>
+        </div>
+
+        <div class="contacting-info bg-white">
+          <h5 class="fw-bold text-dark mb-0">Chat now:</h5>
+          <a
+            href="https://wa.me/+020100000000"
+            target="_blank"
+            class="btn btn-whatspapp text-white fs-15 my-3"
+          >
+            <i class="fa-brands fa-whatsapp me-2 fs-2"></i>
+            WhatsApp NOW!
+          </a>
+          <h5 class="fw-bold text-dark mb-2">Worktime</h5>
+          <p class="mb-2">Sunday - Thursday, 9am to 7pm</p>
+          <p class="mb-3">
+            click on the options to send an instant Whatsapp message or call at
+          </p>
+          <h5 class="fw-bold text-dark mb-2">+020100000000</h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- end whatsapp -->
+
+    <!-- start scroll-top-->
+    <div id="scroll-top" class="text-center">
+      <i class="fas fa-angle-up"></i>
+    </div>
+    <!-- end scroll-top-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap 5 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="assets/js/scripts.js"></script>
+    <script>
+      $(document).ready(function () {
+        let isRtl = $('html[lang="ar"]').length > 0;
+        $(".posts-carusel").owlCarousel({
+          items: 1,
+          loop: true,
+          rtl: isRtl,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          autoplayTimeout: 3000,
+          smartSpeed: 2000,
+          nav: false,
+          dots: true,
+          animateOut: "animate__fadeOut",
+          animateIn: "animate__fadeIn",
+        });
+      });
+    </script>
+  </body>
+</html>

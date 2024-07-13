@@ -528,7 +528,6 @@ img.lazyload:not([src]) {
 .fs-15 {
   font-size: 15px !important;
 }
-
 .fs-14 {
   font-size: 14px !important;
 }
@@ -846,6 +845,7 @@ html[lang="ar"] {
   color: #fff;
   &:hover,
   &:focus {
+    color: #fff;
     background-color: map_get(colors.$theme-colors, primary);
   }
 }
@@ -872,7 +872,7 @@ html[lang="ar"] {
     &:focus {
       color: #fff;
       background-color: map_get(colors.$theme-colors, primary);
-      transform: scale(0.9);
+      transform: translatey(-4px);
     }
   }
   .pay {
@@ -1184,7 +1184,7 @@ html[lang="ar"] {
   }
 
   h2 {
-    font-size: 1.3rem !important;
+    font-size: 1.2rem !important;
   }
   h5 {
     font-size: 1rem !important;
@@ -1193,7 +1193,7 @@ html[lang="ar"] {
     font-size: 1.1rem !important;
   }
   .fs-3 {
-    font-size: 21px !important;
+    font-size: 22px !important;
   }
   h4 {
     font-size: 16px !important;
@@ -1351,7 +1351,7 @@ html[lang="ar"] {
   .fs-80 {
     font-size: 60px !important;
   }
-  body .btn{
+  body .btn {
     font-size: 16px;
   }
 
