@@ -363,6 +363,10 @@ body {
   transform: rotateY(-180deg);
 }
 
+.rotate-10 {
+  transform: rotate(10deg);
+}
+
 html[lang="ar"] {
   body {
     direction: rtl;
@@ -394,9 +398,9 @@ html[lang="ar"] {
 }
 
 .btn {
-  @include mixins.border-radius(20px);
+  @include mixins.border-radius(15px);
   border: 0;
-  height: 50px;
+  height: 53px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -439,6 +443,7 @@ img {
 :placeholder-shown::-webkit-input-placeholder {
   opacity: 1;
   color: map_get(colors.$theme-colors, placeholder);
+  text-transform: capitalize;
 }
 
 .owl-carousel {
@@ -475,6 +480,32 @@ a {
       color: map_get(colors.$theme-colors, secondary);
     }
   }
+  &.hvr-primary {
+    color: map_get(colors.$theme-colors, secondary);
+    &:hover,
+    &:focus {
+      color: map_get(colors.$theme-colors, primary);
+    }
+  }
+  &.link-bg {
+    background-color: map_get(colors.$theme-colors, lightSecondary);
+    color: map_get(colors.$theme-colors, secondary2);
+    &:hover,
+    &:focus {
+      background-color: map_get(colors.$theme-colors, secondary2);
+      color: #fff;
+    }
+    .img-cont {
+      @include mixins.shape(40px);
+      @extend .flex-center;
+      @include mixins.border-radius(50%);
+      background-color: #fff;
+      overflow: hidden;
+      img {
+        @include mixins.shape(30px);
+      }
+    }
+  }
 }
 
 ul {
@@ -498,6 +529,9 @@ img.lazyload:not([src]) {
 }
 .w-25px {
   width: 25px;
+}
+.w-fit {
+  width: fit-content;
 }
 .wh-40 {
   @include mixins.shape(40px);
@@ -528,8 +562,14 @@ img.lazyload:not([src]) {
 .fs-15 {
   font-size: 15px !important;
 }
+.fs-16 {
+  font-size: 16px !important;
+}
 .fs-14 {
   font-size: 14px !important;
+}
+.fs-13 {
+  font-size: 13px !important;
 }
 h5 {
   font-size: 1.1rem !important;
@@ -703,9 +743,12 @@ h2 {
 /*end loader */
 
 // start form
+.resize-none {
+  resize: none;
+}
 .form-control {
   height: 50px;
-  background: #fff;
+  background: map_get(colors.$theme-colors, menuBg);
   color: map_get(colors.$theme-colors, lightGrayClr);
   @include mixins.border-radius(20px);
   border: 0;
@@ -752,12 +795,13 @@ h2 {
   .select2-selection--single
   .select2-selection__placeholder {
   color: map_get(colors.$theme-colors, placeholder) !important;
+  text-transform: capitalize !important;
 }
 
 .select2-container {
   .select2-selection--single {
     height: 50px;
-    background: #fff;
+    background: map_get(colors.$theme-colors, menuBg);
     @include mixins.border-radius(20px);
     border: 0;
     display: flex;
@@ -1158,8 +1202,10 @@ html[lang="ar"] {
   h6 {
     font-size: 14px;
   }
-  .w-57 {
-    width: 100%;
+  .w-57,
+  .w-75,
+  .w-25 {
+    width: 100% !important;
   }
 
   .flex-sm-1 {
@@ -1183,7 +1229,8 @@ html[lang="ar"] {
     font-size: 17px !important;
   }
 
-  h2 {
+  h2,
+  .fs-5 {
     font-size: 1.2rem !important;
   }
   h5 {
@@ -1216,6 +1263,11 @@ html[lang="ar"] {
   }
   .fs-50 {
     font-size: 25px !important;
+  }
+  .tags-tabs {
+    .nav-link {
+      font-size: 13px;
+    }
   }
 
   .form-control {
@@ -1333,17 +1385,20 @@ html[lang="ar"] {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 17px;
+  }
   .fs-15 {
     font-size: 14px !important;
   }
-  .w-57 {
-    width: 85%;
+  .w-57 , .w-75 {
+    width: 85% !important;
   }
   h3 {
-    font-size: 27px !important;
+    font-size: 25px !important;
   }
   h4 {
-    font-size: 20px !important;
+    font-size: 19px !important;
   }
   h2 {
     font-size: 1.4rem !important;

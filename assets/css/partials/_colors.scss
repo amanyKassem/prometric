@@ -3,13 +3,18 @@
 $theme-colors: (
   primary: #2ecc9b,
   lightPrimary: #EAFAF5,
+  lightPrimary2: #F2F5FF,
   darkPrimary: #104736,
   secondary: #7d9dff,
+  secondary2: #2455EB,
+  lightSecondary: #ECF0FF,
+  lightSecondary2: #D7E1FF,
   info: #01b8ff,
   light: #eff1f9,
   warning: #eb6f33,
   yellowClr: #E1E515,
   whatspapp: #2DD55C,
+  pass: #81be2e,
   danger: #EE1414,
   dark: #313131,
   lightDark: #646464,
@@ -97,8 +102,15 @@ $theme-colors: (
     &:hover,
     &:active,
     &:focus {
-      background-color: shade-color($value, 5.5%) !important;
-      // color: $value !important;
+      background-color: shade-color($value, 15%) !important;
+    }
+    @if $color == menuBg {
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: #2ecc9b !important;
+        color: #fff !important;
+      }
     }
   }
 }

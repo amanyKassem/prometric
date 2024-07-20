@@ -61,6 +61,12 @@ $(document).ready(function () {
     }
   });
 
+  // add to cart
+  $(".add-to-cart").on("click", function (e) {
+    e.preventDefault();
+    $(this).toggleClass("active");
+  });
+
   //scroll top
   var scrollButton = $("#scroll-top");
   $(window).scroll(function () {
@@ -81,6 +87,7 @@ $(document).ready(function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  // notification dropdown
   const imageContainer = document.querySelector(".image-container");
   const dropdownContent = document.querySelector(".dropdown-content");
   if (imageContainer) {
