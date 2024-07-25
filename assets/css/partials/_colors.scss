@@ -16,6 +16,8 @@ $theme-colors: (
   whatspapp: #2DD55C,
   pass: #81be2e,
   danger: #EE1414,
+  darkDanger: #C70A0A,
+  lightDanger: #FFF1F1,
   dark: #313131,
   lightDark: #646464,
   grayClr: #4e4e4e,
@@ -32,8 +34,8 @@ $theme-colors: (
   selectionBg: #000,
   selectionColor: #fff,
   scrollTrackBg: #f1f1f1,
-  scrollThumbBg: #888,
-  scrollThumbHoverBg: #555,
+  scrollThumbBg: #b5b5b5,
+  scrollThumbHoverBg: #a2a2a2,
 );
 
 // Tint a color: mix a color with white
@@ -109,6 +111,15 @@ $theme-colors: (
       &:active,
       &:focus {
         background-color: #2ecc9b !important;
+        color: #fff !important;
+      }
+    }
+    @if $color == lightDanger {
+      color: #EE1414 !important;
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: #EE1414 !important;
         color: #fff !important;
       }
     }

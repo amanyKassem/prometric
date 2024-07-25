@@ -199,7 +199,7 @@
                         type="tel"
                         class="form-control"
                         id="phone"
-                        placeholder="0123456789"
+                        placeholder="your phone number"
                       />
                     </div>
                   </div>
@@ -213,7 +213,7 @@
                       type="email"
                       class="form-control"
                       id="emai"
-                      placeholder="aaa@example.com"
+                      placeholder="your email"
                     />
                   </div>
                 </div>
@@ -227,7 +227,7 @@
                         type="password"
                         id="password"
                         class="form-control password-radius"
-                        placeholder="**********"
+                        placeholder="your password"
                       />
                       <span
                         class="input-group-text bg-white border-0 cursor-pointer icon"
@@ -248,13 +248,49 @@
                         type="password"
                         id="confirmPass"
                         class="form-control password-radius"
-                        placeholder="**********"
+                        placeholder="your password"
                       />
                       <span
                         class="input-group-text bg-white border-0 cursor-pointer icon"
                       >
                         <i class="fa-regular fa-eye toggle-password"></i>
                       </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-3">
+                    <h5>Are you coming by invitation code?</h5>
+                    <label for="code" class="form-label"
+                      >Please write the invitation code sent to you</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="code"
+                      placeholder="your code"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="mb-3">
+                    <div class="mb-3">
+                      <label for="exam-category" class="form-label"
+                        >Select your prometric pharmacy License category exam
+                        <span class="text-danger">*</span></label
+                      >
+
+                      <select
+                        id="exam-category"
+                        class="select2 w-100"
+                        data-placeholder="select exam category"
+                      >
+                        <option label="select exam category"></option>
+                        <option value="exam1">
+                          SPLE Exam Preparation MCQ's
+                        </option>
+                        <option value="exam2">SPLE Exam MCQ's</option>
+                      </select>
                     </div>
                   </div>
                 </div>
