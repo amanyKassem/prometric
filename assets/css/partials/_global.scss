@@ -550,6 +550,9 @@ img.lazyload:not([src]) {
 .wh-40 {
   @include mixins.shape(40px);
 }
+.wh-150 {
+  @include mixins.shape(150px);
+}
 .fw-500 {
   font-weight: 500;
 }
@@ -625,7 +628,9 @@ h2 {
 .black-img {
   filter: brightness(0);
 }
-
+.white-img {
+  filter: brightness(1);
+}
 /* end common style*/
 
 /*start loader */
@@ -1259,7 +1264,9 @@ html[lang="ar"] {
   .wh-40 {
     @include mixins.shape(35px);
   }
-
+  .wh-150 {
+    @include mixins.shape(90px);
+  }
   h3,
   .fs-18 {
     font-size: 17px !important;
@@ -1490,6 +1497,12 @@ html[lang="ar"] {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
+  .wh-150 {
+    @include mixins.shape(130px);
+  }
+  .w-50 {
+    width: 75% !important;
+  }
   .main-footer {
     .footer-logo {
       width: 155px;

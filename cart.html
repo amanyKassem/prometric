@@ -320,7 +320,10 @@
               />
             </a>
             <!-- add class active to image-container if user in cart page -->
-            <a href="cart.html" class="image-container position-relative active">
+            <a
+              href="cart.html"
+              class="image-container position-relative active"
+            >
               <!-- add condition to show count if some item in cart -->
               <span class="count">+9</span>
               <img src="assets/img/cart.svg" alt="cart" class="default-img" />
@@ -378,6 +381,7 @@
           <div
             class="pay-progress d-flex align-items-center justify-content-center w-75 mx-auto mb-4"
           >
+            <!-- text-secondary class -->
             <div class="pay-item text-secondary d-flex align-items-center">
               <img
                 src="assets/img/cartBlue.svg"
@@ -422,124 +426,132 @@
                   <span class="ms-3">3 Items</span>
                 </h5>
 
-                <div
-                  class="cart-item mt-3 bg-menuBg p-2 d-flex flex-column flex-md-row"
-                >
-                  <div class="flex-shrink-0 position-relative">
-                    <img
-                      src="assets/img/exam1.jpg"
-                      alt="image"
-                      class="cart-img mb-3 mb-md-0"
-                    />
-                  </div>
-                  <div class="flex-grow-1 ms-3">
-                    <div
-                      class="d-flex flex-column justify-content-between h-100"
-                    >
-                      <div class="d-flex flex-column">
-                        <div
-                          class="d-flex justify-content-between align-items-center flex-wrap"
-                        >
-                          <h5 class="text-dark fw-bold mb-2 me-3">KSA SPLE</h5>
-                          <div class="price mb-2">
-                            <span
-                              class="old text-lightGrayClr text-decoration-line-through me-2"
-                              >$59</span
-                            >
-                            <span class="new">$79</span>
-                          </div>
-                        </div>
-                        <span class="fs-15 mb-1">Full Package</span>
-                      </div>
-                      <button
-                        class="btn btn-lightDanger remove-item w-fit h-auto p-2 fs-16 mt-3"
+                <div class="cart-items">
+                  <div
+                    class="cart-item mt-3 bg-menuBg p-2 d-flex flex-column flex-md-row"
+                  >
+                    <div class="flex-shrink-0 position-relative">
+                      <img
+                        src="assets/img/exam1.jpg"
+                        alt="image"
+                        class="cart-img mb-3 mb-md-0"
+                      />
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <div
+                        class="d-flex flex-column justify-content-between h-100"
                       >
-                        <i class="fa-regular fa-trash-can me-2"></i>
-                        Remove
-                      </button>
+                        <div class="d-flex flex-column">
+                          <div
+                            class="d-flex justify-content-between align-items-center flex-wrap"
+                          >
+                            <h5 class="text-dark fw-bold mb-2 me-3">
+                              KSA SPLE
+                            </h5>
+                            <div class="price mb-2">
+                              <span
+                                class="old text-lightGrayClr text-decoration-line-through me-2"
+                                >$59</span
+                              >
+                              <span class="new">$79</span>
+                            </div>
+                          </div>
+                          <span class="fs-15 mb-1">Full Package</span>
+                        </div>
+                        <button
+                          class="btn btn-lightDanger remove-item w-fit h-auto p-2 fs-16 mt-3"
+                        >
+                          <i class="fa-regular fa-trash-can me-2"></i>
+                          Remove
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  class="cart-item mt-3 bg-menuBg p-2 d-flex flex-column flex-md-row"
-                >
-                  <div class="flex-shrink-0 position-relative">
-                    <div
-                      class="offer bg-danger text-white fw-500 rounded-30 fs-14"
-                    >
-                      40%
-                    </div>
-                    <img
-                      src="assets/img/exam4.jpg"
-                      alt="image"
-                      class="cart-img mb-3 mb-md-0"
-                    />
-                  </div>
-                  <div class="flex-grow-1 ms-3">
-                    <div
-                      class="d-flex flex-column justify-content-between h-100"
-                    >
-                      <div class="d-flex flex-column">
-                        <div
-                          class="d-flex justify-content-between align-items-center flex-wrap"
-                        >
-                          <h5 class="text-dark fw-bold mb-2 me-3">KSA SPLE</h5>
-                          <div class="price mb-2">
-                            <span
-                              class="old text-lightGrayClr text-decoration-line-through me-2"
-                              >$59</span
-                            >
-                            <span class="new">$79</span>
-                          </div>
-                        </div>
-                        <span class="fs-15 mb-1">Anesthesia MCQs</span>
-                        <span class="fs-15">Package for one Chapter</span>
-                      </div>
-                      <button
-                        class="btn btn-lightDanger remove-item w-fit h-auto p-2 fs-16 mt-3"
+                  <div
+                    class="cart-item mt-3 bg-menuBg p-2 d-flex flex-column flex-md-row"
+                  >
+                    <div class="flex-shrink-0 position-relative">
+                      <div
+                        class="offer bg-danger text-white fw-500 rounded-30 fs-14"
                       >
-                        <i class="fa-regular fa-trash-can me-2"></i>
-                        Remove
-                      </button>
+                        40%
+                      </div>
+                      <img
+                        src="assets/img/exam4.jpg"
+                        alt="image"
+                        class="cart-img mb-3 mb-md-0"
+                      />
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <div
+                        class="d-flex flex-column justify-content-between h-100"
+                      >
+                        <div class="d-flex flex-column">
+                          <div
+                            class="d-flex justify-content-between align-items-center flex-wrap"
+                          >
+                            <h5 class="text-dark fw-bold mb-2 me-3">
+                              KSA SPLE
+                            </h5>
+                            <div class="price mb-2">
+                              <span
+                                class="old text-lightGrayClr text-decoration-line-through me-2"
+                                >$59</span
+                              >
+                              <span class="new">$79</span>
+                            </div>
+                          </div>
+                          <span class="fs-15 mb-1">Anesthesia MCQs</span>
+                          <span class="fs-15">Package for one Chapter</span>
+                        </div>
+                        <button
+                          class="btn btn-lightDanger remove-item w-fit h-auto p-2 fs-16 mt-3"
+                        >
+                          <i class="fa-regular fa-trash-can me-2"></i>
+                          Remove
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div
-                  class="cart-item mt-3 bg-menuBg p-2 d-flex flex-column flex-md-row"
-                >
-                  <div class="flex-shrink-0 position-relative">
-                    <img
-                      src="assets/img/exam3.jpg"
-                      alt="image"
-                      class="cart-img mb-3 mb-md-0"
-                    />
-                  </div>
-                  <div class="flex-grow-1 ms-3">
-                    <div
-                      class="d-flex flex-column justify-content-between h-100"
-                    >
-                      <div class="d-flex flex-column">
-                        <div
-                          class="d-flex justify-content-between align-items-center flex-wrap"
-                        >
-                          <h5 class="text-dark fw-bold mb-2 me-3">KSA SPLE</h5>
-                          <div class="price mb-2">
-                            <span
-                              class="old text-lightGrayClr text-decoration-line-through me-2"
-                              >$59</span
-                            >
-                            <span class="new">$79</span>
-                          </div>
-                        </div>
-                        <span class="fs-15 mb-1">All Chapters</span>
-                        <span class="fs-15">Comprehensive package</span>
-                      </div>
-                      <button
-                        class="btn btn-lightDanger remove-item w-fit h-auto p-2 fs-16 mt-3"
+                  <div
+                    class="cart-item mt-3 bg-menuBg p-2 d-flex flex-column flex-md-row"
+                  >
+                    <div class="flex-shrink-0 position-relative">
+                      <img
+                        src="assets/img/exam3.jpg"
+                        alt="image"
+                        class="cart-img mb-3 mb-md-0"
+                      />
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <div
+                        class="d-flex flex-column justify-content-between h-100"
                       >
-                        <i class="fa-regular fa-trash-can me-2"></i>
-                        Remove
-                      </button>
+                        <div class="d-flex flex-column">
+                          <div
+                            class="d-flex justify-content-between align-items-center flex-wrap"
+                          >
+                            <h5 class="text-dark fw-bold mb-2 me-3">
+                              KSA SPLE
+                            </h5>
+                            <div class="price mb-2">
+                              <span
+                                class="old text-lightGrayClr text-decoration-line-through me-2"
+                                >$59</span
+                              >
+                              <span class="new">$79</span>
+                            </div>
+                          </div>
+                          <span class="fs-15 mb-1">All Chapters</span>
+                          <span class="fs-15">Comprehensive package</span>
+                        </div>
+                        <button
+                          class="btn btn-lightDanger remove-item w-fit h-auto p-2 fs-16 mt-3"
+                        >
+                          <i class="fa-regular fa-trash-can me-2"></i>
+                          Remove
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -581,10 +593,10 @@
                     <span class="ms-2 mb-2">$467</span>
                   </h5>
                   <a
-                    href="payment.html"
+                    href="checkout.html"
                     class="btn btn-primary mb-3 with-shadow"
                   >
-                    Checkout
+                    Checkout Now!
                   </a>
                   <span class="text-pass fs-16"
                     >You saved 30% with this order</span

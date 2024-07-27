@@ -150,7 +150,7 @@
           > -->
 
           <!-- if user logged in -->
-          <a href="profile.html" class="d-flex align-items-center user">
+          <a href="profile.html" class="d-flex align-items-center user active">
             <div class="flex-shrink-0">
               <img
                 src="assets/img/user.png"
@@ -178,7 +178,10 @@
           > -->
 
             <!-- if user logged in -->
-            <a href="profile.html" class="d-flex align-items-center user">
+            <a
+              href="profile.html"
+              class="d-flex align-items-center user active"
+            >
               <div class="flex-shrink-0">
                 <img
                   src="assets/img/user.png"
@@ -335,7 +338,7 @@
             <li>
               <a href="categories.html">Categories Test</a>
             </li>
-            <li class="active">
+            <li>
               <a href="plans.html">Plans</a>
             </li>
             <li>
@@ -372,109 +375,190 @@
 
     <!-- start page unique content -->
     <main>
-      <!-- start checkout -->
-      <div class="checkout py-4">
+      <!-- start profile -->
+      <div class="profile">
         <div class="container">
-          <div
-            class="pay-progress d-flex align-items-center justify-content-center w-75 mx-auto mb-4"
-          >
-            <!-- text-secondary class -->
-            <div class="pay-item text-secondary d-flex align-items-center">
-              <img
-                src="assets/img/cartBlue.svg"
-                alt="cart"
-                width="20"
-                class="me-1"
-              />
-              Cart
+          <div class="d-flex flex-column flex-md-row">
+            <div class="side-menu">
+              <ul class="links">
+                <li>
+                  <a
+                    href="settings.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/user-gray.svg"
+                      alt="user"
+                      class="default-img mb-1"
+                    />
+                    <img
+                      src="assets/img/user-active.svg"
+                      alt="user"
+                      class="hover-img mb-1"
+                    />
+                    Profile Settings
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="wallet.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/wallet-gray.svg"
+                      alt="wallet"
+                      class="default-img mb-1"
+                    />
+                    <img
+                      src="assets/img/wallet-active.svg"
+                      alt="wallet"
+                      class="hover-img mb-1"
+                    />
+                    Wallet
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="messages.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/message-gray.svg"
+                      alt="message"
+                      class="default-img mb-1"
+                    />
+                    <img
+                      src="assets/img/message-active.svg"
+                      alt="message"
+                      class="hover-img mb-1"
+                    />
+                    Messages
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="invitation.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/invitation-gray.svg"
+                      alt="invitation"
+                      class="default-img mb-1"
+                    />
+                    <img
+                      src="assets/img/invitation-active.svg"
+                      alt="invitation"
+                      class="hover-img mb-1"
+                    />
+                    Invitation Code
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="profile.html#chapters"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/chapters-gray.svg"
+                      alt="chapters"
+                      class="default-img mb-1"
+                    />
+                    <img
+                      src="assets/img/chapters-active.svg"
+                      alt="chapters"
+                      class="hover-img mb-1"
+                    />
+                    Current Chapters
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="profile.html#subscription"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/subscribe-gray.svg"
+                      alt="subscription"
+                      class="default-img mb-1"
+                    />
+                    <img
+                      src="assets/img/subscribe-active.svg"
+                      alt="subscription"
+                      class="hover-img mb-1"
+                    />
+                    My Subscription
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="payMethod.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/cards-gray.svg"
+                      alt="payment"
+                      class="default-img mb-1"
+                    />
+                    <img
+                      src="assets/img/cards-active.svg"
+                      alt="payment"
+                      class="hover-img mb-1"
+                    />
+                    Payment Method
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="login.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/logout-gray.svg"
+                      alt="logout"
+                      class="default-img mb-1"
+                    />
+                    <img
+                      src="assets/img/logout-active.svg"
+                      alt="logout"
+                      class="hover-img mb-1"
+                    />
+                    Log Out
+                  </a>
+                </li>
+              </ul>
             </div>
-            <!-- active class  -->
-            <div class="check active position-relative">
-              <i class="fa-solid fa-circle-check text-secondary fs-14"></i>
-            </div>
-            <!-- text-secondary class -->
-            <div class="pay-item text-secondary d-flex align-items-center">
-              <img
-                src="assets/img/task-square-active.svg"
-                alt="task"
-                width="20"
-                class="me-1"
-              />
-              Checkout
-            </div>
-            <div class="check position-relative">
-              <i class="fa-solid fa-circle-check text-placeholder fs-14"></i>
-            </div>
-            <div class="pay-item text-placeholder d-flex align-items-center">
-              <img
-                src="assets/img/discount-shape.svg"
-                alt="discount"
-                width="20"
-                class="me-1"
-              />
-              Payment method
-            </div>
-            <div class="check position-relative">
-              <i class="fa-solid fa-circle-check text-placeholder fs-14"></i>
-            </div>
-            <div class="pay-item text-placeholder d-flex align-items-center">
-              <img
-                src="assets/img/receipt.svg"
-                alt="receipt"
-                width="20"
-                class="me-1"
-              />
-              Invoice Order
-            </div>
-          </div>
-          <div class="border border-dark rounded-30 p-3 p-lg-4">
-            <div
-              class="category-name bg-lightGrayClr3 fs-15 fw-500 p-2 p-md-3 rounded-5 mb-3"
-            >
-              SPLE Exam Preparation MCQ's
-            </div>
-            <h5
-              class="fw-bold fs-5 mb-3 d-flex align-items-center justify-content-between"
-            >
-              Select Chapters
-              <button
-                class="add-chapter btn h-auto p-0 w-fit fs-4 text-secondary ms-3 scale-hvr"
+            <div class="link-content flex-grow-1">
+              <div
+                class="profile-banner bg-lightSecondary3 position-relative"
               >
-                <i class="fa-solid fa-square-plus"></i>
-              </button>
-            </h5>
-            <div class="select-with-border">
-              <select
-                id="exam-chapters"
-                class="select2 w-100"
-                data-placeholder="select Chapters"
-              >
-                <option label="select Chapters"></option>
-                <option value="chapter1">SPLE Exam Preparation MCQ's</option>
-                <option value="chapter2">SPLE Exam MCQ's</option>
-              </select>
+                <img
+                  src="assets/img/doctorBooks.png"
+                  alt="doctor"
+                  class="doctor-books"
+                />
+                <div class="content position-relative overflow-hidden">
+                  <div class="top-circles"></div>
+                  <div class="row position-relative z-index-2">
+                    <div class="col-md-9">
+                      <img
+                        src="assets/img/welcome.svg"
+                        alt="welcome"
+                        class="welcome-img"
+                      />
+                      <h2 class="fw-bold text-black">Hello, Amany Kassem</h2>
+                      <p class="text-black mb-0 fs-5">
+                        Today is a great day to complete learning activities
+                      </p>
+                    </div>
+                  </div>
+                  <div class="bottom-circles"></div>
+                </div>
+              </div>
             </div>
-            <hr class="my-4" />
-            <ul id="chapter-list">
-              <!-- Chapters will be added here dynamically -->
-            </ul>
-            <div class="error text-danger mt-2 fs-15">
-              Chapter is already added.
-            </div>
-
-            <a
-              href="payment.html"
-              class="btn btn-primary w-25 mt-4 with-shadow mx-auto"
-              >Complete payment</a
-            >
-            <a href="index.html" class="w-fit mt-4 hvr-primary d-block"
-              ><i class="fa-solid fa-arrow-left-long me-2"></i> Continue
-              browsing</a
-            >
           </div>
         </div>
       </div>
-      <!-- end checkout -->
+      <!-- end profile -->
     </main>
     <!-- end page unique content -->
 
@@ -502,7 +586,7 @@
                 <ul class="footer-links">
                   <li class="mb-1"><a href="index.html">Home</a></li>
                   <li class="mb-1">
-                    <a class="active" href="plans.html">Plans</a>
+                    <a href="plans.html">Plans</a>
                   </li>
                   <li class="mb-1"><a href="blog.html">Blog</a></li>
                   <li class="mb-1"><a href="syllabus.html">Syllabus</a></li>
@@ -669,52 +753,7 @@
 
     <script src="assets/js/scripts.js"></script>
     <script>
-      $(document).ready(function () {
-        // select2
-        $(".select2").select2({
-          width: "100%",
-        });
-
-        // Event listener for the add button
-        $(".add-chapter").on("click", function () {
-          const selectedOption = $("#exam-chapters option:selected");
-          const value = selectedOption.val();
-          const text = selectedOption.text();
-
-          if (value) {
-            addChapterToList(value, text);
-            // Clear the selection after adding
-            $("#exam-chapters").val(null).trigger("change");
-          }
-        });
-
-        // Function to add chapter to the list
-        function addChapterToList(value, text) {
-          // Check if the chapter is already added
-          if ($('#chapter-list li[data-value="' + value + '"]').length > 0) {
-            $(".error").fadeIn().delay(2000).fadeOut();
-            return;
-          }
-
-          const listItem = $(
-            "<li class='bg-lightGrayClr3 fs-15 fw-500 p-2 p-md-3 rounded-5 mb-3 d-flex justify-content-between align-items-center'>"
-          ).attr("data-value", value).html(`
-            <span><i class="fa-solid fa-circle-check text-placeholder me-2"></i>${text}</span>
-            <button class="delete-chapter btn h-auto p-0 w-fit text-danger ms-3 scale-hvr">
-              <i class="fa-regular fa-trash-can"></i>
-            </button>
-          `);
-
-          // Event listener for the delete button
-          listItem.find(".delete-chapter").on("click", function () {
-            listItem.slideUp(300, function () {
-              $(this).remove();
-            });
-          });
-
-          $("#chapter-list").append(listItem);
-        }
-      });
+      $(document).ready(function () {});
     </script>
   </body>
 </html>
