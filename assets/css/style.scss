@@ -9,12 +9,12 @@ nav {
   position: sticky;
   background: map_get(colors.$theme-colors, menuBg);
   width: 100%;
-  z-index: 2;
+  z-index: 3;
   // overflow: hidden;
   display: flex;
   top: 70px;
   align-items: center;
-  @include mixins.transition(all 0.5s ease-in-out);
+  @extend .general-transition;
   @include mixins.prefix(
     box-shadow,
     0px 3px 4px 0px rgba(0, 0, 0, 0.06),
@@ -38,7 +38,7 @@ nav {
           font-size: 18px;
           text-transform: capitalize;
           color: map_get(colors.$theme-colors, dark);
-          @include mixins.transition(all 0.5s ease-in-out);
+          @extend .general-transition;
         }
         &.active,
         &:hover {
@@ -163,7 +163,7 @@ nav {
   }
   ul {
     li {
-      @include mixins.transition(all 0.5s ease-in-out);
+      @extend .general-transition;
       @include mixins.border-radius(20px);
       .noti-img {
         @include mixins.shape(78px);
@@ -200,7 +200,7 @@ html[lang="ar"] {
     border: 2px solid map_get(colors.$theme-colors, dark);
   }
   h5 {
-    @include mixins.transition(all 0.5s ease-in-out);
+    @extend .general-transition;
     color: map_get(colors.$theme-colors, lightDark);
   }
   &:hover,
@@ -340,7 +340,7 @@ html[lang="ar"] {
   min-height: 120px;
   @include mixins.border-radius(30px);
   background-color: map_get(colors.$theme-colors, menuBg);
-  @include mixins.transition(all 0.5s ease-in-out);
+  @extend .general-transition;
   &:hover {
     background-color: map_get(colors.$theme-colors, dark);
     color: #fff;
@@ -368,7 +368,7 @@ html[dir="rtl"] {
     min-height: 110px;
     color: map_get(colors.$theme-colors, dark);
     background-color: map_get(colors.$theme-colors, lightGrayClr3);
-    @include mixins.transition(all 0.5s ease-in-out);
+    @extend .general-transition;
     @include mixins.border-radius(30px);
     font-weight: 500;
     .img-container {
@@ -530,14 +530,14 @@ html[lang="ar"] {
         background-color: map_get(colors.$theme-colors, secondary);
         color: map_get(colors.$theme-colors, dark);
         padding: 5px;
-        @include mixins.transition(all 0.5s ease-in-out);
+        @extend .general-transition;
         .tries {
           color: #fff;
           font-size: 14px;
         }
       }
       .last-info {
-        @include mixins.transition(all 0.5s ease-in-out);
+        @extend .general-transition;
         background-color: map_get(colors.$theme-colors, menuBg);
         color: map_get(colors.$theme-colors, dark);
         padding-block: 5px;
@@ -592,7 +592,7 @@ html[lang="ar"] {
     @include mixins.shape(38px);
     @extend .flex-center;
     padding: 3px;
-    @include mixins.transition(all 0.5s ease-in-out);
+    @extend .general-transition;
     img {
       @include mixins.shape(34px);
     }
@@ -752,12 +752,12 @@ html[lang="ar"] {
 }
 
 .plan {
-  @include mixins.transition(all 0.5s ease-in-out);
+  @extend .general-transition;
   background-color: map_get(colors.$theme-colors, lightGrayClr3);
   border: 1px solid map_get(colors.$theme-colors, dark);
   padding: 25px;
   .number {
-    @include mixins.transition(all 0.5s ease-in-out);
+    @extend .general-transition;
     padding: 5px;
     @extend .flex-center;
     background-color: map_get(colors.$theme-colors, dark);
@@ -783,7 +783,7 @@ html[lang="ar"] {
       font-size: 20px !important;
     }
     p {
-      @include mixins.transition(all 0.5s ease-in-out);
+      @extend .general-transition;
       flex: 2;
       font-size: 16px;
       .new {
@@ -862,7 +862,7 @@ html[lang="ar"] {
 
 .page-link {
   border: 0;
-  @include mixins.transition(all 0.5s ease-in-out);
+  @extend .general-transition;
   @include mixins.border-radius(50%);
   @include mixins.shape(35px);
   @extend .flex-center;
@@ -878,6 +878,8 @@ html[lang="ar"] {
   }
 }
 .page-item {
+  z-index: 1;
+
   &.active {
     .page-link {
       color: map_get(colors.$theme-colors, primary);
@@ -923,7 +925,7 @@ html[lang="ar"] {
         width: 65%;
       }
       .arrow {
-        @include mixins.transition(all 0.5s ease-in-out);
+        @extend .general-transition;
         @extend .flex-center;
         @include mixins.border-radius(50%);
         @include mixins.shape(35px);
@@ -974,7 +976,7 @@ html[lang="ar"] {
   }
 
   h5 {
-    @include mixins.transition(all 0.5s ease-in-out);
+    @extend .general-transition;
     color: map_get(colors.$theme-colors, dark);
   }
 
@@ -1067,7 +1069,7 @@ html[dir="rtl"] {
     padding-block: 0;
     border: 0;
     margin-bottom: 0;
-    @include mixins.transition(all 0.5s ease-in-out);
+    @extend .general-transition;
     @include mixins.border-radius(0);
     color: map_get(colors.$theme-colors, dark);
     &:focus-visible {
@@ -1244,7 +1246,7 @@ html[dir="rtl"] {
 }
 .refer-content {
   .refer-profit {
-    @include mixins.transition(all 0.5s ease-in-out);
+    @extend .general-transition;
     img {
       height: 90px;
     }
@@ -1411,7 +1413,7 @@ html[dir="rtl"] {
     .info-icon {
       @include mixins.shape(60px);
       @include mixins.border-radius(50%);
-      @include mixins.transition(all 0.5s ease-in-out);
+      @extend .general-transition;
       @extend .flex-center;
       color: map_get(colors.$theme-colors, darkPrimary);
       background-color: map_get(colors.$theme-colors, lightPrimary);
@@ -1455,7 +1457,7 @@ html[dir="rtl"] {
 .feature {
   min-height: 160px;
   .feat-icon {
-    @include mixins.transition(all 0.5s ease-in-out);
+    @extend .general-transition;
     @include mixins.shape(40px);
     @include mixins.border-radius(50%);
     @extend .flex-center;
@@ -1770,7 +1772,7 @@ html[lang="ar"] {
   border: 1px solid map_get(colors.$theme-colors, lightGrayClr);
   background: map_get(colors.$theme-colors, menuBg);
   @include mixins.border-radius(50px);
-  @include mixins.transition(all 0.5s ease-in-out);
+  @extend .general-transition;
   &::before {
     content: "";
     position: absolute;
@@ -1866,7 +1868,7 @@ html[dir="rtl"] {
 .notifications {
   ul {
     li {
-      @include mixins.prefix(box-shadow, 0px 12px 12px 0px rgba(0, 0, 0, 0.08));
+      @extend .genral-shadow;
       @include mixins.border-radius(20px);
       .noti-img {
         @include mixins.shape(80px);
@@ -1878,13 +1880,14 @@ html[dir="rtl"] {
 // end checkout page
 
 // start cart page
-.cart-items{
+.cart-items {
   max-height: 520px;
   overflow-y: auto;
 }
 .cart-item {
-  @include mixins.prefix(box-shadow, 0px 12px 12px 0px rgba(0, 0, 0, 0.08));
+  @extend .genral-shadow;
   @include mixins.border-radius(20px);
+  align-items: center;
   .cart-img {
     width: 210px;
     height: 140px;
@@ -1920,11 +1923,36 @@ html[dir="rtl"] {
 }
 // end cart page
 
+// start payment page
+.card-img {
+  width: 60px;
+  height: 35px;
+}
+.pay-check {
+  border: 1px solid map_get(colors.$theme-colors, placeholder);
+  background-color: map_get(colors.$theme-colors, menuBg);
+  @include mixins.border-radius(20px);
+  padding-block: 12px;
+  padding-inline: 40px 15px;
+  &.active {
+    border-color: map_get(colors.$theme-colors, primary);
+    background-color: map_get(colors.$theme-colors, lightPrimary);
+  }
+  .form-check-input {
+    flex-shrink: 0;
+  }
+}
+.pay-form {
+  display: none;
+}
+// end payment page
+
 // start profile
 .side-menu {
   @include mixins.prefix(box-shadow, 0px 12px 12px 0px rgba(20, 20, 20, 0.14));
   padding: 30px 10px 0;
   width: 130px;
+  flex-shrink: 0;
   .links {
     li {
       margin-bottom: 30px;
@@ -1972,7 +2000,269 @@ html[dir="rtl"] {
     right: 50px;
     height: 113%;
   }
+  .top-circles {
+    &:before {
+      top: -45px;
+      width: 350px;
+      height: 350px;
+    }
+    &:after {
+      width: 270px;
+      height: 270px;
+    }
+  }
 }
+
+html[dir="rtl"] {
+  .profile-banner {
+    .doctor-books {
+      right: auto;
+      left: 50px;
+      transform: rotateY(-180deg);
+    }
+  }
+}
+
+.discount-block {
+  @include mixins.border-radius(20px);
+  background: linear-gradient(
+    271deg,
+    map_get(colors.$theme-colors, blueLight) 0%,
+    #718de6 68.68%,
+    #d7e1ff 100%
+  );
+  margin-block: 35px 20px;
+  padding: 10px 50px 10px 30px;
+  .discount-img {
+    width: 130px;
+  }
+  p {
+    font-size: 20px;
+  }
+}
+
+.cart-item {
+  .with-progress {
+    .circle {
+      width: 45px;
+      height: 45px;
+    }
+    .expiration-circle {
+      .percentage {
+        font-size: 25px;
+      }
+    }
+  }
+  .progress-bar-small {
+    height: 12px;
+  }
+}
+
+.percentage-circle {
+  .progress-container {
+    position: relative;
+  }
+  .progress-circle {
+    fill: none;
+    stroke-width: 10;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
+  .background-circle {
+    stroke: #e6e6e6;
+  }
+  .foreground-circle {
+    stroke-linecap: round;
+    stroke: url(#gradient);
+    stroke-dasharray: 282.6; /* Initial circumference value */
+    stroke-dashoffset: 282.6; /* Full circumference */
+    transition: stroke-dashoffset 1s ease;
+  }
+  .progress-text {
+    font-size: 24px;
+    font-weight: bold;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    fill: map_get(colors.$theme-colors, dark);
+  }
+}
+.left-progress {
+  background-color: map_get(colors.$theme-colors, lightPrimary2);
+  @extend .genral-shadow;
+  padding: 30px 20px;
+
+  .top-circles {
+    top: 4%;
+    &:before {
+      width: 270px;
+      height: 270px;
+    }
+    &::after {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  .bottom-circles {
+    bottom: 55%;
+    left: -105px;
+  }
+}
+.right-progress {
+  .progress-card {
+    @extend .genral-shadow;
+    @include mixins.border-radius(20px);
+    padding: 30px 20px;
+    height: 164px;
+    &.valid-card {
+      background: #eaffd5;
+    }
+    &.wrong-card {
+      background: #fdd;
+    }
+    &.hours-card {
+      background: #d7e5ff;
+    }
+    &.remaining-card {
+      background: #ffedd8;
+    }
+  }
+}
+
+.inner-table-container {
+  display: none;
+}
+
+.main-table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  text-wrap: nowrap;
+  td {
+    font-size: 16px;
+    &:first-child {
+      @include mixins.border-radius(12px 0 0 12px);
+    }
+    &:last-child {
+      @include mixins.border-radius(0 12px 12px 0);
+    }
+  }
+  thead {
+    tr {
+      th {
+        font-weight: 200;
+        font-size: 18px;
+        text-transform: capitalize;
+        &:first-child {
+          @include mixins.border-radius(12px 0 0 12px);
+        }
+        &:last-child {
+          @include mixins.border-radius(0 12px 12px 0);
+        }
+      }
+    }
+  }
+  > tbody {
+    > tr {
+      &:nth-child(odd) {
+        background-color: map_get(colors.$theme-colors, lightGrayClr2);
+      }
+    }
+  }
+  .inner-table {
+    > thead {
+      background-color: map_get(colors.$theme-colors, blueLight);
+      color: map_get(colors.$theme-colors, menuBg);
+    }
+  }
+}
+
+.subscriped-chapter {
+  @extend .genral-shadow;
+  @include mixins.border-radius(30px);
+  border: 1px solid map_get(colors.$theme-colors, lightGrayClr2);
+  position: relative;
+  justify-content: space-between;
+  overflow: hidden;
+
+  .info {
+    padding: 10px;
+    width: 100%;
+    .offer {
+      @extend .flex-center;
+      min-width: 65px;
+      padding: 3px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+  }
+
+  .exam-img {
+    height: 170px;
+    width: 100%;
+    @include mixins.border-radius(30px);
+    @include mixins.prefix(object-fit, cover, webkit ms o);
+    @include mixins.prefix(object-position, center 10%, webkit ms o);
+  }
+
+  .subscribed {
+    @extend .flex-center;
+    background-color: map_get(colors.$theme-colors, lightGrayClr2);
+    width: 100%;
+    text-align: center;
+    height: 60px;
+    font-size: 20px;
+    i {
+      font-size: 32px;
+    }
+  }
+}
+
+html[lang="ar"] {
+  .left-progress {
+    .bottom-circles {
+      left: auto;
+      right: -105px;
+    }
+    .top-circles {
+      left: -50px;
+      right: auto;
+    }
+  }
+
+  .main-table {
+    td {
+      font-size: 16px;
+      &:first-child {
+        @include mixins.border-radius(0 12px 12px 0);
+      }
+      &:last-child {
+        @include mixins.border-radius(12px 0 0 12px);
+      }
+    }
+    thead {
+      tr {
+        th {
+          &:first-child {
+            @include mixins.border-radius(0 12px 12px 0);
+          }
+          &:last-child {
+            @include mixins.border-radius(12px 0 0 12px);
+          }
+        }
+      }
+    }
+  }
+
+  .subscriped-chapter {
+    .info {
+      .offer {
+        right: 20px;
+        left: auto;
+      }
+    }
+  }
+}
+
 // end profile
 
 /* Start Media Query */
@@ -2078,27 +2368,6 @@ html[dir="rtl"] {
         img {
           height: 30px;
         }
-      }
-    }
-  }
-
-  html[lang="ar"] {
-    nav {
-      .menu {
-        text-align: right;
-        @include mixins.prefix(transform-origin, right, webkit ms o);
-        right: -100%;
-        left: auto;
-
-        &.ul-dir {
-          right: 0;
-          left: auto;
-        }
-      }
-      .overlay {
-        left: 0;
-        right: auto;
-        @include mixins.prefix(transform-origin, left, webkit ms o);
       }
     }
   }
@@ -2396,8 +2665,14 @@ html[dir="rtl"] {
     text-align: center;
     font-size: 14px;
   }
-
+  .cart-items {
+    max-height: unset;
+  }
   .cart-item {
+    .flex-shrink-0,
+    .flex-grow-1 {
+      width: 100%;
+    }
     .cart-img {
       width: 100%;
       margin-inline: auto;
@@ -2415,6 +2690,108 @@ html[dir="rtl"] {
 
     .remove-item {
       width: 100% !important;
+    }
+  }
+
+  .card-img {
+    width: 50px;
+    height: 25px;
+  }
+
+  .pay-check {
+    padding-block: 10px;
+    padding-inline: 30px 10px;
+  }
+
+  .side-menu {
+    width: 100%;
+    padding: 0;
+    .links {
+      display: flex;
+      align-items: center;
+      overflow-x: auto;
+      padding-block: 25px;
+      li {
+        margin-block: 0;
+        margin-inline: 15px;
+      }
+      a {
+        white-space: nowrap;
+        img {
+          @include mixins.shape(25px);
+        }
+      }
+    }
+  }
+  .link-content {
+    padding: 35px 0;
+  }
+  .profile-banner {
+    .content {
+      padding: 17px 17px 215px;
+      min-height: 300px;
+    }
+
+    .doctor-books {
+      height: 215px;
+      top: auto;
+      bottom: -11px;
+      right: 0;
+    }
+  }
+  .discount-block {
+    padding: 10px;
+    .discount-img {
+      width: 80px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  .left-progress {
+    .percentage-circle {
+      width: 70%;
+      margin: auto;
+    }
+    .top-circles {
+      top: 40%;
+    }
+  }
+
+  .subscriped-chapter {
+    .subscribed {
+      font-size: 17px;
+      i {
+        font-size: 25px;
+      }
+    }
+  }
+
+  html[lang="ar"] {
+    nav {
+      .menu {
+        text-align: right;
+        @include mixins.prefix(transform-origin, right, webkit ms o);
+        right: -100%;
+        left: auto;
+
+        &.ul-dir {
+          right: 0;
+          left: auto;
+        }
+      }
+      .overlay {
+        left: 0;
+        right: auto;
+        @include mixins.prefix(transform-origin, left, webkit ms o);
+      }
+    }
+
+    .profile-banner {
+      .doctor-books {
+        left: 0;
+        right: auto;
+      }
     }
   }
 }
@@ -2492,18 +2869,6 @@ html[dir="rtl"] {
             font-size: 30px;
           }
         }
-      }
-    }
-  }
-
-  html[lang="ar"] {
-    .dropdown-content {
-      left: -25px;
-      right: auto;
-
-      &::before {
-        left: 35px;
-        right: auto;
       }
     }
   }
@@ -2623,6 +2988,74 @@ html[dir="rtl"] {
       font-size: 31px;
     }
   }
+
+  .side-menu {
+    width: 100%;
+    padding: 0;
+    .links {
+      display: flex;
+      align-items: center;
+      overflow-x: auto;
+      padding-block: 25px;
+      li {
+        margin-block: 0;
+        margin-inline: 15px;
+      }
+      a {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .left-progress {
+    .percentage-circle {
+      width: 70%;
+      margin: auto;
+    }
+    .top-circles {
+      top: 50%;
+    }
+  }
+
+  .profile-banner {
+    .doctor-books {
+      right: 30px;
+    }
+  }
+
+  .discount-block {
+    .discount-img {
+      width: 100px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .right-progress {
+    .progress-card {
+      height: 163px;
+    }
+  }
+
+  html[lang="ar"] {
+    .dropdown-content {
+      left: -25px;
+      right: auto;
+
+      &::before {
+        left: 35px;
+        right: auto;
+      }
+    }
+
+    .profile-banner {
+      .doctor-books {
+        left: 30px;
+        right: auto;
+      }
+    }
+  }
 }
 
 /*Medium Screen*/
@@ -2711,6 +3144,22 @@ html[dir="rtl"] {
   .about-img {
     height: 300px;
   }
+
+  .left-progress {
+    .percentage-circle {
+      width: 70%;
+      margin: auto;
+    }
+    .top-circles {
+      top: 50%;
+    }
+  }
+
+  .right-progress {
+    .progress-card {
+      height: 183px;
+    }
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1199px) {
@@ -2735,6 +3184,11 @@ html[dir="rtl"] {
     }
   }
 
+  .right-progress {
+    .progress-card {
+      height: 175px;
+    }
+  }
   html[lang="ar"] {
     .dropdown-content {
       left: -25px;

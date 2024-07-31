@@ -84,6 +84,63 @@ $(document).ready(function () {
       behavior: "smooth",
     });
   });
+
+  // Smooth scroll function
+  function smoothScroll(target) {
+    $("html, body").animate(
+      {
+        scrollTop: $(target).offset().top - 200,
+      },
+      500
+    );
+  }
+
+  // Scroll the active link into view on page load
+  var activeLink = $(".side-menu .links .active")[0];
+  if (activeLink) {
+    activeLink.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+  }
+
+  // Handle anchor click to scroll to the link with smooth scroll
+  $(".side-menu .links a").on("click", function (e) {
+    e.preventDefault();
+    $(".side-menu .links a").removeClass("active");
+    $(this).addClass("active");
+
+    this.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+  });
+
+  // Handle anchor click to div with smooth scroll
+  $('a[href^="#"]').on("click", function (e) {
+    e.preventDefault();
+    $(this)
+      .addClass("active")
+      .parents()
+      .siblings()
+      .children("a")
+      .removeClass("active");
+    var target = $(this).attr("href");
+    if ($(target).length) {
+      smoothScroll(target);
+    }
+  });
+  // Check if there is a hash in the URL after page load
+  $(window).on("load", function () {
+    if (window.location.hash) {
+      var target = window.location.hash;
+      if ($(target).length) {
+        smoothScroll(target);
+      }
+    }
+  });
 });
 
 document.addEventListener("DOMContentLoaded", function () {

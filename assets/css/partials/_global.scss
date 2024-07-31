@@ -445,7 +445,7 @@ html[lang="ar"] {
 a,
 button,
 img {
-  @include mixins.transition(all 0.5s ease-in-out);
+  @extend .general-transition;
 }
 
 :placeholder-shown::-webkit-input-placeholder {
@@ -784,6 +784,9 @@ h2 {
   &:focus {
     @include mixins.prefix(box-shadow, none, webkit ms o);
   }
+  &.rounded-0 {
+    @include mixins.border-radius(0);
+  }
 }
 .form-label {
   text-transform: capitalize;
@@ -793,10 +796,13 @@ h2 {
   @include mixins.border-radius(0 20px 20px 0);
   &.icon {
     color: map_get(colors.$theme-colors, placeholder);
-    @include mixins.transition(all 0.5s ease-in-out);
+    @extend .general-transition;
     &:hover {
       color: map_get(colors.$theme-colors, primary);
     }
+  }
+  &.first-g-text {
+    @include mixins.border-radius(20px 0 0 20px);
   }
 }
 .password-radius {
@@ -808,7 +814,7 @@ h2 {
   border-color: map_get(colors.$theme-colors, lightGrayClr);
   background-color: transparent;
   border-width: 2px;
-  @include mixins.transition(all 0.5s ease-in-out);
+  @extend .general-transition;
   cursor: pointer;
   &:checked {
     // filter: invert(1) brightness(1) contrast(0.3);
@@ -861,7 +867,7 @@ h2 {
   background-color: map_get(colors.$theme-colors, secondary);
 }
 .select2-results__option--selectable {
-  @include mixins.transition(all 0.5s ease-in-out);
+  @extend .general-transition;
   font-size: 13px;
 }
 
@@ -880,6 +886,10 @@ h2 {
 html[lang="ar"] {
   .input-group-text {
     @include mixins.border-radius(20px 0 0 20px);
+
+    &.first-g-text {
+      @include mixins.border-radius(0 20px 20px 0);
+    }
   }
   .password-radius {
     @include mixins.border-radius(0 20px 20px 0);
@@ -907,8 +917,8 @@ html[lang="ar"] {
   background-color: #fff;
   position: sticky;
   top: 0;
-  z-index: 2;
-  @include mixins.transition(all 0.5s ease-in-out);
+  z-index: 3;
+  @extend .general-transition;
 
   &.change-bg {
     top: 0;
@@ -1015,7 +1025,7 @@ html[lang="ar"] {
   z-index: 3;
   cursor: pointer;
   display: none;
-  @include mixins.transition(all 0.5s ease-in-out);
+  @extend .general-transition;
   border: 2px solid transparent;
   left: 20px;
   &:hover {
@@ -1079,7 +1089,7 @@ html[lang="ar"] {
   z-index: 12;
 
   .wpp-link {
-    @include mixins.transition(all 0.5s ease-in-out);
+    @extend .general-transition;
     background: map_get(colors.$theme-colors, primary);
     display: flex;
     z-index: 2;
@@ -1118,7 +1128,7 @@ html[lang="ar"] {
     }
 
     & + .contact-wpp {
-      @include mixins.transition(all 0.5s ease-in-out);
+      @extend .general-transition;
       position: absolute;
       @include mixins.prefix(
         box-shadow,
@@ -1138,7 +1148,7 @@ html[lang="ar"] {
       max-width: 300px;
       min-width: 350px;
       .contacting-info {
-        @include mixins.transition(all 0.5s ease-in-out);
+        @extend .general-transition;
         padding: 15px;
         position: relative;
         width: 100%;
@@ -1175,7 +1185,7 @@ html[lang="ar"] {
   &.shake {
     .wpp-link {
       &::before {
-        @include mixins.transition(all 0.5s ease-in-out);
+        @extend .general-transition;
         background: rgba(map_get(colors.$theme-colors, primary), 0.6);
         content: "";
         width: 100%;
@@ -1242,6 +1252,11 @@ html[lang="ar"] {
   .form-label {
     font-size: 14px !important;
   }
+
+  .fs-14 {
+    font-size: 13px !important;
+  }
+
   .w-50,
   .w-57,
   .w-75,
@@ -1432,7 +1447,7 @@ html[lang="ar"] {
 
 @media (min-width: 768px) and (max-width: 991px) {
   body {
-    font-size: 17px;
+    font-size: 16px;
   }
   .fs-15 {
     font-size: 14px !important;

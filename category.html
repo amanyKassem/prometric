@@ -95,12 +95,13 @@
         <div
           class="d-flex justify-content-between align-items-center flex-wrap"
         >
-          <div
+          <a
+            href="index.html"
             class="d-flex align-items-center justify-content-between flex-sm-1 w-sm-100"
           >
             <img src="assets/img/logo.svg" alt="logo" class="logo" />
             <h3 class="text-lightGrayClr ms-3">Online self-assessment tool</h3>
-          </div>
+          </a>
           <div
             class="d-flex align-items-center justify-content-between flex-wrap mt-3 mt-lg-0 flex-sm-1"
           >
@@ -241,7 +242,7 @@
                             >12/5/2024</span
                           >
                         </div>
-                        <p class="fs-6 text-dark fs-14">
+                        <p class="text-dark fs-14">
                           You have started the Anesthesia MCQs test and must
                           continue your progress
                         </p>
@@ -269,7 +270,7 @@
                             >12/5/2024</span
                           >
                         </div>
-                        <p class="fs-6 text-dark fs-14">
+                        <p class="text-dark fs-14">
                           You have started the Anesthesia MCQs test and must
                           continue your progress
                         </p>
@@ -297,7 +298,7 @@
                             >12/5/2024</span
                           >
                         </div>
-                        <p class="fs-6 text-dark fs-14">
+                        <p class="text-dark fs-14">
                           You have started the Anesthesia MCQs test and must
                           continue your progress
                         </p>
@@ -1859,7 +1860,8 @@
     <script>
       let isRtl = $('html[lang="ar"]').length > 0;
       let x = isRtl ? 48 : 52;
-      function updateProgress(expirationDate, totalDaysInCycle) {
+
+      function updateProgress(expirationDate, totalDaysInCycle, container) {
         const today = new Date();
         const expiration = new Date(expirationDate);
         const totalDays = Math.ceil(
@@ -1873,10 +1875,10 @@
         const circumference = 2 * Math.PI * radius;
         const offset = circumference - (progress / 100) * circumference;
 
-        $(".expiration-circle .progress").css("stroke-dashoffset", offset);
-        $(".expiration-circle .percentage").html(
+        container.find(".progress").css("stroke-dashoffset", offset);
+        container.find(".percentage").html(
           `<tspan x="${x}%" dy="0em" class="fw-bold">${daysLeft}</tspan>
-     <tspan x="50%" dy="1.3em" class="fs-18">Days</tspan>`
+         <tspan x="50%" dy="1.3em" class="fs-18">Days</tspan>`
         );
       }
 
@@ -1889,7 +1891,7 @@
             const totalDaysInCycle = container.data("total-days-in-cycle");
 
             if (expirationDate && totalDaysInCycle) {
-              updateProgress(expirationDate, totalDaysInCycle);
+              updateProgress(expirationDate, totalDaysInCycle, container);
             }
             // Stop observing the entry once it has been animated
             observer.unobserve(entry.target);
@@ -1907,6 +1909,7 @@
         });
       });
     </script>
+
     <script>
       $(document).ready(function () {
         // change text and redirect to exam page
