@@ -268,10 +268,24 @@
         // Focus on the first input by default
         $(".pin-code-inputs input:first").focus();
 
-        // Auto tab to the next input when one is filled
+        // Auto tab to the next input when one is filled and change background and border color
         $(".pin-code-inputs input").keyup(function () {
           if ($(this).val().length == $(this).attr("maxlength")) {
             $(this).next().focus();
+          }
+
+          // Check if the input has a value and change the style accordingly
+          if ($(this).val().length > 0) {
+            $(this).addClass("filled");
+          } else {
+            $(this).removeClass("filled");
+          }
+        });
+
+        // Initial check for pre-filled inputs (in case of preloaded values)
+        $(".pin-code-inputs input").each(function () {
+          if ($(this).val().length > 0) {
+            $(this).addClass("filled");
           }
         });
       });

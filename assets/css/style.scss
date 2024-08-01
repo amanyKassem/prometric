@@ -109,7 +109,7 @@ nav {
   @include mixins.border-radius(50px);
   background: map_get(colors.$theme-colors, primary);
   cursor: pointer;
-  box-shadow: 0 0 0 rgba(40, 163, 38, 0.7);
+  @include mixins.prefix(box-shadow, 0 0 0 rgba(40, 163, 38, 0.7), webkit ms o);
   animation: pulse 2s infinite;
   @include mixins.animation("pulse 2s infinite");
   &:hover {
@@ -119,18 +119,27 @@ nav {
 
 @include mixins.keyframes(pulse) {
   0% {
-    -moz-box-shadow: 0 0 0 0 rgba(93, 255, 61, 0.9);
-    box-shadow: 0 0 0 0 rgba(40, 163, 38, 0.7);
+    @include mixins.prefix(
+      box-shadow,
+      0 0 0 rgba(40, 163, 38, 0.7),
+      webkit ms o
+    );
   }
 
   70% {
-    -moz-box-shadow: 0 0 0 10px rgba(255, 71, 61, 0);
-    box-shadow: 0 0 0 10px rgba(255, 71, 61, 0);
+    @include mixins.prefix(
+      box-shadow,
+      0 0 0 10px rgba(255, 71, 61, 0),
+      webkit ms o
+    );
   }
 
   100% {
-    -moz-box-shadow: 0 0 0 0 rgba(255, 71, 61, 0);
-    box-shadow: 0 0 0 0 rgba(255, 71, 61, 0);
+    @include mixins.prefix(
+      box-shadow,
+      0 0 0 0 rgba(255, 71, 61, 0),
+      webkit ms o
+    );
   }
 }
 .dropdown-content {
@@ -234,6 +243,16 @@ html[lang="ar"] {
     @include mixins.shape(50px);
     text-align: center;
     @include mixins.border-radius(10px);
+
+    &.custom-pin {
+      background-color: map_get(colors.$theme-colors, lightGrayClr3);
+      border: 1px solid map_get(colors.$theme-colors, placeholder);
+    }
+
+    &.filled {
+      background-color: map_get(colors.$theme-colors, menuBg);
+      border: 1px solid map_get(colors.$theme-colors, primary);
+    }
   }
 }
 .auth-form {
@@ -250,15 +269,6 @@ html[lang="ar"] {
   width: 100%;
   &.mw-65 {
     max-width: 65%;
-  }
-  .form-img {
-    width: 150px;
-    max-width: 250px;
-    margin: auto;
-    display: block;
-    &.custom-width {
-      width: 200px;
-    }
   }
 
   h2 {
@@ -298,6 +308,15 @@ html[lang="ar"] {
   }
 }
 
+.form-img {
+  width: 150px;
+  max-width: 250px;
+  margin: auto;
+  display: block;
+  &.custom-width {
+    width: 200px;
+  }
+}
 .flag {
   @include mixins.border-radius(5px);
   width: 25px;
@@ -1929,12 +1948,14 @@ html[dir="rtl"] {
   height: 35px;
 }
 .pay-check {
+  @extend .general-transition;
   border: 1px solid map_get(colors.$theme-colors, placeholder);
   background-color: map_get(colors.$theme-colors, menuBg);
   @include mixins.border-radius(20px);
   padding-block: 12px;
   padding-inline: 40px 15px;
-  &.active {
+  &.active,
+  &:hover {
     border-color: map_get(colors.$theme-colors, primary);
     background-color: map_get(colors.$theme-colors, lightPrimary);
   }
@@ -1947,7 +1968,7 @@ html[dir="rtl"] {
 }
 // end payment page
 
-// start profile
+// start profile page
 .side-menu {
   @include mixins.prefix(box-shadow, 0px 12px 12px 0px rgba(20, 20, 20, 0.14));
   padding: 30px 10px 0;
@@ -1993,6 +2014,9 @@ html[dir="rtl"] {
   .welcome-img {
     width: 100%;
     max-width: 465px;
+    &.ar {
+      display: none;
+    }
   }
   .doctor-books {
     position: absolute;
@@ -2009,16 +2033,6 @@ html[dir="rtl"] {
     &:after {
       width: 270px;
       height: 270px;
-    }
-  }
-}
-
-html[dir="rtl"] {
-  .profile-banner {
-    .doctor-books {
-      right: auto;
-      left: 50px;
-      transform: rotateY(-180deg);
     }
   }
 }
@@ -2218,6 +2232,22 @@ html[dir="rtl"] {
 }
 
 html[lang="ar"] {
+  .profile-banner {
+    .doctor-books {
+      right: auto;
+      left: 50px;
+      transform: rotateY(-180deg);
+    }
+    .welcome-img {
+      max-width: 400px;
+      &.ar {
+        display: block;
+      }
+      &.en {
+        display: none;
+      }
+    }
+  }
   .left-progress {
     .bottom-circles {
       left: auto;
@@ -2263,7 +2293,55 @@ html[lang="ar"] {
   }
 }
 
-// end profile
+// end profile page
+
+//  start settings page
+.settings-content {
+  .pay-check {
+    color: map_get(colors.$theme-colors, dark);
+    padding-inline: 15px;
+    @include mixins.border-radius(10px);
+    &:hover {
+      color: map_get(colors.$theme-colors, primary);
+      @include mixins.prefix(
+        box-shadow,
+        0px 12px 12px 0px rgba(0, 0, 0, 0.08),
+        webkit ms o
+      );
+    }
+  }
+
+  .form-switch {
+    padding-right: 2.5em;
+    padding-left: 0;
+    .form-check-input {
+      margin-right: -2.5em;
+      margin-left: 0;
+      float: right;
+    }
+  }
+}
+// end settings page
+
+// start edit profile page
+.btn-check-gender {
+  @extend .general-transition;
+  background-color: map_get(colors.$theme-colors, menuBg);
+  color: map_get(colors.$theme-colors, lightGrayClr);
+  border: 1px solid map_get(colors.$theme-colors, placeholder);
+}
+
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active,
+.btn-check + .btn:hover {
+  background-color: map_get(colors.$theme-colors, lightPrimary2);
+  color: map_get(colors.$theme-colors, secondary);
+  border-color: map_get(colors.$theme-colors, secondary);
+}
+// end edit profile page
 
 /* Start Media Query */
 
@@ -2395,13 +2473,11 @@ html[lang="ar"] {
     height: 16px;
   }
 
-  .auth-form {
-    .form-img {
-      width: 100px;
+  .form-img {
+    width: 80px;
 
-      &.custom-width {
-        width: 135px;
-      }
+    &.custom-width {
+      width: 135px;
     }
   }
   .ads {
@@ -2881,12 +2957,11 @@ html[lang="ar"] {
     h2 {
       font-size: 30px;
     }
-
-    .form-img {
-      width: 150px;
-    }
   }
 
+  .form-img {
+    width: 150px;
+  }
   .ads {
     .ads-carusel {
       h2 {

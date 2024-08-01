@@ -95,6 +95,25 @@ $(document).ready(function () {
     );
   }
 
+  
+  $("a[href^='#']").on("click", function (e) {
+    var href = $(this).attr("href");
+    if (href.startsWith("#")) {
+      e.preventDefault();
+
+      this.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center",
+      });
+
+      var target = href;
+      if ($(target).length) {
+        smoothScroll(target);
+      }
+    } 
+  });
+
   // Scroll the active link into view on page load
   var activeLink = $(".side-menu .links .active")[0];
   if (activeLink) {
@@ -107,40 +126,57 @@ $(document).ready(function () {
 
   // Handle anchor click to scroll to the link with smooth scroll
   $(".side-menu .links a").on("click", function (e) {
-    e.preventDefault();
-    $(".side-menu .links a").removeClass("active");
-    $(this).addClass("active");
+    var href = $(this).attr("href");
+    if (href.includes("#")) {
+      // Handle navigation to another page with an anchor link
+      var parts = href.split("#");
+      var page = parts[0];
+      var anchor = "#" + parts[1];
 
-    this.scrollIntoView({
-      behavior: "smooth",
-      block: "nearest",
-      inline: "center",
-    });
-  });
+      var currentPage = window.location.pathname.split("/").pop();
 
-  // Handle anchor click to div with smooth scroll
-  $('a[href^="#"]').on("click", function (e) {
-    e.preventDefault();
-    $(this)
-      .addClass("active")
-      .parents()
-      .siblings()
-      .children("a")
-      .removeClass("active");
-    var target = $(this).attr("href");
-    if ($(target).length) {
-      smoothScroll(target);
+      // Store the anchor in local storage
+      localStorage.setItem("scrollTarget", anchor);
+      localStorage.setItem("activeLinkIndex", $(this).parent().index());
+
+      // Check if the target page is the same as the current page
+      if (currentPage === page) {
+        $(".side-menu .links a").removeClass("active");
+        $(this).addClass("active");
+
+        this.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
+        });
+
+        if ($(anchor).length) {
+          smoothScroll(anchor);
+        }
+      }
+    } else {
+      // Navigate to the new page without anchor
+      window.location.href = href;
     }
   });
-  // Check if there is a hash in the URL after page load
-  $(window).on("load", function () {
-    if (window.location.hash) {
-      var target = window.location.hash;
-      if ($(target).length) {
-        smoothScroll(target);
+
+  // Retrieve and smooth scroll to the target anchor on page load
+  var scrollTarget = localStorage.getItem("scrollTarget");
+  var activeLinkIndex = localStorage.getItem("activeLinkIndex");
+  if (scrollTarget) {
+    localStorage.removeItem("scrollTarget");
+    localStorage.removeItem("activeLinkIndex");
+    if ($(scrollTarget).length) {
+      smoothScroll(scrollTarget);
+      if (activeLinkIndex !== null) {
+        $(".side-menu .links a").removeClass("active");
+        $(".side-menu .links li")
+          .eq(activeLinkIndex)
+          .find("a")
+          .addClass("active");
       }
     }
-  });
+  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {

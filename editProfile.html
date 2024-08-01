@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<!-- if arabic add lang="ar" dir="rtl" -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>prometric</title>
+    <link rel="shortcut icon" href="assets/img/fav.svg" />
+
+    <!-- bootstrap 5 if english -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- bootstrap 5 if arabic -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-DOXMLfHhQkvFFp+rWTZwVlPVqdIhpDVYT9csOnHSgWQWPX0v5MCGtjCJbY6ERspU"
+      crossorigin="anonymous"
+    /> -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      async
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- start loader -->
+    <div class="loader-container">
+      <div class="top-circles"></div>
+      <div id="loader">
+        <div id="logo">
+          <img
+            src="./assets/img/logo.svg"
+            alt="logo prometric"
+            data-aos="zoom-out"
+            data-aos-duration="1000"
+          />
+          <h3
+            class="text-grayClr mt-4"
+            data-aos="fade-up"
+            data-aos-duration="1500"
+          >
+            <span class="text-dark">Welcome to Rx prometric</span> exam
+            <br />
+            preparation portal web
+          </h3>
+        </div>
+        <div id="progressbar"></div>
+      </div>
+      <div class="bottom-circles"></div>
+    </div>
+    <!-- end loader -->
+    <!-- start top bar -->
+    <div class="top-bar bg-white py-2">
+      <div class="container">
+        <div
+          class="d-flex justify-content-between align-items-center flex-wrap"
+        >
+          <a
+            href="index.html"
+            class="d-flex align-items-center justify-content-between flex-sm-1 w-sm-100"
+          >
+            <img src="assets/img/logo.svg" alt="logo" class="logo" />
+            <h3 class="text-lightGrayClr ms-3">Online self-assessment tool</h3>
+          </a>
+          <div
+            class="d-flex align-items-center justify-content-between flex-wrap mt-3 mt-lg-0 flex-sm-1"
+          >
+            <a
+              href="#"
+              class="lang me-3 me-lg-5 d-flex align-items-center text-hover"
+            >
+              عربي
+              <img
+                src="assets/img/global.svg"
+                alt="lang"
+                width="20"
+                class="ms-2"
+              />
+            </a>
+            <div class="d-flex align-items-center">
+              <a href="#" class="social flex-center">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="#" class="social flex-center ms-2">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end top bar -->
+    <!--  Start nav  -->
+    <nav class="normal-nav pt-2">
+      <div class="container">
+        <div
+          class="menu-bar d-flex d-md-none justify-content-between align-items-center"
+        >
+          <!-- if user not logged in -->
+          <!-- <a href="login.html" class="btn btn-primary text-white custom-btn with-shadow"
+            >Login</a
+          > -->
+
+          <!-- if user logged in -->
+          <a href="profile.html" class="d-flex align-items-center user active">
+            <div class="flex-shrink-0">
+              <img
+                src="assets/img/user.png"
+                alt="user"
+                class="rounded-circle wh-40"
+              />
+            </div>
+            <div class="flex-grow-1 ms-2">
+              <h6 class="text-dark">Hello ,</h6>
+              <h5 class="fw-normal fs-6">Amany Kassem</h5>
+            </div>
+          </a>
+          <div class="toggle">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class="overlay"></div>
+
+        <div class="menu d-flex flex-wrap align-items-center">
+          <div class="d-none d-md-block">
+            <!-- if user not logged in -->
+            <!-- <a href="login.html" class="btn btn-primary custom-btn with-shadow"
+            >Login</a
+          > -->
+
+            <!-- if user logged in -->
+            <a
+              href="profile.html"
+              class="d-flex align-items-center user active"
+            >
+              <div class="flex-shrink-0">
+                <img
+                  src="assets/img/user.png"
+                  alt="user"
+                  class="rounded-circle wh-40"
+                />
+              </div>
+              <div class="flex-grow-1 ms-2">
+                <h6 class="text-dark">Hello ,</h6>
+                <h5 class="fw-normal fs-6">Amany Kassem</h5>
+              </div>
+            </a>
+          </div>
+
+          <div class="d-flex align-items-center">
+            <!-- add class active to image-container if user in notifications page -->
+            <div class="image-container position-relative notifications">
+              <!-- add condition to show pulse if there is new notification -->
+              <span class="pulse"></span>
+              <img src="assets/img/bell.svg" alt="bell" class="default-img" />
+              <img src="assets/img/bellAct.svg" alt="bell" class="hover-img" />
+              <div class="dropdown-content">
+                <div
+                  class="d-flex justify-content-between align-items-center flex-wrap"
+                >
+                  <span
+                    class="text-dark d-flex justify-content-between align-items-center fw-500"
+                  >
+                    <img
+                      src="assets/img/bellDot.svg"
+                      alt="bell"
+                      width="18"
+                      class="me-1 rotate-y-180"
+                    />
+                    Your Notification
+                  </span>
+                  <a href="notifications.html" class="hvr-secondary fs-6"
+                    >See More</a
+                  >
+                </div>
+                <ul>
+                  <li class="mt-3 bg-menuBg shadow p-2">
+                    <a
+                      href="#"
+                      class="d-flex align-items-center flex-column flex-md-row"
+                    >
+                      <div class="flex-shrink-0">
+                        <img
+                          src="assets/img/authBg.png"
+                          alt="image"
+                          class="noti-img"
+                        />
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <div
+                          class="d-flex justify-content-between align-items-center flex-wrap"
+                        >
+                          <h6 class="text-dark fs-15 mb-2">Anesthesia MCQs</h6>
+                          <span class="text-lightDark fs-14 mb-2"
+                            >12/5/2024</span
+                          >
+                        </div>
+                        <p class="text-dark fs-14">
+                          You have started the Anesthesia MCQs test and must
+                          continue your progress
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mt-3 bg-menuBg shadow p-2">
+                    <a
+                      href="#"
+                      class="d-flex align-items-center flex-column flex-md-row"
+                    >
+                      <div class="flex-shrink-0">
+                        <img
+                          src="assets/img/authBg.png"
+                          alt="image"
+                          class="noti-img"
+                        />
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <div
+                          class="d-flex justify-content-between align-items-center flex-wrap"
+                        >
+                          <h6 class="text-dark fs-15 mb-2">Anesthesia MCQs</h6>
+                          <span class="text-lightDark fs-14 mb-2"
+                            >12/5/2024</span
+                          >
+                        </div>
+                        <p class="text-dark fs-14">
+                          You have started the Anesthesia MCQs test and must
+                          continue your progress
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="mt-3 bg-menuBg shadow p-2">
+                    <a
+                      href="#"
+                      class="d-flex align-items-center flex-column flex-md-row"
+                    >
+                      <div class="flex-shrink-0">
+                        <img
+                          src="assets/img/authBg.png"
+                          alt="image"
+                          class="noti-img"
+                        />
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <div
+                          class="d-flex justify-content-between align-items-center flex-wrap"
+                        >
+                          <h6 class="text-dark fs-15 mb-2">Anesthesia MCQs</h6>
+                          <span class="text-lightDark fs-14 mb-2"
+                            >12/5/2024</span
+                          >
+                        </div>
+                        <p class="text-dark fs-14">
+                          You have started the Anesthesia MCQs test and must
+                          continue your progress
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a href="#" class="image-container position-relative mx-3">
+              <img
+                src="assets/img/search.svg"
+                alt="search"
+                class="default-img"
+              />
+              <img
+                src="assets/img/searchAct.svg"
+                alt="search"
+                class="hover-img"
+              />
+            </a>
+            <!-- add class active to image-container if user in cart page -->
+            <a href="cart.html" class="image-container position-relative">
+              <!-- add condition to show count if some item in cart -->
+              <span class="count">+9</span>
+              <img src="assets/img/cart.svg" alt="cart" class="default-img" />
+              <img src="assets/img/cartAct.svg" alt="cart" class="hover-img" />
+            </a>
+          </div>
+
+          <ul class="menu-links">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="categories.html">Categories Test</a>
+            </li>
+            <li>
+              <a href="plans.html">Plans</a>
+            </li>
+            <li>
+              <a href="blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="syllabus.html">Syllabus</a>
+            </li>
+            <li>
+              <a href="refer.html">
+                <img
+                  src="assets/img/gift.svg"
+                  alt="gift"
+                  width="20"
+                  class="me-1"
+                />
+                Refer & Earn
+              </a>
+            </li>
+            <li>
+              <a href="faq.html">FAQs</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact Us</a>
+            </li>
+            <li>
+              <a href="about.html">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--end nav-->
+
+    <!-- start page unique content -->
+    <main>
+      <!-- start profile -->
+      <div class="profile">
+        <div class="container">
+          <div class="d-flex flex-column flex-lg-row">
+            <div class="side-menu">
+              <ul class="links">
+                <li>
+                  <a
+                    href="settings.html"
+                    class="d-flex flex-column text-center position-relative fs-14 active"
+                  >
+                    <img
+                      src="assets/img/user-gray.svg"
+                      alt="user"
+                      class="default-img mb-1"
+                    />
+                    <img
+                      src="assets/img/user-active.svg"
+                      alt="user"
+                      class="hover-img mb-1"
+                    />
+                    Profile Settings
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="wallet.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/wallet-gray.svg"
+                      alt="wallet"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/wallet-active.svg"
+                      alt="wallet"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    Wallet
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="messages.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/message-gray.svg"
+                      alt="message"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/message-active.svg"
+                      alt="message"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    Messages
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="invitation.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/invitation-gray.svg"
+                      alt="invitation"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/invitation-active.svg"
+                      alt="invitation"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    Invitation Code
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="profile.html#chapters"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/chapters-gray.svg"
+                      alt="chapters"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/chapters-active.svg"
+                      alt="chapters"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    Current Chapters
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="profile.html#subscription"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/subscribe-gray.svg"
+                      alt="subscription"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/subscribe-active.svg"
+                      alt="subscription"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    My Subscription
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="payMethod.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/cards-gray.svg"
+                      alt="payment"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/cards-active.svg"
+                      alt="payment"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    Payment Method
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="login.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/logout-gray.svg"
+                      alt="logout"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/logout-active.svg"
+                      alt="logout"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    Log Out
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="link-content flex-grow-1">
+              <div class="settings-content">
+                <h5 class="fs-5 mb-4">
+                  <i class="fa-regular fa-pen-to-square me-1"></i>
+                  Edite Profile
+                </h5>
+
+                <form
+                  action="settings.html"
+                  class="border border-dark rounded-30 p-3 p-lg-4"
+                >
+                  <div class="row">
+                    <div class="col-xl-6">
+                      <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input
+                          type="text"
+                          class="form-control border border-placeholder"
+                          id="name"
+                          placeholder="your name"
+                          value="Amany Kassem"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-xl-6">
+                      <div class="mb-3 select-with-border">
+                        <label for="Country" class="form-label">Country</label>
+
+                        <select
+                          id="Country"
+                          class="select2 w-100"
+                          data-placeholder="select country"
+                        >
+                          <option label="select country"></option>
+                          <option value="Egypt" selected>Egypt</option>
+                          <option value="United States">United States</option>
+                          <option value="Canada">Canada</option>
+                          <option value="United Kingdom">United Kingdom</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-xl-6">
+                      <label for="gender" class="form-label">Gander</label>
+                      <div class="d-flex align-items-center">
+                        <div
+                          class="form-check d-flex align-items-center gender-check mb-3 me-3 flex-grow-1 p-0"
+                        >
+                          <input
+                            class="form-check-input btn-check me-2"
+                            type="radio"
+                            name="gender"
+                            id="male"
+                          />
+                          <label
+                            class="form-check-label flex-grow-1 btn btn-check-gender"
+                            for="male"
+                          >
+                            <div class="d-flex align-items-center">
+                              <i class="fa-solid fa-mars me-2 fs-18"></i>
+                              Male
+                            </div>
+                          </label>
+                        </div>
+                        <div
+                          class="form-check d-flex align-items-center gender-check mb-3 flex-grow-1 p-0"
+                        >
+                          <input
+                            class="form-check-input btn-check me-2"
+                            type="radio"
+                            name="gender"
+                            id="female"
+                            checked
+                          />
+                          <label
+                            class="form-check-label flex-grow-1 btn btn-check-gender"
+                            for="female"
+                          >
+                            <i class="fa-solid fa-venus me-2 fs-18"></i>
+                            Female
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-xl-6">
+                      <div class="mb-3">
+                        <label for="age" class="form-label">Age</label>
+                        <input
+                          type="number"
+                          class="form-control border border-placeholder"
+                          id="age"
+                          placeholder="your age"
+                          value="29"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-240 with-shadow mx-auto mt-3 mb-2">Save</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end profile -->
+    </main>
+    <!-- end page unique content -->
+
+    <!-- start footer -->
+    <footer class="main-footer bg-footerBg text-white">
+      <div class="container">
+        <div class="row mb-4">
+          <div
+            class="col-lg-5 d-flex flex-column align-items-center align-items-lg-start mb-4 mb-lg-0"
+          >
+            <img
+              src="assets/img/footerLogo.svg"
+              class="footer-logo"
+              alt="logo"
+            />
+            <h2 class="fw-bold mb-2 lh-base w-75">
+              <span class="text-primary">Start your career </span>
+              as a pharmacist in the Gulf countries
+            </h2>
+          </div>
+          <div class="col-lg-7">
+            <div class="row">
+              <div class="col-md-4 mb-3 mb-md-0 text-center">
+                <h5 class="footer-title mb-3">Quick links</h5>
+                <ul class="footer-links">
+                  <li class="mb-1"><a href="index.html">Home</a></li>
+                  <li class="mb-1">
+                    <a href="plans.html">Plans</a>
+                  </li>
+                  <li class="mb-1"><a href="blog.html">Blog</a></li>
+                  <li class="mb-1"><a href="syllabus.html">Syllabus</a></li>
+                  <li class="mb-1"><a href="refer.html">Refer & Earn</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4 mb-3 mb-md-0 text-center">
+                <h5 class="footer-title mb-3">prometric pharmacy category</h5>
+                <ul class="footer-links">
+                  <li class="mb-1">
+                    <a href="category.html">SPLE Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">MOH Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">DHA Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">DOH Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">BPLE Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">KMLE Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">QCHP Exam Preparation MCQ's</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="category.html">OMSB Exam Preparation MCQ's</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4 mb-3 mb-md-0 text-center">
+                <h5 class="footer-title mb-3">About</h5>
+                <ul class="footer-links">
+                  <li class="mb-1"><a href="about.html">About us</a></li>
+                  <li class="mb-1"><a href="contact.html">Contact us</a></li>
+                  <li class="mb-1"><a href="faq.html">FAQs</a></li>
+                  <li class="mb-1">
+                    <a href="refund.html">Refund policy</a>
+                  </li>
+                  <li class="mb-1">
+                    <a href="privacy.html">privacy policy</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div
+              class="d-flex align-items-center justify-content-center justify-content-lg-start flex-wrap"
+            >
+              <a href="#" class="social mb-3 flex-center">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social mb-3 flex-center ms-2">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="social mb-3 flex-center ms-2">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social mb-3 flex-center ms-2">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="#" class="social mb-3 flex-center ms-2">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div
+              class="d-flex align-items-center justify-content-center justify-content-lg-end flex-wrap"
+            >
+              <a href="#" class="pay mb-3 flex-center">
+                <img src="assets/img/Visa.svg" alt="visa" />
+              </a>
+              <a href="#" class="pay mb-3 flex-center ms-2">
+                <img src="assets/img/Mastercard.svg" alt="master" />
+              </a>
+              <a href="#" class="pay mb-3 flex-center ms-2">
+                <img src="assets/img/PayPal.svg" alt="paypal" />
+              </a>
+              <a href="#" class="pay mb-3 flex-center ms-2">
+                <img src="assets/img/Stripe.svg" alt="stripe" />
+              </a>
+              <a href="#" class="pay mb-3 flex-center ms-2">
+                <img src="assets/img/Wise.svg" alt="wise" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="copyright border-menuBg border-top row fs-15 pt-3 mt-2">
+          <div class="col-md-6 mb-2">
+            Prometric pharmacy global@ 2024. All rights reserved.
+          </div>
+          <div class="col-md-6 mb-2 text-md-end">
+            Terms & conditions. privacy policy
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- start footer -->
+
+    <!--start whatsapp  -->
+
+    <div id="wpp-fix" class="shake">
+      <button id="wpp-link" class="wpp-form wpp-link">
+        <span>Chamar no WhatsApp</span>
+        <img src="assets/img/headset.svg" alt="headset" class="headset" />
+      </button>
+
+      <div class="contact-wpp">
+        <div class="head-wpp cursor-pointer" id="close-bt">
+          <img src="assets/img/headset.svg" alt="headset" class="headset" />
+          <h6 class="text-white">Chat with Consultant</h6>
+          <i class="fas fa-angle-down text-white"></i>
+        </div>
+
+        <div class="contacting-info bg-white">
+          <h5 class="fw-bold text-dark mb-0">Chat now:</h5>
+          <a
+            href="https://wa.me/+020100000000"
+            target="_blank"
+            class="btn btn-whatspapp text-white fs-15 my-3"
+          >
+            <i class="fa-brands fa-whatsapp me-2 fs-2"></i>
+            WhatsApp NOW!
+          </a>
+          <h5 class="fw-bold text-dark mb-2">Worktime</h5>
+          <p class="mb-2">Sunday - Thursday, 9am to 7pm</p>
+          <p class="mb-3">
+            click on the options to send an instant Whatsapp message or call at
+          </p>
+          <h5 class="fw-bold text-dark mb-2">+020100000000</h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- end whatsapp -->
+
+    <!-- start scroll-top-->
+    <div id="scroll-top" class="text-center">
+      <i class="fas fa-angle-up"></i>
+    </div>
+    <!-- end scroll-top-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap 5 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script src="assets/js/scripts.js"></script>
+    <script>
+      $(document).ready(function () {
+        // select2
+        $(".select2").select2({
+          width: "100%",
+        });
+      });
+    </script>
+  </body>
+</html>
