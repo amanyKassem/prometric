@@ -2211,7 +2211,11 @@ img {
   z-index: 9999;
   background-color: #fff;
   overflow: hidden;
-  display: none;
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: flex;
+  -o-display: flex;
+  display: flex;
   -ms-align-items: center;
   align-items: center;
   justify-content: center;
