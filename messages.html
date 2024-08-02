@@ -151,7 +151,7 @@
           > -->
 
           <!-- if user logged in -->
-          <a href="profile.html" class="d-flex align-items-center user">
+          <a href="profile.html" class="d-flex align-items-center user active">
             <div class="flex-shrink-0">
               <img
                 src="assets/img/user.png"
@@ -179,7 +179,10 @@
           > -->
 
             <!-- if user logged in -->
-            <a href="profile.html" class="d-flex align-items-center user">
+            <a
+              href="profile.html"
+              class="d-flex align-items-center user active"
+            >
               <div class="flex-shrink-0">
                 <img
                   src="assets/img/user.png"
@@ -336,7 +339,7 @@
             <li>
               <a href="categories.html">Categories Test</a>
             </li>
-            <li class="active">
+            <li>
               <a href="plans.html">Plans</a>
             </li>
             <li>
@@ -373,186 +376,336 @@
 
     <!-- start page unique content -->
     <main>
-      <!-- start notifications -->
-      <div class="notifications py-4 mb-4">
+      <!-- start profile -->
+      <div class="profile">
         <div class="container">
-          <h5 class="fw-bold fs-5 mb-3 d-flex align-items-center">
-            <img
-              src="assets/img/bellAct.svg"
-              alt="bell"
-              width="20"
-              class="black-img me-1"
-            />
-            Your Notification
-          </h5>
+          <div class="d-flex flex-column flex-lg-row">
+            <div class="side-menu">
+              <ul class="links">
+                <li>
+                  <a
+                    href="settings.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/user-gray.svg"
+                      alt="user"
+                      class="default-img mb-1"
+                    />
+                    <img
+                      src="assets/img/user-active.svg"
+                      alt="user"
+                      class="hover-img mb-1"
+                    />
+                    Profile Settings
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="wallet.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/wallet-gray.svg"
+                      alt="wallet"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/wallet-active.svg"
+                      alt="wallet"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    Wallet
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="messages.html"
+                    class="d-flex flex-column text-center position-relative fs-14 active"
+                  >
+                    <img
+                      src="assets/img/message-gray.svg"
+                      alt="message"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/message-active.svg"
+                      alt="message"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    Messages
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="invitation.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/invitation-gray.svg"
+                      alt="invitation"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/invitation-active.svg"
+                      alt="invitation"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    Invitation Code
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="profile.html#chapters"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/chapters-gray.svg"
+                      alt="chapters"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/chapters-active.svg"
+                      alt="chapters"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    Current Chapters
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="profile.html#subscription"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/subscribe-gray.svg"
+                      alt="subscription"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/subscribe-active.svg"
+                      alt="subscription"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    My Subscription
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="payMethod.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/cards-gray.svg"
+                      alt="payment"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/cards-active.svg"
+                      alt="payment"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    Payment Method
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="login.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/logout-gray.svg"
+                      alt="logout"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/logout-active.svg"
+                      alt="logout"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    Log Out
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="link-content flex-grow-1">
+              <div class="settings-content">
+                <h5 class="fs-5 mb-4">
+                  <img
+                    src="assets/img/message-active.svg"
+                    alt="message"
+                    class="black-img me-1"
+                    width="27"
+                  />
+                  Your Massage
+                </h5>
 
-          <span>Latest:12/5/2024</span>
+                <div class="notifications">
+                  <span>Latest:12/5/2024</span>
 
-          <ul>
-            <li class="mt-3 bg-menuBg p-2 shrink-hvr general-transition">
-              <a
-                href="notiDetails.html"
-                class="d-flex align-items-center align-items-md-start flex-column flex-md-row"
-              >
-                <div class="flex-shrink-0">
-                  <img
-                    src="assets/img/authBg.png"
-                    alt="image"
-                    class="noti-img mb-3 mb-md-0"
-                  />
+                  <ul>
+                    <li
+                      class="mt-3 bg-menuBg p-2 d-flex align-items-center align-items-md-start flex-column flex-md-row"
+                    >
+                      <div
+                        class="flex-shrink-0 noti-img bg-lightPrimary3 flex-center mb-3 mb-md-0"
+                      >
+                        <img
+                          src="assets/img/logo.svg"
+                          alt="prometric"
+                          class="logo-img"
+                        />
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <h5 class="text-dark fw-bold mb-2 me-3">
+                          Message title
+                        </h5>
+                        <p class="text-dark fs-15 mb-0">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and
+                          scrambled it to make a type specimen book.
+                        </p>
+                      </div>
+                    </li>
+                    <li
+                      class="mt-3 bg-menuBg p-2 d-flex align-items-center align-items-md-start flex-column flex-md-row"
+                    >
+                      <div
+                        class="flex-shrink-0 noti-img bg-lightPrimary3 flex-center mb-3 mb-md-0"
+                      >
+                        <img
+                          src="assets/img/logo.svg"
+                          alt="prometric"
+                          class="logo-img"
+                        />
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <h5 class="text-dark fw-bold mb-2 me-3">
+                          Message title
+                        </h5>
+                        <p class="text-dark fs-15 mb-0">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and
+                          scrambled it to make a type specimen book.
+                        </p>
+                      </div>
+                    </li>
+                    <li
+                      class="mt-3 bg-menuBg p-2 d-flex align-items-center align-items-md-start flex-column flex-md-row"
+                    >
+                      <div
+                        class="flex-shrink-0 noti-img bg-lightPrimary3 flex-center mb-3 mb-md-0"
+                      >
+                        <img
+                          src="assets/img/logo.svg"
+                          alt="prometric"
+                          class="logo-img"
+                        />
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <h5 class="text-dark fw-bold mb-2 me-3">
+                          Message title
+                        </h5>
+                        <p class="text-dark fs-15 mb-0">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and
+                          scrambled it to make a type specimen book.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                  <hr class="my-4" />
+                  <span>12/5/2024</span>
+                  <ul>
+                    <li
+                      class="mt-3 bg-lightGrayClr3 p-2 d-flex align-items-center align-items-md-start flex-column flex-md-row"
+                    >
+                      <div
+                        class="flex-shrink-0 noti-img bg-lightGrayClr4 flex-center mb-3 mb-md-0"
+                      >
+                        <img
+                          src="assets/img/logo.svg"
+                          alt="prometric"
+                          class="logo-img"
+                        />
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <h5 class="text-dark fw-bold mb-2 me-3">
+                          Message title
+                        </h5>
+                        <p class="text-dark fs-15 mb-0">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and
+                          scrambled it to make a type specimen book.
+                        </p>
+                      </div>
+                    </li>
+                    <li
+                      class="mt-3 bg-lightGrayClr3 p-2 d-flex align-items-center align-items-md-start flex-column flex-md-row"
+                    >
+                      <div
+                        class="flex-shrink-0 noti-img bg-lightGrayClr4 flex-center mb-3 mb-md-0"
+                      >
+                        <img
+                          src="assets/img/logo.svg"
+                          alt="prometric"
+                          class="logo-img"
+                        />
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <h5 class="text-dark fw-bold mb-2 me-3">
+                          Message title
+                        </h5>
+                        <p class="text-dark fs-15 mb-0">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and
+                          scrambled it to make a type specimen book.
+                        </p>
+                      </div>
+                    </li>
+                    <li
+                      class="mt-3 bg-lightGrayClr3 p-2 d-flex align-items-center align-items-md-start flex-column flex-md-row"
+                    >
+                      <div
+                        class="flex-shrink-0 noti-img bg-lightGrayClr4 flex-center mb-3 mb-md-0"
+                      >
+                        <img
+                          src="assets/img/logo.svg"
+                          alt="prometric"
+                          class="logo-img"
+                        />
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <h5 class="text-dark fw-bold mb-2 me-3">
+                          Message title
+                        </h5>
+                        <p class="text-dark fs-15 mb-0">
+                          Lorem Ipsum is simply dummy text of the printing and
+                          typesetting industry. Lorem Ipsum has been the
+                          industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and
+                          scrambled it to make a type specimen book.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
-                <div class="flex-grow-1 ms-2">
-                  <div
-                    class="d-flex justify-content-between align-items-center flex-wrap"
-                  >
-                    <h5 class="text-dark fw-bold mb-2 me-3">Anesthesia MCQs</h5>
-                    <span class="text-lightDark fs-15 mb-2">12/5/2024</span>
-                  </div>
-                  <p class="text-dark fs-15">
-                    You have started the Anesthesia MCQs test and must continue
-                    your progress
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="mt-3 bg-menuBg p-2 shrink-hvr general-transition">
-              <a
-                href="notiDetails.html"
-                class="d-flex align-items-center align-items-md-start flex-column flex-md-row"
-              >
-                <div class="flex-shrink-0">
-                  <img
-                    src="assets/img/authBg.png"
-                    alt="image"
-                    class="noti-img mb-3 mb-md-0"
-                  />
-                </div>
-                <div class="flex-grow-1 ms-2">
-                  <div
-                    class="d-flex justify-content-between align-items-center flex-wrap"
-                  >
-                    <h5 class="text-dark fw-bold mb-2 me-3">Anesthesia MCQs</h5>
-                    <span class="text-lightDark fs-15 mb-2">12/5/2024</span>
-                  </div>
-                  <p class="text-dark fs-15">
-                    You have started the Anesthesia MCQs test and must continue
-                    your progress
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="mt-3 bg-menuBg p-2 shrink-hvr general-transition">
-              <a
-                href="notiDetails.html"
-                class="d-flex align-items-center align-items-md-start flex-column flex-md-row"
-              >
-                <div class="flex-shrink-0">
-                  <img
-                    src="assets/img/authBg.png"
-                    alt="image"
-                    class="noti-img mb-3 mb-md-0"
-                  />
-                </div>
-                <div class="flex-grow-1 ms-2">
-                  <div
-                    class="d-flex justify-content-between align-items-center flex-wrap"
-                  >
-                    <h5 class="text-dark fw-bold mb-2 me-3">Anesthesia MCQs</h5>
-                    <span class="text-lightDark fs-15 mb-2">12/5/2024</span>
-                  </div>
-                  <p class="text-dark fs-15">
-                    You have started the Anesthesia MCQs test and must continue
-                    your progress
-                  </p>
-                </div>
-              </a>
-            </li>
-          </ul>
-          <hr class="my-4" />
-          <span>12/5/2024</span>
-          <ul>
-            <li class="mt-3 bg-menuBg p-2 shrink-hvr general-transition">
-              <a
-                href="notiDetails.html"
-                class="d-flex align-items-center align-items-md-start flex-column flex-md-row"
-              >
-                <div class="flex-shrink-0">
-                  <img
-                    src="assets/img/authBg.png"
-                    alt="image"
-                    class="noti-img mb-3 mb-md-0"
-                  />
-                </div>
-                <div class="flex-grow-1 ms-2">
-                  <div
-                    class="d-flex justify-content-between align-items-center flex-wrap"
-                  >
-                    <h5 class="text-dark fw-bold mb-2 me-3">Anesthesia MCQs</h5>
-                    <span class="text-lightDark fs-15 mb-2">12/5/2024</span>
-                  </div>
-                  <p class="text-dark fs-15">
-                    You have started the Anesthesia MCQs test and must continue
-                    your progress
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="mt-3 bg-menuBg p-2 shrink-hvr general-transition">
-              <a
-                href="notiDetails.html"
-                class="d-flex align-items-center align-items-md-start flex-column flex-md-row"
-              >
-                <div class="flex-shrink-0">
-                  <img
-                    src="assets/img/authBg.png"
-                    alt="image"
-                    class="noti-img mb-3 mb-md-0"
-                  />
-                </div>
-                <div class="flex-grow-1 ms-2">
-                  <div
-                    class="d-flex justify-content-between align-items-center flex-wrap"
-                  >
-                    <h5 class="text-dark fw-bold mb-2 me-3">Anesthesia MCQs</h5>
-                    <span class="text-lightDark fs-15 mb-2">12/5/2024</span>
-                  </div>
-                  <p class="text-dark fs-15">
-                    You have started the Anesthesia MCQs test and must continue
-                    your progress
-                  </p>
-                </div>
-              </a>
-            </li>
-            <li class="mt-3 bg-menuBg p-2 shrink-hvr general-transition">
-              <a
-                href="notiDetails.html"
-                class="d-flex align-items-center align-items-md-start flex-column flex-md-row"
-              >
-                <div class="flex-shrink-0">
-                  <img
-                    src="assets/img/authBg.png"
-                    alt="image"
-                    class="noti-img mb-3 mb-md-0"
-                  />
-                </div>
-                <div class="flex-grow-1 ms-2">
-                  <div
-                    class="d-flex justify-content-between align-items-center flex-wrap"
-                  >
-                    <h5 class="text-dark fw-bold mb-2 me-3">Anesthesia MCQs</h5>
-                    <span class="text-lightDark fs-15 mb-2">12/5/2024</span>
-                  </div>
-                  <p class="text-dark fs-15">
-                    You have started the Anesthesia MCQs test and must continue
-                    your progress
-                  </p>
-                </div>
-              </a>
-            </li>
-          </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- end notifications -->
+      <!-- end profile -->
     </main>
     <!-- end page unique content -->
 
@@ -580,7 +733,7 @@
                 <ul class="footer-links">
                   <li class="mb-1"><a href="index.html">Home</a></li>
                   <li class="mb-1">
-                    <a class="active" href="plans.html">Plans</a>
+                    <a href="plans.html">Plans</a>
                   </li>
                   <li class="mb-1"><a href="blog.html">Blog</a></li>
                   <li class="mb-1"><a href="syllabus.html">Syllabus</a></li>

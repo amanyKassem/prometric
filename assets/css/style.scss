@@ -1903,8 +1903,11 @@ html[dir="rtl"] {
       @extend .genral-shadow;
       @include mixins.border-radius(20px);
       .noti-img {
-        @include mixins.shape(80px);
+        @include mixins.shape(90px);
         @include mixins.border-radius(20px);
+        .logo-img {
+          width: 80%;
+        }
       }
     }
   }
@@ -2023,6 +2026,7 @@ html[dir="rtl"] {
   @include mixins.border-radius(30px);
   .content {
     padding: 0 70px 25px;
+    @include mixins.border-radius(30px);
   }
   .welcome-img {
     width: 100%;
@@ -2036,6 +2040,7 @@ html[dir="rtl"] {
     top: -7px;
     right: 50px;
     height: 113%;
+    z-index: 2;
   }
   .top-circles {
     &:before {
@@ -2165,6 +2170,7 @@ html[dir="rtl"] {
   text-wrap: nowrap;
   td {
     font-size: 16px;
+    vertical-align: middle;
     &:first-child {
       @include mixins.border-radius(12px 0 0 12px);
     }
@@ -2191,6 +2197,13 @@ html[dir="rtl"] {
     > tr {
       &:nth-child(odd) {
         background-color: map_get(colors.$theme-colors, lightGrayClr2);
+      }
+    }
+  }
+  &.rows-bg {
+    tbody {
+      tr {
+        background-color: map_get(colors.$theme-colors, lightGrayClr3);
       }
     }
   }
@@ -2355,6 +2368,47 @@ html[lang="ar"] {
   border-color: map_get(colors.$theme-colors, secondary);
 }
 // end edit profile page
+
+// start wallet page
+.large-title {
+  font-size: 100px !important;
+  font-style: italic;
+}
+.pass-input {
+  width: 40px;
+}
+.toggle-pass {
+  @extend .general-transition;
+  @extend .flex-center;
+  @include mixins.border-radius(50%);
+  @include mixins.shape(35px);
+  color: map_get(colors.$theme-colors, blueLight);
+  background-color: map_get(colors.$theme-colors, menuBg);
+  cursor: pointer;
+  font-size: 17px;
+  &:hover {
+    color: map_get(colors.$theme-colors, primary);
+  }
+}
+.wallet-banner {
+  .doctor-books {
+    right: 0;
+    height: auto;
+    top: auto;
+    bottom: -8px;
+    width: 400px;
+  }
+}
+
+html[lang="ar"] {
+  .wallet-banner {
+    .doctor-books {
+      right: auto;
+      left: -23px;
+    }
+  }
+}
+// end wallet page
 
 /* Start Media Query */
 
@@ -2856,6 +2910,49 @@ html[lang="ar"] {
     }
   }
 
+  .main-table {
+    thead {
+      tr {
+        th {
+          font-size: 16px;
+        }
+      }
+    }
+    td {
+      font-size: 14px;
+    }
+  }
+
+  .large-title {
+    font-size: 40px !important;
+  }
+
+  .wallet-banner {
+    padding-top: 17px;
+  }
+
+  .wallet-content {
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 17px;
+      min-height: unset;
+      .btn {
+        margin-inline: auto;
+      }
+    }
+    .doctor-books {
+      position: unset;
+      width: 65%;
+      margin: auto;
+      height: auto;
+      display: block;
+    }
+  }
+
   html[lang="ar"] {
     nav {
       .menu {
@@ -3126,6 +3223,36 @@ html[lang="ar"] {
     }
   }
 
+  .large-title {
+    font-size: 70px !important;
+  }
+
+  .wallet-banner {
+    padding-top: 17px;
+  }
+
+  .wallet-content {
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 17px;
+      min-height: unset;
+      .btn {
+        margin-inline: auto;
+      }
+    }
+    .doctor-books {
+      position: unset;
+      width: 40%;
+      margin: auto;
+      height: auto;
+      display: block;
+    }
+  }
+
   html[lang="ar"] {
     .dropdown-content {
       left: -25px;
@@ -3175,19 +3302,6 @@ html[lang="ar"] {
       left: auto;
     }
   }
-
-  html[lang="ar"] {
-    .dropdown-content {
-      left: -25px;
-      right: auto;
-
-      &::before {
-        left: 35px;
-        right: auto;
-      }
-    }
-  }
-
   .auth-form {
     &.mw-65 {
       max-width: 100%;
@@ -3246,6 +3360,47 @@ html[lang="ar"] {
   .right-progress {
     .progress-card {
       height: 183px;
+    }
+  }
+  .large-title {
+    font-size: 70px !important;
+  }
+
+  .wallet-banner {
+    padding-top: 17px;
+  }
+
+  .wallet-content {
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 17px;
+      min-height: unset;
+      .btn {
+        margin-inline: auto;
+      }
+    }
+    .doctor-books {
+      position: unset;
+      width: 40%;
+      margin: auto;
+      height: auto;
+      display: block;
+    }
+  }
+
+  html[lang="ar"] {
+    .dropdown-content {
+      left: -25px;
+      right: auto;
+
+      &::before {
+        left: 35px;
+        right: auto;
+      }
     }
   }
 }

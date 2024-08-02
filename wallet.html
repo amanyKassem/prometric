@@ -226,6 +226,7 @@
                 <ul>
                   <li class="mt-3 bg-menuBg shadow p-2">
                     <a
+                      href="notiDetails.html"
                       href="#"
                       class="d-flex align-items-center flex-column flex-md-row"
                     >
@@ -254,6 +255,7 @@
                   </li>
                   <li class="mt-3 bg-menuBg shadow p-2">
                     <a
+                      href="notiDetails.html"
                       href="#"
                       class="d-flex align-items-center flex-column flex-md-row"
                     >
@@ -282,6 +284,7 @@
                   </li>
                   <li class="mt-3 bg-menuBg shadow p-2">
                     <a
+                      href="notiDetails.html"
                       href="#"
                       class="d-flex align-items-center flex-column flex-md-row"
                     >
@@ -530,6 +533,262 @@
             </div>
             <div class="link-content flex-grow-1">
               <div class="wallet-content">
+                <div
+                  class="profile-banner wallet-banner bg-lightSecondary3 position-relative"
+                >
+                  <img
+                    src="assets/img/profileWallet.png"
+                    alt="wallet"
+                    class="doctor-books"
+                  />
+                  <div class="content position-relative overflow-hidden">
+                    <div class="top-circles"></div>
+                    <div class="row position-relative z-index-2">
+                      <div class="col-xl-7">
+                        <h2 class="text-black fw-bold mb-2 large-title">
+                          Wallet
+                        </h2>
+                        <div
+                          class="d-flex align-items-center justify-content-center justify-content-xl-start mb-2"
+                        >
+                          <img
+                            src="assets/img/wallet-green.svg"
+                            alt="wallet"
+                            width="30"
+                            class="me-3 transfrom-180-reverse"
+                          />
+                          <input
+                            type="password"
+                            class="me-1 bg-transparent p-0 border-0 pass-input"
+                            value="1234"
+                            readonly
+                          />
+                          <span class="me-3 fs-2 fw-bold text-black">$</span>
+                          <div class="toggle-pass">
+                            <i class="fa-regular fa-eye"></i>
+                          </div>
+                        </div>
+                        <p class="text-black mb-0 fs-5 mb-4">
+                          You can submit a withdrawal request for the required
+                          amount and you will be responded to as quickly as
+                          possible
+                        </p>
+                        <button
+                          class="btn btn-primary w-240 with-shadow mb-2"
+                          data-bs-toggle="modal"
+                          data-bs-target="#withdrawModal"
+                        >
+                          <img
+                            src="assets/img/money-send.svg"
+                            alt="withdraw"
+                            width="25"
+                            class="me-2 transfrom-180-reverse"
+                          />
+                          Withdraw request
+                        </button>
+                      </div>
+                    </div>
+                    <div class="bottom-circles"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="withdrawModal"
+                tabindex="-1"
+                aria-labelledby="withdrawModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="top-circles"></div>
+                    <div class="modal-body">
+                      <form action="" class="position-relative z-index-2">
+                        <img
+                          src="assets/img/profileWallet.png"
+                          alt="wallet"
+                          class="d-block mb-4 mx-auto w-50 transfrom-180-reverse"
+                        />
+                        <div class="mb-3">
+                          <label
+                            for="amount"
+                            class="form-label text-transform-unset fs-18"
+                            >Please write the phone number or account number you
+                            want to transfer the amount to</label
+                          >
+                          <input
+                            type="number"
+                            class="form-control border"
+                            id="amount"
+                            placeholder="Phone number or account number"
+                          />
+                        </div>
+                        <div class="mb-4">
+                          <label
+                            for="withdraw"
+                            class="form-label text-transform-unset fs-18"
+                            >How much do you want to withdraw?</label
+                          >
+                          <input
+                            type="number"
+                            class="form-control border"
+                            id="withdraw"
+                            placeholder="Withdraw amount"
+                          />
+                        </div>
+                        <button
+                          type="button"
+                          class="btn btn-primary w-100 mx-auto with-shadow"
+                          data-bs-dismiss="modal"
+                          data-bs-toggle="modal"
+                          data-bs-target="#successModal"
+                        >
+                          <img
+                            src="assets/img/money-send.svg"
+                            alt="withdraw"
+                            width="25"
+                            class="me-2 transfrom-180-reverse"
+                          />
+                          Send withdrawal request
+                        </button>
+                      </form>
+                    </div>
+                    <div class="bottom-circles"></div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="modal fade"
+                id="successModal"
+                tabindex="-1"
+                aria-labelledby="successModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="top-circles"></div>
+                    <div class="modal-body">
+                      <div class="position-relative z-index-2">
+                        <img
+                          src="assets/img/walletSuccess.png"
+                          alt="wallet"
+                          class="d-block mb-4 mx-auto w-50 transfrom-180-reverse"
+                        />
+                        <h4 class="text-dark mb-3 lh-base text-center">
+                          Your request has been sent successfully. Your request
+                          will be answered as soon as possible
+                        </h4>
+                      </div>
+                    </div>
+                    <div class="bottom-circles"></div>
+                  </div>
+                </div>
+              </div>
+              <hr class="my-4" />
+              <h3 class="d-flex align-items-center fw-bold mb-4">
+                <img
+                  src="assets/img/arrowReverse.svg"
+                  alt="transfers"
+                  width="32"
+                  class="me-1 transfrom-180-reverse"
+                />
+                All transfers
+              </h3>
+
+              <div class="table-responsive w-100 mb-4 mb-lg-0">
+                <table
+                  class="table table-borderless main-table rows-bg w-100 text-center"
+                >
+                  <thead>
+                    <tr class="bg-footerBg text-menuBg">
+                      <th>ID transfer</th>
+                      <th>Date</th>
+                      <th>Value</th>
+                      <th>Fees</th>
+                      <th>Transfer</th>
+                    </tr>
+                  </thead>
+                  <tbody class="text-footerBg">
+                    <tr>
+                      <td>
+                        <div class="d-flex flex-column">
+                          <span>Voda_cash</span>
+                          <span>(56541231)</span>
+                        </div>
+                      </td>
+                      <td>Wed.12 July 2023</td>
+                      <td>800 $</td>
+                      <td>0 $</td>
+                      <td>
+                        <img
+                          src="assets/img/export.svg"
+                          alt="export"
+                          width="33"
+                          class="transfrom-180-reverse"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex flex-column">
+                          <span>Voda_cash</span>
+                          <span>(56541231)</span>
+                        </div>
+                      </td>
+                      <td>Wed.12 July 2023</td>
+                      <td>800 $</td>
+                      <td>0 $</td>
+                      <td>
+                        <img
+                          src="assets/img/export.svg"
+                          alt="export"
+                          width="33"
+                          class="transfrom-180-reverse"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex flex-column">
+                          <span>Voda_cash</span>
+                          <span>(56541231)</span>
+                        </div>
+                      </td>
+                      <td>Wed.12 July 2023</td>
+                      <td>800 $</td>
+                      <td>0 $</td>
+                      <td>
+                        <img
+                          src="assets/img/export.svg"
+                          alt="export"
+                          width="33"
+                          class="transfrom-180-reverse"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex flex-column">
+                          <span>Voda_cash</span>
+                          <span>(56541231)</span>
+                        </div>
+                      </td>
+                      <td>Wed.12 July 2023</td>
+                      <td>800 $</td>
+                      <td>0 $</td>
+                      <td>
+                        <img
+                          src="assets/img/export.svg"
+                          alt="export"
+                          width="33"
+                          class="transfrom-180-reverse"
+                        />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
@@ -729,5 +988,19 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script src="assets/js/scripts.js"></script>
+    <script>
+      $(document).ready(function () {
+        // show/hide password
+        $(".toggle-pass").on("click", function () {
+          $(this).find("i").toggleClass("fa-eye fa-eye-slash");
+          let input = $(".pass-input");
+          if (input.attr("type") == "password") {
+            input.attr("type", "text");
+          } else {
+            input.attr("type", "password");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
