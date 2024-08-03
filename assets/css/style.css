@@ -2354,7 +2354,7 @@ img {
 }
 
 .form-control {
-  height: 50px;
+  height: 53px;
   background: #fcfcfc;
   color: #858585;
   border-radius: 17px !important;
@@ -2376,6 +2376,14 @@ img {
   -moz-border-radius: 0 !important;
   -ms-border-radius: 0 !important;
   -o-border-radius: 0 !important;
+}
+
+.rounded-start-0 {
+  border-radius: 0 17px 17px 0 !important;
+  -webkit-border-radius: 0 17px 17px 0 !important;
+  -moz-border-radius: 0 17px 17px 0 !important;
+  -ms-border-radius: 0 17px 17px 0 !important;
+  -o-border-radius: 0 17px 17px 0 !important;
 }
 
 .form-label {
@@ -2439,7 +2447,7 @@ img {
 }
 
 .select2-container .select2-selection--single {
-  height: 50px;
+  height: 53px;
   background: #fcfcfc;
   border-radius: 17px !important;
   -webkit-border-radius: 17px !important;
@@ -2480,6 +2488,57 @@ img {
   border: 1px solid #a6a5a5;
 }
 
+.SelectBox {
+  padding: 5px 10px;
+}
+
+.SumoSelect {
+  width: 100%;
+  font-size: 15px;
+  font-weight: normal;
+}
+.SumoSelect > .optWrapper {
+  font-size: 15px;
+}
+.SumoSelect > .optWrapper.multiple > .options li ul li.opt {
+  padding-left: 35px;
+}
+.SumoSelect > .CaptionCont {
+  height: 53px;
+  background: #fcfcfc;
+  border-radius: 17px !important;
+  -webkit-border-radius: 17px !important;
+  -moz-border-radius: 17px !important;
+  -ms-border-radius: 17px !important;
+  -o-border-radius: 17px !important;
+  border: 1px solid #a6a5a5;
+  display: flex;
+  align-items: center;
+}
+.SumoSelect > .CaptionCont > span {
+  font-size: 15px;
+}
+.SumoSelect > .CaptionCont > span.placeholder {
+  color: #a6a5a5;
+  background-color: transparent;
+  font-style: normal;
+  font-size: 14px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  opacity: 1;
+}
+.SumoSelect.open > .CaptionCont, .SumoSelect:focus > .CaptionCont, .SumoSelect:hover > .CaptionCont {
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  border-color: #a6a5a5;
+}
+.SumoSelect .select-all.selected > span i,
+.SumoSelect > .optWrapper.multiple > .options li.opt.selected span i {
+  background-color: #2ecc9b;
+}
+
 .gray-filter {
   filter: grayscale(1);
 }
@@ -2514,6 +2573,34 @@ html[lang=ar] .transfrom-180 {
 }
 html[lang=ar] .transfrom-180-reverse {
   transform: rotateY(-180deg);
+}
+html[lang=ar] .SumoSelect > .optWrapper.multiple > .options li.opt {
+  padding-right: 35px;
+}
+html[lang=ar] .SumoSelect > .optWrapper.multiple > .options li.opt span {
+  margin-right: -35px;
+}
+html[lang=ar] .SumoSelect > .optWrapper.multiple > .options li.group > label {
+  font-weight: 500;
+}
+html[lang=ar] .SumoSelect > .CaptionCont > label {
+  left: 0;
+  right: auto;
+}
+html[lang=ar] .SumoSelect > .CaptionCont > span {
+  padding-left: 30px;
+  padding-right: 0;
+}
+html[lang=ar] .SumoSelect > .CaptionCont > span.placeholder {
+  padding-right: 0;
+  padding-left: 30px;
+}
+html[lang=ar] .rounded-start-0 {
+  border-radius: 17px 0 0 17px !important;
+  -webkit-border-radius: 17px 0 0 17px !important;
+  -moz-border-radius: 17px 0 0 17px !important;
+  -ms-border-radius: 17px 0 0 17px !important;
+  -o-border-radius: 17px 0 0 17px !important;
 }
 
 .top-bar {
@@ -2925,6 +3012,12 @@ html[lang=ar] #wpp-fix .wpp-link + .contact-wpp {
   .select2-container .select2-selection--single {
     font-size: 13px;
     height: 45px;
+  }
+  .SumoSelect > .CaptionCont {
+    height: 45px;
+  }
+  .SumoSelect > .CaptionCont > span {
+    font-size: 13px;
   }
   .btn {
     font-size: 14px;
@@ -3906,11 +3999,12 @@ html[lang=ar] .text-carusel {
   font-size: 16px;
 }
 .plan .price p .new {
-  font-size: 24px;
+  font-size: 26px;
 }
 .plan .price p .old {
   color: #4e4e4e;
-  font-size: 21px;
+  font-size: 23px;
+  font-weight: 500;
 }
 .plan:hover {
   border-color: #2ecc9b;
@@ -5009,8 +5103,22 @@ html[dir=rtl] .cart-item .offer {
   flex-shrink: 0;
 }
 
-.pay-form {
+.pay-form,
+.show-extra-discount {
   display: none;
+}
+
+.discount-pay img {
+  position: relative;
+  top: 17px;
+}
+.discount-pay h3 {
+  text-shadow: 0px 12px 12px rgba(20, 20, 20, 0.14);
+  transform: rotate(-2deg);
+}
+
+html[dir=rtl] .discount-pay h3 {
+  transform: rotate(2deg);
 }
 
 .side-menu {

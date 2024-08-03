@@ -59,6 +59,14 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery.sumoselect/3.4.9/sumoselect.min.css"
+      integrity="sha512-vU7JgiHMfDcQR9wyT/Ye0EAAPJDHchJrouBpS9gfnq3vs4UGGE++HNL3laUYQCoxGLboeFD+EwbZafw7tbsLvg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <link href="assets/css/style.css" rel="stylesheet" />
   </head>
 
@@ -594,7 +602,7 @@
                   <div class="number me-2 mb-3">
                     <span>1</span>
                   </div>
-                  <h4 class="fw-500 mb-3">Package for one Chapter</h4>
+                  <h4 class="fw-500 mb-3">Prime test bundle</h4>
                 </div>
                 <ul class="text-lightDark list-dot mb-3 fs-15">
                   <li>
@@ -627,11 +635,63 @@
                     The package price is determined according to each Chapter
                   </p>
                 </div>
-                <a
-                  href="payment.html"
-                  class="btn btn-primary fw-bold with-shadow mb-1 shrink-hvr"
-                  >Subscribe</a
+                <button
+                  type="button"
+                  class="btn btn-primary fw-bold with-shadow mb-1 shrink-hvr w-100"
+                  data-bs-toggle="modal"
+                  data-bs-target="#subscribeModal"
                 >
+                  Subscribe
+                </button>
+              </div>
+            </div>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="subscribeModal"
+              tabindex="-1"
+              aria-labelledby="subscribeModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                  <div class="modal-body bg-menuBg">
+                    <div
+                      class="category-name bg-lightGrayClr3 fs-15 fw-500 p-2 p-md-3 rounded-5 mb-3"
+                    >
+                      SPLE Exam Preparation MCQ's
+                    </div>
+                    <h5
+                      class="fw-bold fs-5 mb-3 d-flex align-items-center justify-content-between"
+                    >
+                      Select Chapters
+                    </h5>
+                    <select
+                      class="selectChapter"
+                      name="examChapters "
+                      id="exam-chapters "
+                      multiple
+                    >
+                      <option value="chapter2">SPLE Exam MCQ's</option>
+                      <option value="chapter3">SPLE Exam MCQ's 2</option>
+                      <option value="chapter4">
+                        SPLE Exam Preparation MCQ's 3
+                      </option>
+                      <option value="chapter5">SPLE Exam MCQ's 4</option>
+                    </select>
+                    <hr class="my-4" />
+                    <ul id="chapter-list">
+                      <!-- Chapters will be added here dynamically -->
+                    </ul>
+
+                    <a
+                      href="payment.html"
+                      class="btn btn-primary w-50 mt-4 with-shadow mx-auto"
+                      >Next</a
+                    >
+                  </div>
+                </div>
               </div>
             </div>
             <div class="col-lg-6 mb-4">
@@ -641,7 +701,7 @@
                     <span>2</span>
                   </div>
                   <div class="mb-3">
-                    <h4 class="fw-500 mb-1">Package for one Chapter</h4>
+                    <h4 class="fw-500 mb-1">Prime plus test bundle</h4>
                     <span class="fs-6"
                       >(Comprehensive package for all Chapter)</span
                     >
@@ -695,10 +755,7 @@
                     <span>3</span>
                   </div>
                   <div class="mb-3">
-                    <h4 class="fw-500 mb-1">Package for one Chapter</h4>
-                    <span class="fs-6"
-                      >(Comprehensive package for all Chapter)</span
-                    >
+                    <h4 class="fw-500 mb-1">Mock test bundle</h4>
                   </div>
                 </div>
                 <ul class="text-lightDark list-dot mb-3 fs-15">
@@ -749,9 +806,9 @@
                     <span>4</span>
                   </div>
                   <div class="mb-3">
-                    <h4 class="fw-500 mb-1">Package for one Chapter</h4>
+                    <h4 class="fw-500 mb-1">Elite test bundle</h4>
                     <span class="fs-6"
-                      >(Comprehensive package for all Chapter)</span
+                      >(Package includes All Chapter & final exam)</span
                     >
                   </div>
                 </div>
@@ -1372,8 +1429,69 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sumoselect/3.4.9/jquery.sumoselect.min.js"
+      integrity="sha512-+Ea4TZ8vBWO588N7H6YOySCtkjerpyiLnV7bgqwrQF+vqR8+q/InGK9WDZx5d6VtdGRoV6uLd5Dwz2vE7EL3oQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <script src="assets/js/scripts.js"></script>
+    <script>
+      $(document).ready(function () {
+        // check if body has class rtl
+        let isRtl = $('html[lang="ar"]').length > 0;
+
+        $(".selectChapter").SumoSelect({
+          placeholder: isRtl ? "اختر الشباتر" : "Select chapters",
+          captionFormat: isRtl ? "اختيار {0}" : "Selected {0}",
+          captionFormatAllSelected: isRtl
+            ? "تم تحديد جميع الشباتر"
+            : "All chapters are selected",
+        });
+
+        // Handle SumoSelect change event
+        $(".selectChapter").on("change", function () {
+          // Clear the list first to avoid duplicates
+          $("#chapter-list").empty();
+
+          // Get selected options
+          var selectedOptions = $(this).val();
+
+          // Add each selected option to the list
+          if (selectedOptions) {
+            selectedOptions.forEach(function (value) {
+              var optionText = $(
+                'select.selectChapter option[value="' + value + '"]'
+              ).text();
+              addChapterToList(value, optionText);
+            });
+          }
+        });
+        // Function to add chapter to the list
+        function addChapterToList(value, text) {
+          const listItem = $(
+            "<li class='bg-lightGrayClr3 fs-15 fw-500 p-2 px-md-3 rounded-5 mb-3 d-flex justify-content-between align-items-center'>"
+          ).attr("data-value", value).html(`
+            <span><i class="fa-solid fa-circle-check text-placeholder me-2"></i>${text}</span>
+            <button class="delete-chapter btn h-auto p-0 w-fit text-danger ms-3 scale-hvr">
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
+          `);
+
+          // Event listener for the delete button
+          listItem.find(".delete-chapter").on("click", function () {
+            listItem.slideUp(300, function () {
+              $(this).remove();
+              // Deselect the option in SumoSelect
+              $(".selectChapter")[0].sumo.unSelectItem(value);
+            });
+          });
+
+          $("#chapter-list").append(listItem);
+        }
+      });
+    </script>
     <script>
       $(document).ready(function () {
         let isRtl = $('html[lang="ar"]').length > 0;

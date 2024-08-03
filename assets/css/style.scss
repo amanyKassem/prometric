@@ -819,11 +819,12 @@ html[lang="ar"] {
       flex: 2;
       font-size: 16px;
       .new {
-        font-size: 24px;
+        font-size: 26px;
       }
       .old {
         color: map_get(colors.$theme-colors, grayClr);
-        font-size: 21px;
+        font-size: 23px;
+        font-weight: 500;
       }
     }
   }
@@ -1979,8 +1980,27 @@ html[dir="rtl"] {
     flex-shrink: 0;
   }
 }
-.pay-form {
+.pay-form,
+.show-extra-discount {
   display: none;
+}
+.discount-pay {
+  img {
+    position: relative;
+    top: 17px;
+  }
+  h3 {
+    text-shadow: 0px 12px 12px rgba(20, 20, 20, 0.14);
+    transform: rotate(-2deg);
+  }
+}
+
+html[dir="rtl"] {
+  .discount-pay {
+    h3 {
+      transform: rotate(2deg);
+    }
+  }
 }
 // end payment page
 

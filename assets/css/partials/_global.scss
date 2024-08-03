@@ -775,7 +775,7 @@ h2 {
   resize: none;
 }
 .form-control {
-  height: 50px;
+  height: 53px;
   background: map_get(colors.$theme-colors, menuBg);
   color: map_get(colors.$theme-colors, lightGrayClr);
   @include mixins.border-radius(17px);
@@ -788,6 +788,11 @@ h2 {
     @include mixins.border-radius(0);
   }
 }
+
+.rounded-start-0 {
+  @include mixins.border-radius(0 17px 17px 0);
+}
+
 .form-label {
   text-transform: capitalize;
   font-size: 16px;
@@ -838,7 +843,7 @@ h2 {
 
 .select2-container {
   .select2-selection--single {
-    height: 50px;
+    height: 53px;
     background: map_get(colors.$theme-colors, menuBg);
     @include mixins.border-radius(17px);
     border: 0;
@@ -882,6 +887,68 @@ h2 {
   }
 }
 
+.SelectBox {
+  padding: 5px 10px;
+}
+
+.SumoSelect {
+  width: 100%;
+  font-size: 15px;
+  font-weight: normal;
+  > {
+    .optWrapper {
+      font-size: 15px;
+      &.multiple > {
+        .options {
+          li {
+            ul {
+              li.opt {
+                padding-left: 35px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .CaptionCont {
+      height: 53px;
+      background: map_get(colors.$theme-colors, menuBg);
+      @include mixins.border-radius(17px);
+      border: 1px solid map_get(colors.$theme-colors, placeholder);
+      display: flex;
+      align-items: center;
+
+      > {
+        span {
+          font-size: 15px;
+          &.placeholder {
+            color: map_get(colors.$theme-colors, placeholder);
+            background-color: transparent;
+            font-style: normal;
+            font-size: 14px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  &.open,
+  &:focus,
+  &:hover {
+    > .CaptionCont {
+      @include mixins.prefix(box-shadow, none, webkit ms o);
+      border-color: map_get(colors.$theme-colors, placeholder);
+    }
+  }
+  .select-all.selected > span i,
+  > .optWrapper.multiple > .options li.opt.selected span i {
+    background-color: map_get(colors.$theme-colors, primary);
+  }
+}
+
 .gray-filter {
   filter: grayscale(1);
 }
@@ -910,6 +977,52 @@ html[lang="ar"] {
   }
   .transfrom-180-reverse {
     transform: rotateY(-180deg);
+  }
+
+  .SumoSelect {
+    > {
+      .optWrapper {
+        &.multiple {
+          > .options {
+            li {
+              &.opt {
+                padding-right: 35px;
+                span {
+                  margin-right: -35px;
+                }
+              }
+
+              &.group {
+                > label {
+                  font-weight: 500;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .CaptionCont {
+        > {
+          label {
+            left: 0;
+            right: auto;
+          }
+          span {
+            padding-left: 30px;
+            padding-right: 0;
+            &.placeholder {
+              padding-right: 0;
+              padding-left: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .rounded-start-0 {
+    @include mixins.border-radius( 17px 0 0 17px );
   }
 }
 // end form
@@ -1348,6 +1461,15 @@ html[lang="ar"] {
     .select2-selection--single {
       font-size: 13px;
       height: 45px;
+    }
+  }
+
+  .SumoSelect {
+    > .CaptionCont {
+      height: 45px;
+      > span {
+        font-size: 13px;
+      }
     }
   }
 
