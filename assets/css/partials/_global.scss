@@ -643,8 +643,8 @@ h2 {
   z-index: 9999;
   background-color: #fff;
   overflow: hidden;
-  @include mixins.prefix(display, flex, webkit moz ms o);
-  // display: none;
+  // @include mixins.prefix(display, flex, webkit moz ms o);
+  display: none;
   -ms-align-items: center;
   align-items: center;
   justify-content: center;

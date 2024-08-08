@@ -224,7 +224,6 @@
                   <li class="mt-3 bg-menuBg shadow p-2">
                     <a
                       href="notiDetails.html"
-                      href="#"
                       class="d-flex align-items-center flex-column flex-md-row"
                     >
                       <div class="flex-shrink-0">
@@ -253,7 +252,6 @@
                   <li class="mt-3 bg-menuBg shadow p-2">
                     <a
                       href="notiDetails.html"
-                      href="#"
                       class="d-flex align-items-center flex-column flex-md-row"
                     >
                       <div class="flex-shrink-0">
@@ -282,7 +280,6 @@
                   <li class="mt-3 bg-menuBg shadow p-2">
                     <a
                       href="notiDetails.html"
-                      href="#"
                       class="d-flex align-items-center flex-column flex-md-row"
                     >
                       <div class="flex-shrink-0">
@@ -311,7 +308,10 @@
                 </ul>
               </div>
             </div>
-            <a href="search.html" class="image-container position-relative mx-3">
+            <a
+              href="search.html"
+              class="image-container position-relative active mx-3"
+            >
               <img
                 src="assets/img/search.svg"
                 alt="search"
@@ -336,7 +336,7 @@
             <li>
               <a href="index.html">Home</a>
             </li>
-            <li class="active">
+            <li>
               <a href="categories.html">Categories Test</a>
             </li>
             <li>
@@ -376,243 +376,122 @@
 
     <!-- start page unique content -->
     <main>
-      <div class="container">
-        <!-- start breadcrumb -->
-        <div
-          class="breadcrumb-nav bg-transparent shadow-none pt-4 pb-2 fs-18"
-          aria-label="breadcrumb"
-        >
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item d-flex align-items-center">
-              <a href="categories.html">Categories Test</a>
-              <img
-                src="assets/img/arrows.svg"
-                alt="arrows"
-                class="mx-2 transfrom-180-reverse arrows"
-              />
-            </li>
-            <li class="breadcrumb-item d-flex align-items-center">
-              <a href="category.html">Saudi Pharmacy Prometric exam SPLE</a>
-              <img
-                src="assets/img/arrows.svg"
-                alt="arrows"
-                class="mx-2 transfrom-180-reverse arrows"
-              />
-            </li>
-            <li class="breadcrumb-item active" aria-current="page">
-              Anesthesia MCQs details
-            </li>
-          </ol>
-        </div>
-        <!-- end breadcrumb -->
+      <!-- start search -->
+      <div class="search-page py-4">
+        <div class="container">
+          <form
+            class="search-box mb-4 d-flex align-items-center flex-wrap flex-md-nowrap rounded-30 border w-fit overflow-hidden"
+          >
+            <input
+              type="text"
+              class="form-control bg-menuBg border-0"
+              placeholder="Search.."
+            />
 
-        <!-- start exam details -->
-        <div class="exam-details">
-          <div class="row">
-            <div class="col-md-6 mb-4">
-              <div class="exam-img-container position-relative">
-                <div class="image-container position-relative add-to-cart">
-                  <img
-                    src="assets/img/addCart.svg"
-                    alt="cart"
-                    class="default-img"
-                  />
-                  <img
-                    src="assets/img/cartCheck.svg"
-                    alt="cart"
-                    class="hover-img"
-                  />
-                </div>
-                <img
-                  src="assets/img/brain.png"
-                  alt="image"
-                  class="w-100 exam-img"
-                />
-              </div>
-            </div>
-            <div class="col-md-6 mb-4">
-              <h3 class="fw-bold mb-3 lh-base">
-                Saudi Pharmacist Prometric Exam (SPLE) - Saudi Pharmacist
-                Licensing Exam
-              </h3>
-              <div class="price justify-content-start mb-3">
-                <span class="new me-3">$79</span>
-                <span class="old text-decoration-line-through text-lightDark"
-                  >$59</span
-                >
-              </div>
-              <p class="text-lightDark mb-4">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-              </p>
-              <div
-                class="d-flex align-items-center justify-content-between flex-wrap btns pt-3 mb-2"
+            <div class="select-search border border-0 border-start border-end">
+              <select
+                id="exam-category"
+                class="select2 w-100"
+                data-placeholder="select category"
               >
-                <a
-                  href="exam.html"
-                  class="btn btn-lightSecondary2 text-dark with-shadow mb-3"
-                  >Free Test</a
-                >
-                <a
-                  href="payment.html"
-                  class="btn btn-primary text-dark with-shadow mb-3"
-                  >Subscribe
-                  <img
-                    src="assets/img/arrow-right.svg"
-                    alt="arrow"
-                    class="transfrom-180-reverse ms-2 arrow"
-                  />
-                </a>
-              </div>
-              <span class="tries mb-2 text-danger">
-                <i class="fa-solid fa-circle-exclamation me-1"></i>
-                Only have 3 free tries</span
-              >
+                <option label="select category"></option>
+                <option value="exam1">SPLE Exam Preparation MCQ's</option>
+                <option value="exam2">SPLE Exam MCQ's</option>
+              </select>
             </div>
-          </div>
-          <p class="fs-18 mb-4 fw-500">
-            <span class="text-secondary fw-500"
-              >Welcome to our website for pharmacy prometric exams</span
+            <button type="submit" class="btn h-auto shrink-hvr">
+              <img src="assets/img/search-circle.svg" alt="search" />
+            </button>
+          </form>
+
+          <h5 class="fw-500 mb-3 lh-base fs-5">Search Results</h5>
+          <hr />
+          <div
+            class="result d-flex justify-content-between align-items-center flex-wrap"
+          >
+            <a href="examDetails.html" class="result-name mb-3 ms-3"
+              >Anesthesia MCQs</a
             >
-            In the individual chapter MCQ's, you can view detailed results. This
-            includes your choices, the correct answers for all questions, and an
-            analysis of where you made mistakes or selected wrong answers. This
-            detailed feedback will help you understand your errors and improve
-            your performance.
-          </p>
-          <hr class="mb-1" />
-          <div class="row justify-content-center pt-4 mb-4">
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div
-                class="circle-container"
-                data-expiration-date="2024-08-12"
-                data-total-days-in-cycle="30"
-              >
-                <h5 class="text-center mb-4 fw-500 fs-5">
-                  Subscription Validity
-                </h5>
-                <svg class="circle expiration-circle" viewBox="0 0 100 100">
-                  <defs>
-                    <linearGradient
-                      id="expirationGradient"
-                      x1="0%"
-                      y1="0%"
-                      x2="100%"
-                      y2="100%"
-                    >
-                      <stop
-                        offset="0%"
-                        style="stop-color: #950808; stop-opacity: 1"
-                      />
-                      <stop
-                        offset="100%"
-                        style="stop-color: #c70a0a; stop-opacity: 1"
-                      />
-                    </linearGradient>
-                  </defs>
-                  <circle class="background" cx="50" cy="50" r="45"></circle>
-                  <circle class="progress" cx="50" cy="50" r="45"></circle>
-                  <text
-                    class="percentage"
-                    x="50%"
-                    y="50%"
-                    text-anchor="middle"
-                    dy=".3em"
-                  ></text>
-                </svg>
-                <div class="text-danger text-center mt-4">2024-08-12</div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div
-                class="circle-container"
-                data-tests-completed="12"
-                data-total-tests="30"
-              >
-                <h5 class="text-center mb-4 fw-500 fs-5">
-                  No. Tests Completed
-                </h5>
-                <svg class="circle tests-circle" viewBox="0 0 100 100">
-                  <defs>
-                    <linearGradient
-                      id="testsGradient"
-                      x1="0%"
-                      y1="0%"
-                      x2="100%"
-                      y2="100%"
-                    >
-                      <stop
-                        offset="0%"
-                        style="stop-color: #239974; stop-opacity: 1"
-                      />
-                      <stop
-                        offset="100%"
-                        style="stop-color: #2ecc9b; stop-opacity: 1"
-                      />
-                    </linearGradient>
-                  </defs>
-                  <circle class="background" cx="50" cy="50" r="45"></circle>
-                  <circle class="progress" cx="50" cy="50" r="45"></circle>
-                  <text
-                    class="percentage"
-                    x="50%"
-                    y="50%"
-                    text-anchor="middle"
-                    dy=".3em"
-                  ></text>
-                </svg>
-                <div class="text-footerBg text-center mt-4">
-                  Total number of tests: 30 tests
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mb-4">
-              <div
-                class="circle-container"
-                data-tries-made="2"
-                data-total-tries="3"
-              >
-                <h5 class="text-center mb-4 fw-500 fs-5">Free tests</h5>
-                <svg class="circle tries-circle" viewBox="0 0 100 100">
-                  <defs>
-                    <linearGradient
-                      id="triesGradient"
-                      x1="0%"
-                      y1="0%"
-                      x2="100%"
-                      y2="100%"
-                    >
-                      <stop
-                        offset="0%"
-                        style="stop-color: #5e76bf; stop-opacity: 1"
-                      />
-                      <stop
-                        offset="100%"
-                        style="stop-color: #7d9dff; stop-opacity: 1"
-                      />
-                    </linearGradient>
-                  </defs>
-                  <circle class="background" cx="50" cy="50" r="45"></circle>
-                  <circle class="progress" cx="50" cy="50" r="45"></circle>
-                  <text
-                    class="percentage"
-                    x="50%"
-                    y="50%"
-                    text-anchor="middle"
-                    dy=".3em"
-                  ></text>
-                </svg>
-                <div class="text-secondary text-center mt-4">
-                  You only have one free trial
-                </div>
-              </div>
-            </div>
+            <span class="remove-result cursor-pointer fs-18"
+              ><i class="fa-regular fa-circle-xmark"></i
+            ></span>
+          </div>
+          <div
+            class="result d-flex justify-content-between align-items-center flex-wrap"
+          >
+            <a href="examDetails.html" class="result-name mb-3 ms-3"
+              >Anesthesia MCQs</a
+            >
+            <span class="remove-result cursor-pointer fs-18"
+              ><i class="fa-regular fa-circle-xmark"></i
+            ></span>
+          </div>
+          <div
+            class="result d-flex justify-content-between align-items-center flex-wrap"
+          >
+            <a href="examDetails.html" class="result-name mb-3 ms-3"
+              >Anesthesia MCQs</a
+            >
+            <span class="remove-result cursor-pointer fs-18"
+              ><i class="fa-regular fa-circle-xmark"></i
+            ></span>
+          </div>
+          <div
+            class="result d-flex justify-content-between align-items-center flex-wrap"
+          >
+            <a href="examDetails.html" class="result-name mb-3 ms-3"
+              >Anesthesia MCQs</a
+            >
+            <span class="remove-result cursor-pointer fs-18"
+              ><i class="fa-regular fa-circle-xmark"></i
+            ></span>
+          </div>
+          <div
+            class="result d-flex justify-content-between align-items-center flex-wrap"
+          >
+            <a href="examDetails.html" class="result-name mb-3 ms-3"
+              >Anesthesia MCQs</a
+            >
+            <span class="remove-result cursor-pointer fs-18"
+              ><i class="fa-regular fa-circle-xmark"></i
+            ></span>
+          </div>
+          <hr />
+          <h5 class="fw-500 mb-3 lh-base fs-5 mt-4">Most searched results</h5>
+          <hr />
+          <div
+            class="result d-flex justify-content-between align-items-center flex-wrap"
+          >
+            <a href="examDetails.html" class="result-name mb-3 ms-3"
+              >Anesthesia MCQs</a
+            >
+            <span class="remove-result cursor-pointer fs-18"
+              ><i class="fa-regular fa-circle-xmark"></i
+            ></span>
+          </div>
+          <div
+            class="result d-flex justify-content-between align-items-center flex-wrap"
+          >
+            <a href="examDetails.html" class="result-name mb-3 ms-3"
+              >Anesthesia MCQs</a
+            >
+            <span class="remove-result cursor-pointer fs-18"
+              ><i class="fa-regular fa-circle-xmark"></i
+            ></span>
+          </div>
+          <div
+            class="result d-flex justify-content-between align-items-center flex-wrap"
+          >
+            <a href="examDetails.html" class="result-name mb-3 ms-3"
+              >Anesthesia MCQs</a
+            >
+            <span class="remove-result cursor-pointer fs-18"
+              ><i class="fa-regular fa-circle-xmark"></i
+            ></span>
           </div>
         </div>
-
-        <!-- end exam details -->
       </div>
+      <!-- end search -->
     </main>
     <!-- end page unique content -->
 
@@ -813,93 +692,18 @@
 
     <script src="assets/js/scripts.js"></script>
     <script>
-      let isRtl = $('html[lang="ar"]').length > 0;
-      let x = isRtl ? 48 : 52;
-      function updateProgress(expirationDate, totalDaysInCycle) {
-        const today = new Date();
-        const expiration = new Date(expirationDate);
-        const totalDays = Math.ceil(
-          (expiration - today) / (1000 * 60 * 60 * 24)
-        );
-
-        const daysLeft = Math.max(totalDays, 0);
-        const progress = Math.min((daysLeft / totalDaysInCycle) * 100, 100); // Cap at 100%
-
-        const radius = 45;
-        const circumference = 2 * Math.PI * radius;
-        const offset = circumference - (progress / 100) * circumference;
-
-        $(".expiration-circle .progress").css("stroke-dashoffset", offset);
-        $(".expiration-circle .percentage").html(
-          `<tspan x="${x}%" dy="0em" class="fw-bold">${daysLeft}</tspan>
-     <tspan x="50%" dy="1.3em" class="fs-13">Days</tspan>`
-        );
-      }
-
-      function updateTestsProgress(completedTests, totalTests) {
-        const progress = (completedTests / totalTests) * 100;
-
-        const radius = 45;
-        const circumference = 2 * Math.PI * radius;
-        const offset = circumference - (progress / 100) * circumference;
-
-        $(".tests-circle .progress").css("stroke-dashoffset", offset);
-        $(".tests-circle .percentage").text(`${completedTests}/${totalTests}`);
-      }
-
-      function updateTriesProgress(triesMade, totalTries) {
-        const progress = (triesMade / totalTries) * 100;
-
-        const radius = 45;
-        const circumference = 2 * Math.PI * radius;
-        const offset = circumference - (progress / 100) * circumference;
-
-        $(".tries-circle .progress").css("stroke-dashoffset", offset);
-        $(".tries-circle .percentage").html(
-          `<tspan x="${x}%" dy="0em" class="fw-bold">${triesMade}</tspan>
-     <tspan x="50%" dy="1.3em" class="fs-13">free tries</tspan>`
-        );
-      }
-
-      // Function to animate progress circles when they enter the viewport
-      function animateCircles(entries, observer) {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const container = $(entry.target);
-            const expirationDate = container.data("expiration-date");
-            const totalDaysInCycle = container.data("total-days-in-cycle");
-
-            if (expirationDate && totalDaysInCycle) {
-              updateProgress(expirationDate, totalDaysInCycle);
-            }
-
-            const completedTests = container.data("tests-completed");
-            const totalTests = container.data("total-tests");
-
-            if (completedTests && totalTests) {
-              updateTestsProgress(completedTests, totalTests);
-            }
-
-            const triesMade = container.data("tries-made");
-            const totalTries = container.data("total-tries");
-
-            if (triesMade && totalTries) {
-              updateTriesProgress(triesMade, totalTries);
-            }
-
-            // Stop observing the entry once it has been animated
-            observer.unobserve(entry.target);
-          }
-        });
-      }
-
       $(document).ready(function () {
-        const observer = new IntersectionObserver(animateCircles, {
-          threshold: 0.5, // Adjust as needed
+        // select2
+        $(".select2").select2({
+          width: "100%",
         });
-
-        $(".circle-container").each(function () {
-          observer.observe(this);
+        // remove result
+        $(".remove-result").click(function () {
+          $(this)
+            .parent()
+            .slideUp(300, function () {
+              $(this).remove();
+            });
         });
       });
     </script>
