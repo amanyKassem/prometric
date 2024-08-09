@@ -3337,7 +3337,7 @@ html[lang="ar"] {
   }
 }
 
-@media screen and (max-width: 768px) and (min-height: 320px) {
+@media screen and (min-width: 768px) and (orientation: landscape) {
   nav {
     .menu-bar {
       display: flex !important;
@@ -3374,6 +3374,9 @@ html[lang="ar"] {
       overflow: auto;
       &.ul-dir {
         left: 0;
+      }
+      .user{
+        display: none !important;
       }
       .menu-links {
         align-items: flex-start;
