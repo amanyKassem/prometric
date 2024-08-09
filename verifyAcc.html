@@ -204,12 +204,19 @@
                 />
               </div>
               <div
-                class="text-lightDark d-flex align-items-center flex-wrap fs-15 text-center justify-content-center mb-4"
+                class="text-lightDark d-flex align-items-center flex-wrap fs-15 text-center justify-content-between mb-3"
               >
-                Didn't get a code?
-                <button class="text-secondary shrink-hvr ms-2 btn p-0 h-auto">
-                  Click to resend
-                </button>
+                <div class="d-flex align-items-center mb-2 me-3">
+                  Didn't get a code?
+                  <button
+                    type="button"
+                    disabled
+                    class="resend-button text-secondary shrink-hvr ms-2 btn p-0 h-auto"
+                  >
+                    Click to resend
+                  </button>
+                </div>
+                <div class="time-counter mb-2">01:00</div>
               </div>
 
               <button
@@ -287,6 +294,49 @@
           if ($(this).val().length > 0) {
             $(this).addClass("filled");
           }
+        });
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        var timerDuration = 60; // 60 seconds
+        var timerInterval;
+
+        function startTimer() {
+          var timeRemaining = timerDuration;
+          $(".time-counter").text(formatTime(timeRemaining));
+
+          timerInterval = setInterval(function () {
+            timeRemaining--;
+            $(".time-counter").text(formatTime(timeRemaining));
+
+            if (timeRemaining <= 0) {
+              clearInterval(timerInterval);
+              $(".resend-button").prop("disabled", false);
+              $(".time-counter").text("00:00");
+            }
+          }, 1000);
+        }
+
+        function formatTime(seconds) {
+          var minutes = Math.floor(seconds / 60);
+          var seconds = seconds % 60;
+          return (
+            (minutes < 10 ? "0" : "") +
+            minutes +
+            ":" +
+            (seconds < 10 ? "0" : "") +
+            seconds
+          );
+        }
+
+        // Initially start the timer
+        startTimer();
+
+        // Click event to resend the code and restart the timer
+        $(".resend-button").click(function () {
+          $(this).prop("disabled", true);
+          startTimer();
         });
       });
     </script>
