@@ -2430,6 +2430,65 @@ html[lang="ar"] {
 }
 // end wallet page
 
+// start invitation page
+.invitation-banner {
+  .invitation-img {
+    width: 80%;
+    max-width: 530px;
+  }
+  .doctor-books {
+    top: auto;
+    bottom: -20px;
+    right: 30px;
+    height: 95%;
+  }
+}
+// end invitation page
+
+// start payment page
+.pay-content {
+  .pay-card {
+    @include mixins.border-radius(15px);
+    @include mixins.prefix(
+      box-shadow,
+      0px 12px 12px 0px rgba(20, 20, 20, 0.14),
+      webkit ms o
+    );
+    height: 220px;
+    padding: 25px;
+    &.visa {
+      background: url(../img/moovBg.png) no-repeat center center/cover;
+    }
+    &.master {
+      background: url(../img/blueBg.png) no-repeat center center/cover;
+    }
+    .fa-wifi {
+      transform: rotate(90deg);
+    }
+  }
+  .pay-method-check {
+    .check {
+      @include mixins.border-radius(50%);
+      @include mixins.shape(25px);
+      @extend .flex-center;
+      @extend .general-transition;
+      color: map_get(colors.$theme-colors, primary);
+      background: #fff;
+      position: absolute;
+      right: -9px;
+      top: -9px;
+      font-size: 21px;
+      opacity: 0;
+    }
+    &.active {
+      .check {
+        opacity: 1;
+      }
+    }
+  }
+}
+// end payment page
+
 // start search page
 .search-box {
   padding: 5px;
@@ -2981,7 +3040,8 @@ html[lang="ar"] {
     padding-top: 17px;
   }
 
-  .wallet-content {
+  .wallet-content,
+  .invitation-banner {
     .content {
       display: flex;
       flex-direction: column;
@@ -3337,7 +3397,7 @@ html[lang="ar"] {
   }
 }
 
-@media screen and (min-width: 768px) and (orientation: landscape) {
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   nav {
     .menu-bar {
       display: flex !important;
@@ -3375,7 +3435,7 @@ html[lang="ar"] {
       &.ul-dir {
         left: 0;
       }
-      .user{
+      .user {
         display: none !important;
       }
       .menu-links {

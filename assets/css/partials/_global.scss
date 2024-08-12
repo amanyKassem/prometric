@@ -550,6 +550,9 @@ img.lazyload:not([src]) {
 .wh-40 {
   @include mixins.shape(40px);
 }
+.wh-50 {
+  @include mixins.shape(50px);
+}
 .wh-150 {
   @include mixins.shape(150px);
 }

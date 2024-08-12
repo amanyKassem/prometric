@@ -1996,7 +1996,7 @@ html[lang=ar] .rotate-y-180 {
   touch-action: manipulation;
 }
 
-.flex-center, .image-container, .count, .exam-categories .category .img-container, .some-exams .exam-block .overlay-info, .top-info .offer, .top-info .image-container, .price, .plan .number, .page-link, .blog-categories-list li a .arrow, .posts-carusel .owl-dots, .accordion-button::after, .contact-form .contact-info .info-icon, .feature .feat-icon, .circle-container, .final-exam .overlay-info, .pay-progress .check, .cart-item .offer, .subscriped-chapter .info .offer, .subscriped-chapter .subscribed, .toggle-pass, a.link-bg .img-cont {
+.flex-center, .image-container, .count, .exam-categories .category .img-container, .some-exams .exam-block .overlay-info, .top-info .offer, .top-info .image-container, .price, .plan .number, .page-link, .blog-categories-list li a .arrow, .posts-carusel .owl-dots, .accordion-button::after, .contact-form .contact-info .info-icon, .feature .feat-icon, .circle-container, .final-exam .overlay-info, .pay-progress .check, .cart-item .offer, .subscriped-chapter .info .offer, .subscriped-chapter .subscribed, .toggle-pass, .pay-content .pay-method-check .check, a.link-bg .img-cont {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2098,6 +2098,11 @@ img.lazyload:not([src]) {
   height: 40px;
 }
 
+.wh-50 {
+  width: 50px;
+  height: 50px;
+}
+
 .wh-150 {
   width: 150px;
   height: 150px;
@@ -2174,7 +2179,7 @@ h2 {
   cursor: pointer;
 }
 
-.general-transition, nav, nav .menu .menu-links li a, .dropdown-content ul li, .user h5, .statistic-item, .exam-categories .category, .some-exams .exam-block .bottom-info .first-info, .some-exams .exam-block .bottom-info .last-info, .top-info .image-container, .plan, .plan .number, .plan .price p, .page-link, .blog-categories-list li a .arrow, .post h5, .syllabus-tabs .nav-link, .refer-content .refer-profit, .contact-form .contact-info .info-icon, .feature .feat-icon, .bubble, .pay-check, .btn-check-gender, .toggle-pass, .remove-result, #wpp-fix.shake .wpp-link::before, #wpp-fix .wpp-link + .contact-wpp .contacting-info, #wpp-fix .wpp-link + .contact-wpp, #wpp-fix .wpp-link, #scroll-top, .top-bar, .select2-results__option--selectable, .form-check-input, .input-group-text.icon, a,
+.general-transition, nav, nav .menu .menu-links li a, .dropdown-content ul li, .user h5, .statistic-item, .exam-categories .category, .some-exams .exam-block .bottom-info .first-info, .some-exams .exam-block .bottom-info .last-info, .top-info .image-container, .plan, .plan .number, .plan .price p, .page-link, .blog-categories-list li a .arrow, .post h5, .syllabus-tabs .nav-link, .refer-content .refer-profit, .contact-form .contact-info .info-icon, .feature .feat-icon, .bubble, .pay-check, .btn-check-gender, .toggle-pass, .pay-content .pay-method-check .check, .remove-result, #wpp-fix.shake .wpp-link::before, #wpp-fix .wpp-link + .contact-wpp .contacting-info, #wpp-fix .wpp-link + .contact-wpp, #wpp-fix .wpp-link, #scroll-top, .top-bar, .select2-results__option--selectable, .form-check-input, .input-group-text.icon, a,
 button,
 img {
   transition: all 0.5s ease-in-out !important;
@@ -5534,6 +5539,58 @@ html[lang=ar] .wallet-banner .doctor-books {
   left: -23px;
 }
 
+.invitation-banner .invitation-img {
+  width: 80%;
+  max-width: 530px;
+}
+.invitation-banner .doctor-books {
+  top: auto;
+  bottom: -20px;
+  right: 30px;
+  height: 95%;
+}
+
+.pay-content .pay-card {
+  border-radius: 15px !important;
+  -webkit-border-radius: 15px !important;
+  -moz-border-radius: 15px !important;
+  -ms-border-radius: 15px !important;
+  -o-border-radius: 15px !important;
+  -ms-box-shadow: 0px 12px 12px 0px rgba(20, 20, 20, 0.14);
+  -o-box-shadow: 0px 12px 12px 0px rgba(20, 20, 20, 0.14);
+  box-shadow: 0px 12px 12px 0px rgba(20, 20, 20, 0.14);
+  height: 220px;
+  padding: 25px;
+}
+.pay-content .pay-card.visa {
+  background: url(../img/moovBg.png) no-repeat center center/cover;
+}
+.pay-content .pay-card.master {
+  background: url(../img/blueBg.png) no-repeat center center/cover;
+}
+.pay-content .pay-card .fa-wifi {
+  transform: rotate(90deg);
+}
+.pay-content .pay-method-check .check {
+  border-radius: 50% !important;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -ms-border-radius: 50% !important;
+  -o-border-radius: 50% !important;
+  width: 25px;
+  height: 25px;
+  color: #2ecc9b;
+  background: #fff;
+  position: absolute;
+  right: -9px;
+  top: -9px;
+  font-size: 21px;
+  opacity: 0;
+}
+.pay-content .pay-method-check.active .check {
+  opacity: 1;
+}
+
 .search-box {
   padding: 5px;
 }
@@ -6003,7 +6060,8 @@ html[lang=ar] .wallet-banner .doctor-books {
   .wallet-banner {
     padding-top: 17px;
   }
-  .wallet-content .content {
+  .wallet-content .content,
+  .invitation-banner .content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6012,10 +6070,12 @@ html[lang=ar] .wallet-banner .doctor-books {
     padding: 17px;
     min-height: unset;
   }
-  .wallet-content .content .btn {
+  .wallet-content .content .btn,
+  .invitation-banner .content .btn {
     margin-inline: auto;
   }
-  .wallet-content .doctor-books {
+  .wallet-content .doctor-books,
+  .invitation-banner .doctor-books {
     position: unset;
     width: 65%;
     margin: auto;
@@ -6287,7 +6347,7 @@ html[lang=ar] .wallet-banner .doctor-books {
     right: auto;
   }
 }
-@media screen and (min-width: 768px) and (orientation: landscape) {
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   nav .menu-bar {
     display: flex !important;
   }
