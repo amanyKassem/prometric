@@ -126,5 +126,14 @@ $theme-colors: (
         color: #fff !important;
       }
     }
+
+    @if $color == lightPrimary3 {
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: #2ecc9b !important;
+        color: #fff !important;
+      }
+    }
   }
 }

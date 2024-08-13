@@ -59,6 +59,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
 
+    <!-- jquery-ui -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
+      integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <link href="assets/css/style.css" rel="stylesheet" />
   </head>
 
@@ -636,20 +645,324 @@
                   </div>
                 </div>
 
-                <div class="pay-form">
+                <div class="pay-form mb-3">
                   <hr />
 
-                  <h5 class="fs-5 mb-4 d-flex align-items-center">
-                    <img
-                      src="assets/img/card-tick.svg"
-                      alt="card"
-                      width="27"
-                      class="me-2"
-                    />
-                    Card Details
+                  <h5
+                    class="fs-5 mb-4 d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center me-2">
+                      <img
+                        src="assets/img/card-tick.svg"
+                        alt="card"
+                        width="27"
+                        class="me-2"
+                      />
+                      Card Details
+                    </div>
+                    <a href="javascript:void(0)" class="text-hover delete-card">
+                      <i class="fa-regular fa-circle-xmark"></i>
+                    </a>
                   </h5>
+                  <form class="row">
+                    <div class="col-12 mb-3">
+                      <div class="bg-lightGrayClr3 py-2 px-3 rounded-4">
+                        <h6>
+                          <i class="fa-regular fa-user me-2"></i>
+                          Cardholder’s Name
+                        </h6>
+                        <input
+                          type="text"
+                          class="form-control h-auto bg-transparent p-0 rounded-0"
+                          value="Amany Kassem"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                      <div class="bg-lightGrayClr3 py-2 px-3 rounded-4">
+                        <h6>
+                          <i class="fa-regular fa-credit-card me-2"></i>
+                          Card Number
+                        </h6>
+                        <input
+                          type="text"
+                          class="form-control h-auto bg-transparent p-0 rounded-0"
+                          value="****  ****  ****  3456"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <div class="bg-lightGrayClr3 py-2 px-3 rounded-4">
+                        <h6>
+                          <i class="fa-regular fa-calendar-days me-2"></i>
+                          Expiry date
+                        </h6>
+                        <input
+                          type="text"
+                          id="ExpireDate1"
+                          class="form-control h-auto bg-transparent p-0 rounded-0 fc-datepicker"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <div class="bg-lightGrayClr3 py-2 px-3 rounded-4">
+                        <h6>
+                          <i class="fa-solid fa-lock me-2"></i>
+                          CVV/ CVC
+                        </h6>
+                        <input
+                          type="number"
+                          class="form-control h-auto bg-transparent p-0 rounded-0"
+                          value="254"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                      <div class="bg-lightGrayClr3 py-2 px-3 rounded-4">
+                        <h6>
+                          <i class="fa-solid fa-location-dot me-2"></i>
+                          Billing address
+                        </h6>
+                        <input
+                          type="text"
+                          class="form-control h-auto bg-transparent p-0 rounded-0"
+                          value="14 Zohour Bargout Street, Apartment 12, Smouha Circle, in front of Smouha Club, Alexandria"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <button
+                        type="submit"
+                        class="btn btn-lightPrimary3 text-primary w-100 mt-3"
+                      >
+                        <i class="fa-solid fa-pencil me-2"></i>
+                        Edit
+                      </button>
+                    </div>
+                    <div class="col-md-6">
+                      <button
+                        type="button"
+                        class="btn btn-lightDanger text-danger w-100 mt-3 delete-card"
+                      >
+                        <i class="fa-regular fa-trash-can me-2"></i>
+                        Remove
+                      </button>
+                    </div>
+                  </form>
                 </div>
-                <div class="pay-form">2</div>
+                <div class="pay-form mb-3">
+                  <hr />
+
+                  <h5
+                    class="fs-5 mb-4 d-flex align-items-center justify-content-between"
+                  >
+                    <div class="d-flex align-items-center me-2">
+                      <img
+                        src="assets/img/card-tick.svg"
+                        alt="card"
+                        width="27"
+                        class="me-2"
+                      />
+                      Card Details
+                    </div>
+                    <a href="javascript:void(0)" class="text-hover delete-card">
+                      <i class="fa-regular fa-circle-xmark"></i>
+                    </a>
+                  </h5>
+                  <form class="row">
+                    <div class="col-12 mb-3">
+                      <div class="bg-lightGrayClr3 py-2 px-3 rounded-4">
+                        <h6>
+                          <i class="fa-regular fa-user me-2"></i>
+                          Cardholder’s Name
+                        </h6>
+                        <input
+                          type="text"
+                          class="form-control h-auto bg-transparent p-0 rounded-0"
+                          value="Amany Kassem"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                      <div class="bg-lightGrayClr3 py-2 px-3 rounded-4">
+                        <h6>
+                          <i class="fa-regular fa-credit-card me-2"></i>
+                          Card Number
+                        </h6>
+                        <input
+                          type="text"
+                          class="form-control h-auto bg-transparent p-0 rounded-0"
+                          value="****  ****  ****  3456"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <div class="bg-lightGrayClr3 py-2 px-3 rounded-4">
+                        <h6>
+                          <i class="fa-regular fa-calendar-days me-2"></i>
+                          Expiry date
+                        </h6>
+                        <input
+                          type="text"
+                          id="ExpireDate2"
+                          class="form-control h-auto bg-transparent p-0 rounded-0 fc-datepicker"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <div class="bg-lightGrayClr3 py-2 px-3 rounded-4">
+                        <h6>
+                          <i class="fa-solid fa-lock me-2"></i>
+                          CVV/ CVC
+                        </h6>
+                        <input
+                          type="number"
+                          class="form-control h-auto bg-transparent p-0 rounded-0"
+                          value="254"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                      <div class="bg-lightGrayClr3 py-2 px-3 rounded-4">
+                        <h6>
+                          <i class="fa-solid fa-location-dot me-2"></i>
+                          Billing address
+                        </h6>
+                        <input
+                          type="text"
+                          class="form-control h-auto bg-transparent p-0 rounded-0"
+                          value="14 Zohour Bargout Street, Apartment 12, Smouha Circle, in front of Smouha Club, Alexandria"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <button
+                        type="submit"
+                        class="btn btn-lightPrimary3 text-primary w-100 mt-3"
+                      >
+                        <i class="fa-solid fa-pencil me-2"></i>
+                        Edit
+                      </button>
+                    </div>
+                    <div class="col-md-6">
+                      <button
+                        type="button"
+                        class="btn btn-lightDanger text-danger w-100 mt-3 delete-card"
+                      >
+                        <i class="fa-regular fa-trash-can me-2"></i>
+                        Remove
+                      </button>
+                    </div>
+                  </form>
+                </div>
+
+                <h5 class="fs-5 mb-4 d-flex align-items-center">
+                  <img
+                    src="assets/img/card-pos.svg"
+                    alt="card"
+                    width="27"
+                    class="me-2"
+                  />
+                  Add New Card
+                </h5>
+
+                <div class="border border-dark p-3 rounded-30">
+                  <form class="row">
+                    <div class="col-12 mb-3">
+                      <div
+                        class="input-group border border-dark rounded-4 overflow-hidden"
+                      >
+                        <input
+                          type="text"
+                          id="visaCardNumber"
+                          class="form-control password-radius"
+                          placeholder="Cardholder’s Name"
+                        />
+                        <span
+                          class="input-group-text bg-white text-lightGrayClr fs-18 border-0 icon"
+                        >
+                          <i class="fa-solid fa-user"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                      <div
+                        class="input-group border border-dark rounded-4 overflow-hidden"
+                      >
+                        <input
+                          type="number"
+                          id="visaCardNumber"
+                          class="form-control password-radius"
+                          placeholder="Card number"
+                        />
+                        <span
+                          class="input-group-text bg-white text-lightGrayClr fs-18 border-0 icon"
+                        >
+                          <i class="fa-solid fa-credit-card"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <div
+                        class="input-group border border-dark rounded-4 overflow-hidden"
+                      >
+                        <input
+                          type="text"
+                          id="visaDate"
+                          class="form-control rounded-0 fc-datepicker"
+                          placeholder="Expiry date"
+                        />
+                        <span
+                          class="input-group-text bg-white text-lightGrayClr fs-18 border-0 icon"
+                        >
+                          <i class="fa-solid fa-calendar-days"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <div
+                        class="input-group border border-dark rounded-4 overflow-hidden"
+                      >
+                        <input
+                          type="text"
+                          id="visaCvv"
+                          class="form-control rounded-0"
+                          placeholder="CVV/ CVC"
+                        />
+                        <span
+                          class="input-group-text bg-white text-lightGrayClr fs-18 border-0 icon"
+                        >
+                          <i class="fa-solid fa-lock"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                      <div
+                        class="input-group border border-dark rounded-4 overflow-hidden"
+                      >
+                        <input
+                          type="text"
+                          id="billing_address"
+                          class="form-control rounded-0"
+                          placeholder="Billing address"
+                        />
+                        <span
+                          class="input-group-text bg-white text-lightGrayClr fs-18 border-0 icon"
+                        >
+                          <i class="fa-solid fa-location-dot"></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button
+                        type="submit"
+                        class="btn btn-primary w-50 mt-3 mx-auto"
+                      >
+                        Save
+                      </button>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -847,6 +1160,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- jquery-ui -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"
+      integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- <script src="assets/js/datepicker-ar.js"></script> -->
 
     <script src="assets/js/scripts.js"></script>
     <script>
@@ -859,6 +1180,32 @@
           $(".pay-form").eq(selectedIndex).slideDown();
           $(".pay-method-check").removeClass("active");
           $(this).closest(".pay-method-check").addClass("active");
+        });
+
+        $(".delete-card").on("click", function () {
+          $(this).parents(".pay-form").slideUp( 300 , function () {
+            $(this).html("");
+          });
+          $(".pay-method-check").removeClass("active");
+        });
+
+        // Array of default dates
+        var defaultDates = [
+          new Date("2024-01-01"), // Default date for the first input
+          new Date("2025-02-20"), // Default date for the second input
+        ];
+
+        // Initialize datepicker for all elements with class 'fc-datepicker'
+        $(".fc-datepicker").each(function (index) {
+          var defaultDate = defaultDates[index];
+          var formattedDate = $.datepicker.formatDate("mm/dd/yy", defaultDate); // Format the date
+
+          $(this)
+            .datepicker({
+              dateFormat: "mm/dd/yy",
+              defaultDate: defaultDate,
+            })
+            .val(formattedDate);
         });
       });
     </script>

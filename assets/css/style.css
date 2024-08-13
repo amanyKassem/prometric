@@ -179,6 +179,10 @@
 .btn-lightPrimary3:hover, .btn-lightPrimary3:active, .btn-lightPrimary3:focus {
   background-color: #bed2cc !important;
 }
+.btn-lightPrimary3:hover, .btn-lightPrimary3:active, .btn-lightPrimary3:focus {
+  background-color: #2ecc9b !important;
+  color: #fff !important;
+}
 
 .btn-light-darkPrimary,
 .bg-light-darkPrimary {
@@ -5589,6 +5593,11 @@ html[lang=ar] .wallet-banner .doctor-books {
 }
 .pay-content .pay-method-check.active .check {
   opacity: 1;
+}
+
+html[lang=ar] .pay-content .pay-method-check .check {
+  left: -9px;
+  right: auto;
 }
 
 .search-box {
