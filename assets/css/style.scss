@@ -1720,6 +1720,18 @@ html[lang="ar"] {
         197.635% no-repeat;
   }
 }
+
+.category-exam-card {
+  @include mixins.border-radius(30px);
+  .category-img {
+    width: 100%;
+    height: 350px;
+    @include mixins.prefix(object-fit, cover, webkit ms o);
+    @include mixins.prefix(object-position, center, webkit ms o);
+    @include mixins.border-radius(35px);
+  }
+}
+
 .test-info {
   @include mixins.border-radius(15px);
   background-color: map_get(colors.$theme-colors, lightGrayClr3);
@@ -1736,6 +1748,10 @@ html[lang="ar"] {
   .circle {
     width: 50px;
     height: 50px;
+    &.wh-30{
+      width: 30%;
+      height: 30%;
+    }
   }
   .expiration-circle {
     .percentage {
@@ -1751,17 +1767,14 @@ html[lang="ar"] {
     position: absolute;
     background: rgba(0, 0, 0, 0.24);
     @include mixins.prefix(backdrop-filter, blur(2px), webkit ms o);
-    top: 35%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -34%);
+    transform: translate(-50%, -50%);
     width: 80%;
     padding: 20px;
     font-size: 22px;
     font-weight: 200;
   }
-}
-.subscribe-btn {
-  bottom: 0;
 }
 .category-exams {
   .some-exams {
@@ -2918,12 +2931,6 @@ html[lang="ar"] {
     }
   }
 
-  .final-exam {
-    .overlay-info {
-      top: 40%;
-    }
-  }
-
   .pay-progress {
     text-align: center;
     font-size: 14px;
@@ -3085,6 +3092,13 @@ html[lang="ar"] {
       border-inline-start: 0 !important;
     }
   }
+
+  .category-exam-card {
+    .category-img {
+      height: 250px;
+    }
+  }
+
   html[lang="ar"] {
     nav {
       .menu {

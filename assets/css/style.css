@@ -2206,7 +2206,7 @@ img {
 }
 
 .white-img {
-  filter: brightness(1);
+  filter: brightness(20);
 }
 
 /* end common style*/
@@ -4865,6 +4865,31 @@ html[lang=ar] .exam-details .exam-img-container .image-container {
   background: linear-gradient(0deg, rgba(60, 82, 86, 0.4) 0%, rgba(60, 82, 86, 0.4) 100%), url(../img/categoryBg.png) lightgray -66.377px -205.034px/111.271% 197.635% no-repeat;
 }
 
+.category-exam-card {
+  border-radius: 30px !important;
+  -webkit-border-radius: 30px !important;
+  -moz-border-radius: 30px !important;
+  -ms-border-radius: 30px !important;
+  -o-border-radius: 30px !important;
+}
+.category-exam-card .category-img {
+  width: 100%;
+  height: 350px;
+  -webkit-object-fit: cover;
+  -ms-object-fit: cover;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-object-position: center;
+  -ms-object-position: center;
+  -o-object-position: center;
+  object-position: center;
+  border-radius: 35px !important;
+  -webkit-border-radius: 35px !important;
+  -moz-border-radius: 35px !important;
+  -ms-border-radius: 35px !important;
+  -o-border-radius: 35px !important;
+}
+
 .test-info {
   border-radius: 15px !important;
   -webkit-border-radius: 15px !important;
@@ -4884,6 +4909,10 @@ html[lang=ar] .exam-details .exam-img-container .image-container {
   width: 50px;
   height: 50px;
 }
+.test-info .circle.wh-30 {
+  width: 30%;
+  height: 30%;
+}
 .test-info .expiration-circle .percentage {
   font-size: 25px;
 }
@@ -4896,17 +4925,13 @@ html[lang=ar] .exam-details .exam-img-container .image-container {
   -webkit-backdrop-filter: blur(2px);
   -o-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
-  top: 35%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -34%);
+  transform: translate(-50%, -50%);
   width: 80%;
   padding: 20px;
   font-size: 22px;
   font-weight: 200;
-}
-
-.subscribe-btn {
-  bottom: 0;
 }
 
 .category-exams .some-exams .exam-block .bottom-info .first-info {
@@ -5965,9 +5990,6 @@ html[lang=ar] .pay-content .pay-method-check .check {
   .btns .btn .arrow {
     width: 40px;
   }
-  .final-exam .overlay-info {
-    top: 40%;
-  }
   .pay-progress {
     text-align: center;
     font-size: 14px;
@@ -6106,6 +6128,9 @@ html[lang=ar] .pay-content .pay-method-check .check {
   .search-box .select-search {
     width: calc(100% - 64px);
     border-inline-start: 0 !important;
+  }
+  .category-exam-card .category-img {
+    height: 250px;
   }
   html[lang=ar] nav .menu {
     text-align: right;
