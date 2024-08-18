@@ -190,9 +190,11 @@ $(document).ready(function () {
   let touchTimeout;
 
   $(document).on("touchstart", ".btn-check-answer", function (event) {
+    alert("hello");
     const $this = $(this);
 
     touchTimeout = setTimeout(function () {
+      alert("hello 50");
       $this.toggleClass("strike-through");
     }, 500); // Adjust the timeout duration to suit your needs (500ms for a long press)
   });
