@@ -193,7 +193,7 @@ $(document).ready(function () {
     const $this = $(this);
 
     touchTimeout = setTimeout(function () {
-      alert("hello 50");
+      alert("strike-through");
       $this.toggleClass("strike-through");
     }, 500); // Adjust the timeout duration to suit your needs (500ms for a long press)
   });
@@ -204,6 +204,7 @@ $(document).ready(function () {
 
   // Handle left-click on the radio button
   $(document).on("click", ".form-check-ques-input", function () {
+    alert("radio");
     // Add line-through style to the currently selected option (if it was right-clicked or long-pressed)
     var selectedLabel = $(this).next(".btn-check-answer");
     if (selectedLabel.hasClass("strike-through")) {
