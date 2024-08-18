@@ -440,6 +440,10 @@ html[lang="ar"] {
     background-color: map_get(colors.$theme-colors, lightGrayClr3);
     padding: 30px;
   }
+  .modal-header {
+    padding: 15px 30px;
+    background-color: map_get(colors.$theme-colors, lightGrayClr3);
+  }
 }
 
 a,
@@ -1025,7 +1029,7 @@ html[lang="ar"] {
   }
 
   .rounded-start-0 {
-    @include mixins.border-radius( 17px 0 0 17px );
+    @include mixins.border-radius(17px 0 0 17px);
   }
 }
 // end form
@@ -1361,6 +1365,18 @@ html[lang="ar"] {
   }
 }
 // end whatsapp
+// start not found
+.not-found {
+  min-height: calc(100vh - 109px);
+  display: flex;
+  align-items: center;
+  .not-found-img{
+    width: 75%;
+    max-width: 400px;
+  }
+}
+// end not found
+
 /* Start Media Query */
 
 @media (max-width: 767px) {

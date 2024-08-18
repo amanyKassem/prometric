@@ -1987,6 +1987,10 @@ html[lang=ar] .rotate-y-180 {
   background-color: #F5F5F5;
   padding: 30px;
 }
+.modal .modal-header {
+  padding: 15px 30px;
+  background-color: #F5F5F5;
+}
 
 :placeholder-shown::-webkit-input-placeholder {
   opacity: 1;
@@ -2930,6 +2934,16 @@ html[lang=ar] #wpp-fix .wpp-link + .contact-wpp {
   left: 0;
   right: auto;
   transform-origin: bottom left;
+}
+
+.not-found {
+  min-height: calc(100vh - 109px);
+  display: flex;
+  align-items: center;
+}
+.not-found .not-found-img {
+  width: 75%;
+  max-width: 400px;
 }
 
 /* Start Media Query */

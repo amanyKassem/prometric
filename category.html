@@ -787,14 +787,17 @@
               </p>
 
               <div class="test-info shadow mb-3 flex-center">
-                <h5 class="mb-4 fs-5 ">Subscription Expired :</h5>
+                <h5 class="mb-4 fs-5">Subscription Expired :</h5>
 
                 <div
                   class="circle-container w-100 p-0 bg-transparent shadow-none h-auto mb-4"
                   data-expiration-date="2024-09-09"
                   data-total-days-in-cycle="30"
                 >
-                  <svg class="circle expiration-circle wh-30" viewBox="0 0 100 100">
+                  <svg
+                    class="circle expiration-circle wh-30"
+                    viewBox="0 0 100 100"
+                  >
                     <defs>
                       <linearGradient
                         id="expirationGradient"
@@ -1874,7 +1877,6 @@
 
     <script>
       $(document).ready(function () {
-
         let isRtl = $('html[lang="ar"]').length > 0;
         $(".testimonials-carusel").owlCarousel({
           items: 3,
@@ -1916,6 +1918,7 @@
             theCount.css("font-weight", "bold");
           } else {
             maximum.css("color", "#313131");
+            current.css("color", "#313131");
             theCount.css("font-weight", "normal");
           }
         });

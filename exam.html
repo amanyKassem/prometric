@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>prometric</title>
+    <link rel="shortcut icon" href="assets/img/fav.svg" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      async
+    />
+    <link
+      rel="stylesheet"
+      media="all"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+
+    <link href="assets/css/examStyle.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- start page unique content -->
+    <main>
+      <div class="exam-content">
+        <div class="top-info pt-3 fw-light">
+          <div class="container">
+            <div
+              class="d-flex justify-content-between align-items-center flex-wrap"
+            >
+              <div class="mb-3 me-2 sm-100 mb">
+                <span class="d-block mb-1">Question:6</span>
+                <span class="d-block">Section: 2</span>
+              </div>
+              <div class="d-flex align-items-center mb-3 me-2 sm-100">
+                <i class="fa-regular fa-clock me-2 fs-5"></i>
+                <div>
+                  <span class="d-block mb-1">Section Time Remaining</span>
+                  <span class="d-block time-remaining">00:39:36</span>
+                </div>
+              </div>
+              <div class="text-center mb-3 me-2 sm-100">
+                <div class="progress mb-1">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    style="width: 32%"
+                    aria-valuenow="32"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
+                Progress 32%
+              </div>
+
+              <button
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#finishSectionConfirmModal"
+                class="btn finish-section-btn mb-3 sm-100"
+              >
+                Finish Section
+              </button>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="finishSectionConfirmModal"
+                tabindex="-1"
+                aria-labelledby="finishSectionConfirmModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="top-circles"></div>
+                    <div class="modal-body">
+                      <div class="position-relative z-index-2">
+                        <p class="text-center text-dark-color fw-500 mb-4">
+                          Are you sure you want to finish this section?
+                        </p>
+                        <div
+                          class="d-flex align-items-center justify-content-between flex-wrap btns"
+                        >
+                          <button
+                            type="button"
+                            class="btn btn-darkDanger text-light-color with-shadow mb-3 mb-md-0"
+                            data-bs-dismiss="modal"
+                            data-bs-toggle="modal"
+                            data-bs-target="#finishSectionModal"
+                          >
+                            Yes
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-secondary text-light-color with-shadow mb-3 mb-md-0"
+                            data-bs-dismiss="modal"
+                          >
+                            no
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bottom-circles"></div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="modal fade"
+                id="finishSectionModal"
+                tabindex="-1"
+                aria-labelledby="finishSectionModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="top-circles"></div>
+                    <div class="modal-body">
+                      <div class="position-relative z-index-2">
+                        <img
+                          src="assets/img/finishSection.png"
+                          alt="paper"
+                          class="d-block mb-4 mx-auto w-50 transfrom-180-reverse"
+                        />
+                        <p class="text-center text-dark-color fw-500 mb-3">
+                          Please take a short break to complete the rest of the
+                          test
+                        </p>
+
+                        <div
+                          class="d-flex align-items-center justify-content-center text-center fw-500"
+                        >
+                          <span class="me-2 text-dark-color">Break time:</span>
+                          <div
+                            class="bg-primary-color py-2 px-3 rounded-3 text-light-color"
+                          >
+                            <i class="fa-regular fa-clock me-2 fs-5"></i>
+                            <span class="break-time-counter">00 : 30 Min</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bottom-circles"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-primary-color text-light-color fw-normal">
+          <div class="container">
+            <div
+              class="d-flex align-items-center justify-content-between flex-wrap pt-2"
+            >
+              <span class="me-2 d-inline-bolck mb-2"
+                >Test: Saudi SPLE Anesthesia Examination</span
+              >
+              <span class="d-inline-bolck mb-2">amanykassem@gmail</span>
+            </div>
+          </div>
+        </div>
+        <form action="" class="mt-4">
+          <div class="container">
+            <div class="row mb-4">
+              <div
+                class="nav flex-column nav-pills col-md-2 col-xl-1"
+                id="v-pills-tab"
+                role="tablist"
+                aria-orientation="vertical"
+                style="pointer-events: none"
+              >
+                <button
+                  class="nav-link active"
+                  id="v-ques1-tab"
+                  data-bs-target="#v-ques1"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-ques1"
+                  aria-selected="true"
+                >
+                  1
+                </button>
+                <button
+                  class="nav-link"
+                  id="v-ques2-tab"
+                  data-bs-target="#v-ques2"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-ques2"
+                  aria-selected="false"
+                >
+                  2
+                </button>
+                <button
+                  class="nav-link"
+                  id="v-ques3-tab"
+                  data-bs-target="#v-ques3"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-ques3"
+                  aria-selected="false"
+                >
+                  3
+                </button>
+                <button
+                  class="nav-link"
+                  id="v-ques4-tab"
+                  data-bs-target="#v-ques4"
+                  type="button"
+                  role="tab"
+                  aria-controls="v-ques4"
+                  aria-selected="false"
+                >
+                  4
+                </button>
+              </div>
+              <div
+                class="tab-content flex-grow-1 col-md-10 col-xl-11"
+                id="v-pills-tabContent"
+              >
+                <div
+                  class="tab-pane fade show active"
+                  id="v-ques1"
+                  role="tabpanel"
+                  aria-labelledby="v-ques1-tab"
+                >
+                  <div class="question-block">
+                    <p>
+                      03-year-old pregnant woman presented with loss of fetal
+                      movements.Followed by decreased urinary output and
+                      difficulty breathing (see lab results and report)
+                    </p>
+                    <h5 class="fw-bold">Chest X-ray:</h5>
+                    <span class="d-block mb-2"
+                      >Diffuse ground glass opacities</span
+                    >
+                    <span class="d-block mb-2">
+                      which of the following is the most appropriate diagnosis?
+                    </span>
+                    <div
+                      class="table-responsive range-block rounded-30 text-center p-3 pb-0 mb-3"
+                    >
+                      <table class="table table-borderless w-100 text-nowrap">
+                        <thead>
+                          <tr>
+                            <th>Test</th>
+                            <th>Result</th>
+                            <th>Normal range</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Hb</td>
+                            <td>100</td>
+                            <td>120-160 g/l</td>
+                          </tr>
+                          <tr>
+                            <td>Platelets count</td>
+                            <td>70</td>
+                            <td>75-140%</td>
+                          </tr>
+                          <tr>
+                            <td>DLCO</td>
+                            <td>75</td>
+                            <td>150-400 *10^/l</td>
+                          </tr>
+                          <tr>
+                            <td>Prothrombin time</td>
+                            <td>24</td>
+                            <td>44-115 µmol/l</td>
+                          </tr>
+                          <tr>
+                            <td>APTT</td>
+                            <td>60</td>
+                            <td>30-40 sec</td>
+                          </tr>
+                          <tr>
+                            <td>Fibrinogen</td>
+                            <td>1.6</td>
+                            <td>2-4 g/l</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div
+                      class="form-check d-flex align-items-center mb-2 flex-grow-1 p-0"
+                    >
+                      <input
+                        class="form-check-input form-check-ques-input btn-check me-2"
+                        type="radio"
+                        name="ques1Answer1"
+                        id="answer1"
+                      />
+                      <!-- with strike-through -->
+                      <label
+                        class="form-check-label flex-grow-1 btn btn-check-answer justify-content-start strike-through"
+                        for="answer1"
+                      >
+                        <span class="fs-25 me-2">A</span>
+                        <div class="d-flex align-items-center answer">
+                          Acute glomerulonephritis
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="form-check d-flex align-items-center mb-2 flex-grow-1 p-0"
+                    >
+                      <input
+                        class="form-check-input form-check-ques-input btn-check me-2"
+                        type="radio"
+                        name="ques1Answer1"
+                        id="answer2"
+                      />
+                      <!-- with strike-through -->
+                      <label
+                        class="form-check-label flex-grow-1 btn btn-check-answer justify-content-start strike-through"
+                        for="answer2"
+                      >
+                        <span class="fs-25 me-2">B</span>
+                        <div class="d-flex align-items-center answer">
+                          Acute glomerulonephritis 2
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="form-check d-flex align-items-center mb-2 flex-grow-1 p-0"
+                    >
+                      <input
+                        class="form-check-input form-check-ques-input btn-check me-2"
+                        type="radio"
+                        name="ques1Answer1"
+                        id="answer3"
+                        checked
+                      />
+                      <label
+                        class="form-check-label flex-grow-1 btn btn-check-answer justify-content-start"
+                        for="answer3"
+                      >
+                        <span class="fs-25 me-2">C</span>
+                        <div class="d-flex align-items-center answer">
+                          Acute glomerulonephritis 3
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="form-check d-flex align-items-center mb-2 flex-grow-1 p-0"
+                    >
+                      <input
+                        class="form-check-input form-check-ques-input btn-check me-2"
+                        type="radio"
+                        name="ques1Answer1"
+                        id="answer4"
+                      />
+                      <label
+                        class="form-check-label flex-grow-1 btn btn-check-answer justify-content-start"
+                        for="answer4"
+                      >
+                        <span class="fs-25 me-2">D</span>
+                        <div class="d-flex align-items-center answer">
+                          Acute glomerulonephritis 4
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="v-ques2"
+                  role="tabpanel"
+                  aria-labelledby="v-ques2-tab"
+                >
+                  <div class="question-block">
+                    <p>
+                      03-year-old pregnant woman presented with loss of fetal
+                      movements.Followed by decreased urinary output and
+                      difficulty breathing (see lab results and report)
+                    </p>
+                    <h5 class="fw-bold">Chest X-ray:</h5>
+                    <span class="d-block mb-2"
+                      >Diffuse ground glass opacities</span
+                    >
+                    <span class="d-block mb-2">
+                      which of the following is the most appropriate diagnosis?
+                    </span>
+                    <div
+                      class="table-responsive range-block rounded-30 text-center p-3 pb-0 mb-3"
+                    >
+                      <table class="table table-borderless w-100 text-nowrap">
+                        <thead>
+                          <tr>
+                            <th>Test</th>
+                            <th>Result</th>
+                            <th>Normal range</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Hb</td>
+                            <td>100</td>
+                            <td>120-160 g/l</td>
+                          </tr>
+                          <tr>
+                            <td>Platelets count</td>
+                            <td>70</td>
+                            <td>75-140%</td>
+                          </tr>
+                          <tr>
+                            <td>DLCO</td>
+                            <td>75</td>
+                            <td>150-400 *10^/l</td>
+                          </tr>
+                          <tr>
+                            <td>Prothrombin time</td>
+                            <td>24</td>
+                            <td>44-115 µmol/l</td>
+                          </tr>
+                          <tr>
+                            <td>APTT</td>
+                            <td>60</td>
+                            <td>30-40 sec</td>
+                          </tr>
+                          <tr>
+                            <td>Fibrinogen</td>
+                            <td>1.6</td>
+                            <td>2-4 g/l</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div
+                      class="form-check d-flex align-items-center mb-2 flex-grow-1 p-0"
+                    >
+                      <input
+                        class="form-check-input form-check-ques-input btn-check me-2"
+                        type="radio"
+                        name="ques1Answer2"
+                        id="answer21"
+                        checked
+                      />
+                      <label
+                        class="form-check-label flex-grow-1 btn btn-check-answer justify-content-start"
+                        for="answer21"
+                      >
+                        <span class="fs-25 me-2">A</span>
+                        <div class="d-flex align-items-center answer">
+                          Acute glomerulonephritis
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="form-check d-flex align-items-center mb-2 flex-grow-1 p-0"
+                    >
+                      <input
+                        class="form-check-input form-check-ques-input btn-check me-2"
+                        type="radio"
+                        name="ques1Answer2"
+                        id="answer22"
+                      />
+                      <label
+                        class="form-check-label flex-grow-1 btn btn-check-answer justify-content-start"
+                        for="answer22"
+                      >
+                        <span class="fs-25 me-2">B</span>
+                        <div class="d-flex align-items-center answer">
+                          Acute glomerulonephritis 2
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="form-check d-flex align-items-center mb-2 flex-grow-1 p-0"
+                    >
+                      <input
+                        class="form-check-input form-check-ques-input btn-check me-2"
+                        type="radio"
+                        name="ques1Answer2"
+                        id="answer23"
+                      />
+                      <label
+                        class="form-check-label flex-grow-1 btn btn-check-answer justify-content-start"
+                        for="answer23"
+                      >
+                        <span class="fs-25 me-2">C</span>
+                        <div class="d-flex align-items-center answer">
+                          Acute glomerulonephritis 3
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="form-check d-flex align-items-center mb-2 flex-grow-1 p-0"
+                    >
+                      <input
+                        class="form-check-input form-check-ques-input btn-check me-2"
+                        type="radio"
+                        name="ques1Answer2"
+                        id="answer24"
+                      />
+                      <label
+                        class="form-check-label flex-grow-1 btn btn-check-answer justify-content-start"
+                        for="answer24"
+                      >
+                        <span class="fs-25 me-2">D</span>
+                        <div class="d-flex align-items-center answer">
+                          Acute glomerulonephritis 4
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="v-ques3"
+                  role="tabpanel"
+                  aria-labelledby="v-ques3-tab"
+                >
+                  <div class="question-block">
+                    <p>
+                      03-year-old pregnant woman presented with loss of fetal
+                      movements.Followed by decreased urinary output and
+                      difficulty breathing (see lab results and report)
+                    </p>
+                    <h5 class="fw-bold">Chest X-ray:</h5>
+                    <span class="d-block mb-2"
+                      >Diffuse ground glass opacities</span
+                    >
+                    <span class="d-block mb-2">
+                      which of the following is the most appropriate diagnosis?
+                    </span>
+                    <div
+                      class="table-responsive range-block rounded-30 text-center p-3 pb-0 mb-3"
+                    >
+                      <table class="table table-borderless w-100 text-nowrap">
+                        <thead>
+                          <tr>
+                            <th>Test</th>
+                            <th>Result</th>
+                            <th>Normal range</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Hb</td>
+                            <td>100</td>
+                            <td>120-160 g/l</td>
+                          </tr>
+                          <tr>
+                            <td>Platelets count</td>
+                            <td>70</td>
+                            <td>75-140%</td>
+                          </tr>
+                          <tr>
+                            <td>DLCO</td>
+                            <td>75</td>
+                            <td>150-400 *10^/l</td>
+                          </tr>
+                          <tr>
+                            <td>Prothrombin time</td>
+                            <td>24</td>
+                            <td>44-115 µmol/l</td>
+                          </tr>
+                          <tr>
+                            <td>APTT</td>
+                            <td>60</td>
+                            <td>30-40 sec</td>
+                          </tr>
+                          <tr>
+                            <td>Fibrinogen</td>
+                            <td>1.6</td>
+                            <td>2-4 g/l</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div
+                      class="form-check d-flex align-items-center mb-2 flex-grow-1 p-0"
+                    >
+                      <input
+                        class="form-check-input form-check-ques-input btn-check me-2"
+                        type="radio"
+                        name="ques1Answer3"
+                        id="answer31"
+                      />
+                      <label
+                        class="form-check-label flex-grow-1 btn btn-check-answer justify-content-start"
+                        for="answer31"
+                      >
+                        <span class="fs-25 me-2">A</span>
+                        <div class="d-flex align-items-center answer">
+                          Acute glomerulonephritis
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="form-check d-flex align-items-center mb-2 flex-grow-1 p-0"
+                    >
+                      <input
+                        class="form-check-input form-check-ques-input btn-check me-2"
+                        type="radio"
+                        name="ques1Answer3"
+                        id="answer32"
+                      />
+                      <label
+                        class="form-check-label flex-grow-1 btn btn-check-answer justify-content-start"
+                        for="answer32"
+                      >
+                        <span class="fs-25 me-2">B</span>
+                        <div class="d-flex align-items-center answer">
+                          Acute glomerulonephritis 2
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="form-check d-flex align-items-center mb-2 flex-grow-1 p-0"
+                    >
+                      <input
+                        class="form-check-input form-check-ques-input btn-check me-2"
+                        type="radio"
+                        name="ques1Answer3"
+                        id="answer33"
+                      />
+                      <label
+                        class="form-check-label flex-grow-1 btn btn-check-answer justify-content-start"
+                        for="answer33"
+                      >
+                        <span class="fs-25 me-2">C</span>
+                        <div class="d-flex align-items-center answer">
+                          Acute glomerulonephritis 3
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="form-check d-flex align-items-center mb-2 flex-grow-1 p-0"
+                    >
+                      <input
+                        class="form-check-input form-check-ques-input btn-check me-2"
+                        type="radio"
+                        name="ques1Answer3"
+                        id="answer34"
+                      />
+                      <label
+                        class="form-check-label flex-grow-1 btn btn-check-answer justify-content-start"
+                        for="answer34"
+                      >
+                        <span class="fs-25 me-2">D</span>
+                        <div class="d-flex align-items-center answer">
+                          Acute glomerulonephritis 4
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="v-ques4"
+                  role="tabpanel"
+                  aria-labelledby="v-ques4-tab"
+                >
+                  <div class="question-block">
+                    <p>
+                      03-year-old pregnant woman presented with loss of fetal
+                      movements.Followed by decreased urinary output and
+                      difficulty breathing (see lab results and report)
+                    </p>
+                    <h5 class="fw-bold">Chest X-ray:</h5>
+                    <span class="d-block mb-2"
+                      >Diffuse ground glass opacities</span
+                    >
+                    <span class="d-block mb-2">
+                      which of the following is the most appropriate diagnosis?
+                    </span>
+                    <div
+                      class="table-responsive range-block rounded-30 text-center p-3 pb-0 mb-3"
+                    >
+                      <table class="table table-borderless w-100 text-nowrap">
+                        <thead>
+                          <tr>
+                            <th>Test</th>
+                            <th>Result</th>
+                            <th>Normal range</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Hb</td>
+                            <td>100</td>
+                            <td>120-160 g/l</td>
+                          </tr>
+                          <tr>
+                            <td>Platelets count</td>
+                            <td>70</td>
+                            <td>75-140%</td>
+                          </tr>
+                          <tr>
+                            <td>DLCO</td>
+                            <td>75</td>
+                            <td>150-400 *10^/l</td>
+                          </tr>
+                          <tr>
+                            <td>Prothrombin time</td>
+                            <td>24</td>
+                            <td>44-115 µmol/l</td>
+                          </tr>
+                          <tr>
+                            <td>APTT</td>
+                            <td>60</td>
+                            <td>30-40 sec</td>
+                          </tr>
+                          <tr>
+                            <td>Fibrinogen</td>
+                            <td>1.6</td>
+                            <td>2-4 g/l</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div
+                      class="form-check d-flex align-items-center mb-2 flex-grow-1 p-0"
+                    >
+                      <input
+                        class="form-check-input form-check-ques-input btn-check me-2"
+                        type="radio"
+                        name="ques1Answer4"
+                        id="answer41"
+                      />
+                      <label
+                        class="form-check-label flex-grow-1 btn btn-check-answer justify-content-start"
+                        for="answer41"
+                      >
+                        <span class="fs-25 me-2">A</span>
+                        <div class="d-flex align-items-center answer">
+                          Acute glomerulonephritis
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="form-check d-flex align-items-center mb-2 flex-grow-1 p-0"
+                    >
+                      <input
+                        class="form-check-input form-check-ques-input btn-check me-2"
+                        type="radio"
+                        name="ques1Answer4"
+                        id="answer42"
+                      />
+                      <label
+                        class="form-check-label flex-grow-1 btn btn-check-answer justify-content-start"
+                        for="answer42"
+                      >
+                        <span class="fs-25 me-2">B</span>
+                        <div class="d-flex align-items-center answer">
+                          Acute glomerulonephritis 2
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="form-check d-flex align-items-center mb-2 flex-grow-1 p-0"
+                    >
+                      <input
+                        class="form-check-input form-check-ques-input btn-check me-2"
+                        type="radio"
+                        name="ques1Answer4"
+                        id="answer43"
+                      />
+                      <label
+                        class="form-check-label flex-grow-1 btn btn-check-answer justify-content-start"
+                        for="answer43"
+                      >
+                        <span class="fs-25 me-2">C</span>
+                        <div class="d-flex align-items-center answer">
+                          Acute glomerulonephritis 3
+                        </div>
+                      </label>
+                    </div>
+                    <div
+                      class="form-check d-flex align-items-center mb-2 flex-grow-1 p-0"
+                    >
+                      <input
+                        class="form-check-input form-check-ques-input btn-check me-2"
+                        type="radio"
+                        name="ques1Answer4"
+                        id="answer44"
+                      />
+                      <label
+                        class="form-check-label flex-grow-1 btn btn-check-answer justify-content-start"
+                        for="answer44"
+                      >
+                        <span class="fs-25 me-2">D</span>
+                        <div class="d-flex align-items-center answer">
+                          Acute glomerulonephritis 4
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bottim-info py-2 fw-light">
+            <div class="container">
+              <div
+                class="questions-actions d-flex align-items-center justify-content-between flex-wrap bg-dark-color"
+              >
+                <div class="d-flex align-items-center flex-wrap sm-100 flex-row">
+                  <button
+                    type="button"
+                    class="btn primary-bg-btn bg-transparent me-1 fs-25"
+                    data-bs-toggle="modal"
+                    data-bs-target="#themeModal"
+                  >
+                    <i class="fa-solid fa-gear"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn primary-bg-btn bg-transparent me-1 fs-25"
+                    data-bs-toggle="modal"
+                    data-bs-target="#filterQuestionsModal"
+                  >
+                    <i class="fa-solid fa-table-cells-large"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn primary-bg-btn bg-transparent me-1 fs-25"
+                    data-bs-toggle="modal"
+                    data-bs-target="#instructionModal"
+                  >
+                    <i class="fa-solid fa-circle-question"></i>
+                  </button>
+                  <button
+                    type="button"
+                    class="btn primary-bg-btn bg-transparent me-1 fs-25"
+                    data-bs-toggle="modal"
+                    data-bs-target="#calculatorModal"
+                  >
+                    <i class="fa-solid fa-calculator"></i>
+                  </button>
+                </div>
+
+                <!--theme Modal -->
+                <div
+                  class="modal fade"
+                  id="themeModal"
+                  tabindex="-1"
+                  aria-labelledby="themeModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                      <div
+                        class="modal-header position-relative z-index-2 border-0"
+                      >
+                        <h5 class="modal-title text-dark-color">
+                          Change Theme
+                        </h5>
+                        <button
+                          type="button"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                          class="text-dark-color btn h-auto fs-5"
+                        >
+                          <i class="fa-regular fa-circle-xmark"></i>
+                        </button>
+                      </div>
+                      <div class="top-circles"></div>
+                      <div class="modal-body">
+                        <div class="position-relative z-index-2">
+                          <div class="theme-switcher row">
+                            <div class="form-check col-md-6 flex-center mb-4">
+                              <input
+                                class="form-check-input btn-check btn-check-theme-input me-2"
+                                type="radio"
+                                name="theme"
+                                value="theme-1"
+                                id="theme1"
+                                checked
+                              />
+                              <label
+                                class="form-check-label flex-grow-1 btn btn-check-theme theme-1-colors"
+                                for="theme1"
+                              >
+                                Black text with white background
+                              </label>
+                            </div>
+                            <div class="form-check col-md-6 flex-center mb-4">
+                              <input
+                                class="form-check-input btn-check btn-check-theme-input me-2"
+                                type="radio"
+                                name="theme"
+                                value="theme-2"
+                                id="theme2"
+                              />
+                              <label
+                                class="form-check-label flex-grow-1 btn btn-check-theme theme-2-colors"
+                                for="theme2"
+                              >
+                                Blue text with gray background
+                              </label>
+                            </div>
+                            <div class="form-check col-md-6 flex-center mb-4">
+                              <input
+                                class="form-check-input btn-check btn-check-theme-input me-2"
+                                type="radio"
+                                name="theme"
+                                value="theme-3"
+                                id="theme3"
+                              />
+                              <label
+                                class="form-check-label flex-grow-1 btn btn-check-theme theme-3-colors"
+                                for="theme3"
+                              >
+                                Black text with yellow background
+                              </label>
+                            </div>
+                            <div class="form-check col-md-6 flex-center mb-4">
+                              <input
+                                class="form-check-input btn-check btn-check-theme-input me-2"
+                                type="radio"
+                                name="theme"
+                                value="theme-4"
+                                id="theme4"
+                              />
+                              <label
+                                class="form-check-label flex-grow-1 btn btn-check-theme theme-4-colors"
+                                for="theme4"
+                              >
+                                Dark gray text with gray background
+                              </label>
+                            </div>
+                            <div class="form-check col-md-6 flex-center mb-4">
+                              <input
+                                class="form-check-input btn-check btn-check-theme-input me-2"
+                                type="radio"
+                                name="theme"
+                                value="theme-5"
+                                id="theme5"
+                              />
+                              <label
+                                class="form-check-label flex-grow-1 btn btn-check-theme theme-5-colors"
+                                for="theme5"
+                              >
+                                Black text with pink background
+                              </label>
+                            </div>
+                            <div class="form-check col-md-6 flex-center mb-4">
+                              <input
+                                class="form-check-input btn-check btn-check-theme-input me-2"
+                                type="radio"
+                                name="theme"
+                                value="theme-6"
+                                id="theme6"
+                              />
+                              <label
+                                class="form-check-label flex-grow-1 btn btn-check-theme theme-6-colors"
+                                for="theme6"
+                              >
+                                White text with black background
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="bottom-circles"></div>
+                    </div>
+                  </div>
+                </div>
+                <!--filter Modal -->
+                <div
+                  class="modal fade"
+                  id="filterQuestionsModal"
+                  tabindex="-1"
+                  aria-labelledby="filterQuestionsModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div
+                        class="modal-header position-relative z-index-2 border-0"
+                      >
+                        <h5 class="modal-title text-dark-color fw-bold">
+                          Section review
+                        </h5>
+                        <button
+                          type="button"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                          class="text-dark-color btn h-auto fs-5"
+                        >
+                          <i class="fa-regular fa-circle-xmark"></i>
+                        </button>
+                      </div>
+                      <div class="modal-body pt-3 pb-0 fs-15 fw-bolder">
+                        <form class="position-relative z-index-2">
+                          <div
+                            class="mb-4 position-relative z-index-2 text-dark-color"
+                          >
+                            <h6 class="fw-bold mb-3 fs-14">Anesthesia MCQs</h6>
+                            <div class="form-check mb-3">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="filterOptions"
+                                id="filterVisited"
+                                value="visited"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="filterVisited"
+                                >Attempted</label
+                              >
+                            </div>
+                            <div class="form-check mb-3">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="filterOptions"
+                                id="filterUnresolved"
+                                value="unresolved"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="filterUnresolved"
+                                >Unattempted</label
+                              >
+                            </div>
+                            <div class="form-check mb-3">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="filterOptions"
+                                id="filterFlagged"
+                                value="flagged"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="filterFlagged"
+                                >Flagged</label
+                              >
+                            </div>
+                            <div id="filteredTabsContainer"></div>
+                            <button
+                              type="button"
+                              class="btn primary-bg-btn mt-3 mx-auto px-4 clear-filter"
+                            >
+                              clear
+                            </button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--instruction Modal -->
+                <div
+                  class="modal fade"
+                  id="instructionModal"
+                  tabindex="-1"
+                  aria-labelledby="instructionModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                      <div
+                        class="modal-header position-relative z-index-2 border-0"
+                      >
+                        <h5 class="modal-title text-dark-color fw-bold">
+                          Section review
+                        </h5>
+                        <button
+                          type="button"
+                          data-bs-dismiss="modal"
+                          aria-label="Close"
+                          class="text-dark-color btn h-auto fs-5"
+                        >
+                          <i class="fa-regular fa-circle-xmark"></i>
+                        </button>
+                      </div>
+                      <div class="top-circles"></div>
+                      <div class="modal-body py-3 fs-15 fw-bolder">
+                        <div
+                          class="row position-relative z-index-2 text-dark-color"
+                        >
+                          <div class="col-lg-6 mb-3">
+                            <i class="fa-solid fa-circle me-2 fs-6px"></i>
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap
+                            into electronic typesetting, remaining essentially
+                            unchanged. It was popularised in the 1960s with the
+                            release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing
+                            software like Aldus PageMaker including versions of
+                            Lorem Ipsum.
+                          </div>
+                          <div class="col-lg-6 mb-3 text-end" dir="rtl">
+                            <i class="fa-solid fa-circle me-2 fs-6px"></i>
+                            يُعد نص لوريم إيبسوم ببساطة نصًا شكليًا (بلا معنى)
+                            يُستخدم في صناعة الطباعة والتنضيد. وكان نص لوريم
+                            إيبسوم هو النص الشكلي القياسي في هذه الصناعة منذ
+                            القرن السادس عشر، عندما قام طابع غير معروف بأخذ معرض
+                            من الحروف وخلطها لعمل كتاب عينات حروف. وقد نجا النص
+                            ليس فقط لخمسة قرون، بل وأيضًا للقفزة إلى التنضيد
+                            الإلكتروني، وظل دون تغيير بشكل أساسي. وقد انتشر في
+                            الستينيات مع إصدار أوراق Letraset التي تحتوي على
+                            مقاطع من نص لوريم إيبسوم، ومؤخرًا مع برامج النشر
+                            المكتبي مثل Aldus PageMaker التي تتضمن إصدارات من نص
+                            لوريم إيبسوم.
+                          </div>
+                          <div class="col-lg-6 mb-3">
+                            <i class="fa-solid fa-circle me-2 fs-6px"></i>
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been the
+                            industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book. It has
+                          </div>
+                          <div class="col-lg-6 mb-3 text-end" dir="rtl">
+                            <i class="fa-solid fa-circle me-2 fs-6px"></i>
+                            يُعد نص لوريم إيبسوم ببساطة نصًا شكليًا (بلا معنى)
+                            يُستخدم في صناعة الطباعة والتنضيد. وكان نص لوريم
+                            إيبسوم هو النص الشكلي القياسي في هذه الصناعة منذ
+                            القرن السادس عشر، عندما قام طابع غير معروف بأخذ معرض
+                            من الحروف وخلطها لعمل كتاب عينات حروف. وقد نجا النص
+                            ليس فقط لخمسة قرون، بل وأيضًا للقفزة إلى التنضيد
+                            الإلكتروني، وظل دون تغيير بشكل أساسي. وقد انتشر في
+                            الستينيات مع إصدار أوراق
+                          </div>
+                        </div>
+                      </div>
+                      <div class="bottom-circles"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- calculator modal -->
+                <div
+                  class="modal fade"
+                  id="calculatorModal"
+                  tabindex="-1"
+                  aria-labelledby="calculatorModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="top-circles"></div>
+                      <div class="modal-body p-0 fs-15 fw-bolder">
+                        <div
+                          class="position-relative z-index-2 text-dark-color"
+                        >
+                          <div class="calc-card">
+                            <div class="flex-center">
+                              <button type="button" id="clear" value="">
+                                C
+                              </button>
+                              <div id="screen" class="screen">0</div>
+                            </div>
+                            <div class="buttons">
+                              <button type="button" class="digit" value="7">
+                                7
+                              </button>
+                              <button type="button" class="digit" value="8">
+                                8
+                              </button>
+                              <button type="button" class="digit" value="9">
+                                9
+                              </button>
+                              <button
+                                type="button"
+                                class="operator"
+                                id="divide"
+                                value="/"
+                              >
+                                &#247;
+                              </button>
+                              <button type="button" class="digit" value="4">
+                                4
+                              </button>
+                              <button type="button" class="digit" value="5">
+                                5
+                              </button>
+                              <button type="button" class="digit" value="6">
+                                6
+                              </button>
+                              <button
+                                type="button"
+                                class="operator"
+                                id="minus"
+                                value="-"
+                              >
+                                -
+                              </button>
+                              <button type="button" class="digit" value="1">
+                                1
+                              </button>
+                              <button type="button" class="digit" value="2">
+                                2
+                              </button>
+                              <button type="button" class="digit" value="3">
+                                3
+                              </button>
+                              <button
+                                type="button"
+                                class="operator"
+                                id="plus"
+                                value="+"
+                              >
+                                +
+                              </button>
+                              <button type="button" class="digit" value="0">
+                                0
+                              </button>
+                              <button type="button" class="digit" value=".">
+                                .
+                              </button>
+                              <button type="button" id="equal">=</button>
+                              <button
+                                type="button"
+                                class="operator"
+                                id="multiply"
+                                value="*"
+                              >
+                                x
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="bottom-circles"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center flex-wrap sm-100 flex-row">
+                  <button
+                    type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#commentModal"
+                    class="btn primary-bg-btn me-3"
+                  >
+                    <i class="fa-solid fa-comment"></i>
+                  </button>
+                  <!-- comment Modal -->
+                  <div
+                    class="modal fade"
+                    id="commentModal"
+                    tabindex="-1"
+                    aria-labelledby="commentModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog modal-dialog-centered">
+                      <div class="modal-content">
+                        <div class="top-circles"></div>
+                        <div class="modal-body">
+                          <form action="" class="position-relative z-index-2">
+                            <div class="mb-4 position-relative z-index-2">
+                              <label
+                                for="comment"
+                                class="form-label text-dark-color text-dark-color"
+                                >Add Comment</label
+                              >
+                              <textarea
+                                class="form-control limited-textarea bg-menuBg border border-placeholder h-auto resize-none"
+                                id="comment"
+                                rows="6"
+                                maxlength="500"
+                                placeholder="Enter text here.."
+                              ></textarea>
+                              <div class="fs-13 limit-text text-end my-2">
+                                <span id="current">0</span>
+                                <span id="maximum">/ 500</span>
+                              </div>
+                            </div>
+                            <button
+                              type="submit"
+                              class="btn btn-primary w-100 mx-auto with-shadow"
+                            >
+                              Add
+                            </button>
+                          </form>
+                        </div>
+                        <div class="bottom-circles"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="btn primary-bg-btn me-3 add-report"
+                  >
+                    <i class="fa-solid fa-flag"></i>
+                  </button>
+                  <button
+                    type="button"
+                    id="backBtn"
+                    class="btn primary-bg-btn me-3"
+                  >
+                    <i class="fa-solid fa-chevron-left me-2"></i>
+                    Back
+                  </button>
+                  <button type="button" id="nextBtn" class="btn primary-bg-btn">
+                    Next
+                    <i class="fa-solid fa-chevron-right ms-2"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <!-- end page unique content -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap 5 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/examScript.js"></script>
+  </body>
+</html>
