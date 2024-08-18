@@ -190,7 +190,6 @@ $(document).ready(function () {
   let touchTimeout;
 
   $(document).on("touchstart", ".btn-check-answer", function (event) {
-    alert("hello");
     const $this = $(this);
 
     touchTimeout = setTimeout(function () {
