@@ -295,18 +295,23 @@ $(document).ready(function () {
 
   // ============================================================ //
   // highlight selected text
-  document.addEventListener("mouseup", function () {
-    var selection = window.getSelection();
-    if (selection.toString().length > 0) {
-      var range = selection.getRangeAt(0);
-      var commonAncestorContainer = range.commonAncestorContainer;
+  function addHighlightListener(eventType) {
+    document.addEventListener(eventType, function (event) {
+      var selection = window.getSelection();
+      if (selection.toString().length > 0) {
+        var range = selection.getRangeAt(0);
+        var commonAncestorContainer = range.commonAncestorContainer;
 
-      // Check if the common ancestor is within a .question-block
-      if ($(commonAncestorContainer).closest(".question-block").length > 0) {
-        highlightSelection(selection);
+        // Check if the common ancestor is within a .question-block
+        if ($(commonAncestorContainer).closest(".question-block").length > 0) {
+          highlightSelection(selection);
+        }
       }
-    }
-  });
+    });
+  }
+
+  addHighlightListener("mouseup");
+  addHighlightListener("touchend");
 
   function highlightSelection(selection) {
     var range = selection.getRangeAt(0);
