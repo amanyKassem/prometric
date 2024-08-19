@@ -194,7 +194,7 @@ $(document).ready(function () {
 
     touchTimeout = setTimeout(function () {
       $this.toggleClass("strike-through");
-    }, 500); 
+    }, 3000); 
   });
 
   $(document).on("touchend touchmove", ".btn-check-answer", function (event) {

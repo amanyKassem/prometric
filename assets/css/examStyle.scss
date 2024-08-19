@@ -315,7 +315,7 @@ $themes: (
 }
 
 .strike-through {
-  text-decoration: line-through;
+  text-decoration: line-through !important;
 }
 .highlight {
   background-color: yellow;
