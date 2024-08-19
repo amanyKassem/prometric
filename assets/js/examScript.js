@@ -177,6 +177,16 @@ $(document).ready(function () {
 
   showTab(currentTab);
 
+  // ============================================================ //
+
+  // Handle right-click on the label (Desktop)
+  // Determine the platform
+  const isAndroid = /Android/i.test(navigator.userAgent);
+  const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  // Set the timeout duration based on the platform
+  const longPressDuration = isAndroid ? 3000 : 500; // Adjust the values as needed
+
   // Handle right-click on the label (Desktop)
   $(document).on("contextmenu", ".btn-check-answer", function (event) {
     event.preventDefault(); // Prevent the default right-click menu
@@ -194,7 +204,7 @@ $(document).ready(function () {
 
     touchTimeout = setTimeout(function () {
       $this.toggleClass("strike-through");
-    }, 3000); 
+    }, longPressDuration);
   });
 
   $(document).on("touchend touchmove", ".btn-check-answer", function (event) {
@@ -203,6 +213,7 @@ $(document).ready(function () {
 
   // Handle left-click on the radio button
   $(document).on("click", ".form-check-ques-input", function () {
+    // Add line-through style to the currently selected option (if it was right-clicked or long-pressed)
     var selectedLabel = $(this).next(".btn-check-answer");
     if (selectedLabel.hasClass("strike-through")) {
       selectedLabel.removeClass("strike-through");
