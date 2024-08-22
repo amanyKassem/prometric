@@ -528,8 +528,8 @@
                 </div>
               </div>
               <button
-                type="submit"
-                class="btn btn-primary mb-4 fw-500 mt-3 mb-4 with-shadow w-48 mx-auto"
+                type="button"
+                class="btn btn-primary mb-4 fw-500 mt-3 mb-4 with-shadow w-48 mx-auto send-message"
               >
                 Send Massege
               </button>
@@ -540,6 +540,33 @@
           </form>
         </div>
       </div>
+
+      <div
+        class="modal fade"
+        id="successModal"
+        tabindex="-1"
+        aria-labelledby="successModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="top-circles"></div>
+            <div class="modal-body">
+              <div class="position-relative z-index-2">
+                <img
+                  src="assets/img/check.svg"
+                  alt="check"
+                  class="d-block mb-4 mx-auto w-25 transfrom-180-reverse"
+                />
+                <h4 class="text-dark mb-3 lh-base text-center">
+                  Your message has been sent successfully.
+              </div>
+            </div>
+            <div class="bottom-circles"></div>
+          </div>
+        </div>
+      </div>
+
       <!-- end contact content -->
     </main>
     <!-- end page unique content -->
@@ -743,5 +770,16 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script src="assets/js/scripts.js"></script>
+    <script>
+       $(document).ready(function () {
+        // Show modal when button is clicked
+        $(".send-message").click(function () {
+          $("#successModal").modal("show");
+          setTimeout(function () {
+            $("#successModal").modal("hide");
+          }, 2000);
+        });
+      });
+    </script>
   </body>
 </html>

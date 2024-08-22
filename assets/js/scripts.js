@@ -1,6 +1,6 @@
 // loader js
 $(window).on("load", function () {
-  $(".loader-container").fadeOut(4500);
+  $(".loader-container").fadeOut(500);
   $("body").css("overflow-y", "auto");
 });
 

@@ -113,12 +113,18 @@ $themes: (
   color: var(--dark-color) !important;
 }
 
+.text-primary-color {
+  color: var(--primary-color) !important;
+}
+
 .btns {
   .btn {
     width: 49%;
   }
 }
-
+.exam-form {
+  min-height: calc(100vh - 129px);
+}
 .exam-content {
   min-height: 100vh;
   .top-info,
@@ -185,7 +191,7 @@ $themes: (
     background-color: var(--primary-color);
     margin-bottom: 10px;
     position: relative;
-    cursor: context-menu;
+    // cursor: context-menu;
     &.active {
       background-color: var(--primary-color) !important;
       width: 92%;
@@ -277,6 +283,16 @@ $themes: (
     padding: 7px 15px;
     flex-grow: 1;
   }
+  &.wrong-answer {
+    span {
+      color: #f00;
+    }
+    .answer {
+      background-color: #ffd5d5;
+      border-color: #f00;
+      color: #f00;
+    }
+  }
 }
 
 .form-check-ques-input:checked + .btn,
@@ -321,6 +337,9 @@ $themes: (
   background-color: yellow;
 }
 
+.explaination-block , .filter-block{
+  display: none;
+}
 .calc-card {
   width: 100%;
   padding: 15px 0;
@@ -426,12 +445,20 @@ $themes: (
   #minus,
   #plus,
   #divide,
-  #multiply {
+  #multiply,
+  #log {
     background-color: #777;
     border: 1px solid #666;
     -moz-box-shadow: inset 0 0 10px #aaa, inset 0px 1px #999, 0 1px 1px #aaa;
     -webkit-box-shadow: inset 0 0 10px #aaa, inset 0px 1px #999, 0 1px 1px #aaa;
     box-shadow: inset 0 0 10px #aaa, inset 0px 1px #999, 0 1px 1px #aaa;
+  }
+  #log {
+    width: 284px;
+  }
+  .buttons,
+  .top {
+    width: 300px;
   }
   #minus:active,
   #plus:active,
@@ -490,6 +517,9 @@ $themes: (
     }
     button {
       width: 60px;
+    }
+    #log {
+      width: 260px;
     }
   }
 }

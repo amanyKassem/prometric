@@ -3348,8 +3348,16 @@ html[lang=ar] #wpp-fix .wpp-link + .contact-wpp {
   color: var(--dark-color) !important;
 }
 
+.text-primary-color {
+  color: var(--primary-color) !important;
+}
+
 .btns .btn {
   width: 49%;
+}
+
+.exam-form {
+  min-height: calc(100vh - 129px);
 }
 
 .exam-content {
@@ -3430,7 +3438,6 @@ html[lang=ar] #wpp-fix .wpp-link + .contact-wpp {
   background-color: var(--primary-color);
   margin-bottom: 10px;
   position: relative;
-  cursor: context-menu;
 }
 .nav-pills .nav-link.active {
   background-color: var(--primary-color) !important;
@@ -3530,6 +3537,14 @@ html[lang=ar] #wpp-fix .wpp-link + .contact-wpp {
   padding: 7px 15px;
   flex-grow: 1;
 }
+.btn-check-answer.wrong-answer span {
+  color: #f00;
+}
+.btn-check-answer.wrong-answer .answer {
+  background-color: #ffd5d5;
+  border-color: #f00;
+  color: #f00;
+}
 
 .form-check-ques-input:checked + .btn,
 .btn.active,
@@ -3573,6 +3588,10 @@ html[lang=ar] #wpp-fix .wpp-link + .contact-wpp {
 
 .highlight {
   background-color: yellow;
+}
+
+.explaination-block, .filter-block {
+  display: none;
 }
 
 .calc-card {
@@ -3653,10 +3672,18 @@ html[lang=ar] #wpp-fix .wpp-link + .contact-wpp {
 .calc-card #minus,
 .calc-card #plus,
 .calc-card #divide,
-.calc-card #multiply {
+.calc-card #multiply,
+.calc-card #log {
   background-color: #777;
   border: 1px solid #666;
   box-shadow: inset 0 0 10px #aaa, inset 0px 1px #999, 0 1px 1px #aaa;
+}
+.calc-card #log {
+  width: 284px;
+}
+.calc-card .buttons,
+.calc-card .top {
+  width: 300px;
 }
 .calc-card #minus:active,
 .calc-card #plus:active,
@@ -3706,5 +3733,8 @@ html[lang=ar] #wpp-fix .wpp-link + .contact-wpp {
   }
   .calc-card button {
     width: 60px;
+  }
+  .calc-card #log {
+    width: 260px;
   }
 }/*# sourceMappingURL=examStyle.css.map */

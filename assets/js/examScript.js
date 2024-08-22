@@ -35,7 +35,7 @@ $(document).ready(function () {
 
   // ============================================================ //
   // section break timer count down
-  $("#finishSectionModal , #filterQuestionsModal").modal({
+  $("#finishSectionModal").modal({
     backdrop: "static",
     keyboard: false,
   });
@@ -96,7 +96,6 @@ $(document).ready(function () {
 
   // ============================================================ //
 
-  //   tabs functionality
   // Tabs functionality
 
   function updateTabClasses() {
@@ -144,6 +143,7 @@ $(document).ready(function () {
   var tabs = $("#v-pills-tab .nav-link");
   var tabContents = $("#v-pills-tabContent .tab-pane");
 
+  // Function to show the tab based on the index
   function showTab(index) {
     tabs.removeClass("active");
     tabContents.removeClass("show active");
@@ -151,6 +151,7 @@ $(document).ready(function () {
     $(tabs[index]).addClass("active");
     $(tabContents[index]).addClass("show active");
 
+    // Update back and next buttons
     $("#backBtn").prop("disabled", index === 0);
     $("#nextBtn").html(
       index === tabs.length - 1
@@ -159,15 +160,23 @@ $(document).ready(function () {
     );
   }
 
+  // Event listener for tab clicks
+  tabs.click(function () {
+    currentTab = tabs.index(this); // Update currentTab to the clicked tab index
+    showTab(currentTab); // Show the clicked tab
+  });
+
+  // Event listener for the Next button
   $("#nextBtn").click(function () {
     if (currentTab < tabs.length - 1) {
       currentTab++;
       showTab(currentTab);
     } else {
-      alert("Form submitted!");
+      $("#scoreModal").modal("show");
     }
   });
 
+  // Event listener for the Back button
   $("#backBtn").click(function () {
     if (currentTab > 0) {
       currentTab--;
@@ -175,6 +184,7 @@ $(document).ready(function () {
     }
   });
 
+  // Initial call to display the first tab
   showTab(currentTab);
 
   // ============================================================ //
@@ -350,50 +360,47 @@ $(document).ready(function () {
   // ============================================================ //
 
   // calculator
-
   function calculator() {
     var sum = "";
-    var len;
-    //var arr= [];
-    var operators = ["+", "-", "*", "/"];
     var inputVal = document.getElementById("screen");
+  
     $(".buttons .digit").on("click", function () {
       var num = $(this).attr("value");
       sum += num;
-      //arr.push(num);
       $("#screen").html(sum);
-      len = inputVal.innerHTML.split("");
-      console.log(len);
-      //console.log(arr);
     });
+  
     $(".buttons .operator").on("click", function (e) {
       e.preventDefault();
       var ops = $(this).attr("value");
-      sum += ops;
-      //arr.push(num);
-      $("#screen").html(sum);
-      len = inputVal.innerHTML;
-      if (/(?=(\D{2}))/g.test(sum)) {
-        sum = len.substring(0, len.length - 1);
+  
+      if (ops === "log") {
+        if (sum) {
+          var result = Math.log10(parseFloat(sum));
+          sum = result % 1 !== 0 ? result.toFixed(2) : result.toString();
+          $("#screen").html(sum);
+        }
+      } else {
+        sum += ops;
         $("#screen").html(sum);
+        if (/(?=(\D{2}))/g.test(sum)) {
+          sum = sum.substring(0, sum.length - 1);
+          $("#screen").html(sum);
+        }
       }
-      //len = inputVal.innerHTML.split("");
-      //console.log(len);
-
-      //console.log(arr);
     });
-
+  
     $("#equal").on("click", function () {
       var total = eval(sum);
-      //$("#screen").attr('value', total);
-      $("#screen").html(total % 1 != 0 ? total.toFixed(2) : total);
+      $("#screen").html(total % 1 !== 0 ? total.toFixed(2) : total);
     });
-
+  
     $("#clear").on("click", function () {
       sum = "";
-      arr = [];
       $("#screen").html(0);
     });
   }
+  
   calculator();
+  
 });
