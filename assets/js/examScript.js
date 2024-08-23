@@ -312,10 +312,17 @@ $(document).ready(function () {
 
         // Append the filtered tab
         if (shouldAppend) {
+          const tabId = $(this).attr("id"); // Get the ID of the corresponding tab
           filteredTabsContainer.append(
-            `<div class="filtered-tab ${filterClass} mt-2">${tabNumber}${flagIcon}</div>`
+            `<div class="filtered-tab ${filterClass} mt-2 cursor-pointer" data-tab-id="${tabId}">${tabNumber}${flagIcon}</div>`
           );
         }
+      });
+
+      // Add click event listener to the filtered tabs
+      $(".filtered-tab").on("click", function () {
+        const tabId = $(this).data("tab-id");
+        $(`#${tabId}`).click(); // Trigger click on the corresponding tab
       });
     }
   });
@@ -363,17 +370,17 @@ $(document).ready(function () {
   function calculator() {
     var sum = "";
     var inputVal = document.getElementById("screen");
-  
+
     $(".buttons .digit").on("click", function () {
       var num = $(this).attr("value");
       sum += num;
       $("#screen").html(sum);
     });
-  
+
     $(".buttons .operator").on("click", function (e) {
       e.preventDefault();
       var ops = $(this).attr("value");
-  
+
       if (ops === "log") {
         if (sum) {
           var result = Math.log10(parseFloat(sum));
@@ -389,18 +396,17 @@ $(document).ready(function () {
         }
       }
     });
-  
+
     $("#equal").on("click", function () {
       var total = eval(sum);
       $("#screen").html(total % 1 !== 0 ? total.toFixed(2) : total);
     });
-  
+
     $("#clear").on("click", function () {
       sum = "";
       $("#screen").html(0);
     });
   }
-  
+
   calculator();
-  
 });
