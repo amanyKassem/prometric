@@ -154,7 +154,7 @@
           > -->
 
           <!-- if user logged in -->
-          <a href="profile.html" class="d-flex align-items-center user">
+          <a href="profile.html" class="d-flex align-items-center user active">
             <div class="flex-shrink-0">
               <img
                 src="assets/img/user.png"
@@ -182,7 +182,10 @@
           > -->
 
             <!-- if user logged in -->
-            <a href="profile.html" class="d-flex align-items-center user">
+            <a
+              href="profile.html"
+              class="d-flex align-items-center user active"
+            >
               <div class="flex-shrink-0">
                 <img
                   src="assets/img/user.png"
@@ -227,7 +230,6 @@
                   <li class="mt-3 bg-menuBg shadow p-2">
                     <a
                       href="notiDetails.html"
-                      href="#"
                       class="d-flex align-items-center flex-column flex-md-row"
                     >
                       <div class="flex-shrink-0">
@@ -256,7 +258,6 @@
                   <li class="mt-3 bg-menuBg shadow p-2">
                     <a
                       href="notiDetails.html"
-                      href="#"
                       class="d-flex align-items-center flex-column flex-md-row"
                     >
                       <div class="flex-shrink-0">
@@ -285,7 +286,6 @@
                   <li class="mt-3 bg-menuBg shadow p-2">
                     <a
                       href="notiDetails.html"
-                      href="#"
                       class="d-flex align-items-center flex-column flex-md-row"
                     >
                       <div class="flex-shrink-0">
@@ -368,7 +368,7 @@
             <li>
               <a href="faq.html">FAQs</a>
             </li>
-            <li class="active">
+            <li>
               <a href="contact.html">Contact Us</a>
             </li>
             <li>
@@ -382,192 +382,232 @@
 
     <!-- start page unique content -->
     <main>
-      <!-- start contact header -->
-
-      <header class="py-4 pt-0">
-        <div class="categories-header contact-header">
-          <div class="container">
-            <div
-              class="d-flex flex-column align-items-center mx-auto custom-w-p text-white text-center"
-              data-aos="zoom-in"
-            >
-              <h1 class="fw-bold mb-2 lh-base">Get In Touch</h1>
-              <p class="fw-500 fs-3 mb-0">
-                If you have questions about our services or our website and
-                request them, we are here to help!
-              </p>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <!-- end contact header -->
-
-      <!-- start contact content -->
-      <div class="contact-form w-75 mx-auto">
+      <!-- start profile -->
+      <div class="profile">
         <div class="container">
-          <form action="">
-            <div class="row justify-content-center mb-2">
-              <div
-                class="col-md-6 col-xl-4 mb-4"
-                data-aos="fade-up"
-                data-aos-delay="100"
-                data-aos-offset="0"
-              >
-                <a
-                  href="tel:+2010000000"
-                  class="d-flex align-items-center justify-content-center contact-info"
-                >
-                  <div class="flex-shrink-0 info-icon">
-                    <i class="fa-solid fa-phone-volume"></i>
-                  </div>
-                  <div class="ms-2 text-darkPrimary">
-                    <h5 class="fs-5 fw-500 mb-1">Phone Number</h5>
-                    <span class="fs-18 text-break">+2010000000</span>
-                  </div>
-                </a>
-              </div>
-              <div
-                class="col-md-6 col-xl-4 mb-4"
-                data-aos="fade-up"
-                data-aos-delay="300"
-                data-aos-offset="0"
-              >
-                <a
-                  href="https://wa.me/+2010000000"
-                  target="_blank"
-                  class="d-flex align-items-center justify-content-center contact-info"
-                >
-                  <div class="flex-shrink-0 info-icon">
-                    <i class="fa-brands fa-whatsapp"></i>
-                  </div>
-                  <div class="ms-2 text-darkPrimary">
-                    <h5 class="fs-5 fw-500 mb-1">WhatsApp Number</h5>
-                    <span class="fs-18 text-break">+2010000000</span>
-                  </div>
-                </a>
-              </div>
-              <div
-                class="col-md-6 col-xl-4 mb-4"
-                data-aos="fade-up"
-                data-aos-delay="500"
-                data-aos-offset="0"
-              >
-                <a
-                  href="mailto:prometricexam30@gmail.com"
-                  class="d-flex align-items-center justify-content-center contact-info"
-                >
-                  <div class="flex-shrink-0 info-icon">
-                    <i class="fa-solid fa-envelope"></i>
-                  </div>
-                  <div class="ms-2 text-darkPrimary">
-                    <h5 class="fs-5 fw-500 mb-1">Email Adress</h5>
-                    <span class="fs-18 text-break"
-                      >prometricexam30@gmail.com</span
-                    >
-                  </div>
-                </a>
-              </div>
+          <div class="d-flex flex-column flex-lg-row">
+            <div class="side-menu">
+              <ul class="links">
+                <li>
+                  <a
+                    href="settings.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/user-gray.svg"
+                      alt="user"
+                      class="default-img mb-1"
+                    />
+                    <img
+                      src="assets/img/user-active.svg"
+                      alt="user"
+                      class="hover-img mb-1"
+                    />
+                    Profile Settings
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="wallet.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/wallet-gray.svg"
+                      alt="wallet"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/wallet-active.svg"
+                      alt="wallet"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    Wallet
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="messages.html"
+                    class="d-flex flex-column text-center position-relative fs-14 active"
+                  >
+                    <img
+                      src="assets/img/message-gray.svg"
+                      alt="message"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/message-active.svg"
+                      alt="message"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    Messages
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="invitation.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/invitation-gray.svg"
+                      alt="invitation"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/invitation-active.svg"
+                      alt="invitation"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    Invitation Code
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="profile.html#chapters"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/chapters-gray.svg"
+                      alt="chapters"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/chapters-active.svg"
+                      alt="chapters"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    Current Chapters
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="profile.html#subscription"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/subscribe-gray.svg"
+                      alt="subscription"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/subscribe-active.svg"
+                      alt="subscription"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    My Subscription
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="payMethod.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/cards-gray.svg"
+                      alt="payment"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/cards-active.svg"
+                      alt="payment"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    Payment Method
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="login.html"
+                    class="d-flex flex-column text-center position-relative fs-14"
+                  >
+                    <img
+                      src="assets/img/logout-gray.svg"
+                      alt="logout"
+                      class="default-img transfrom-180-reverse mb-1"
+                    />
+                    <img
+                      src="assets/img/logout-active.svg"
+                      alt="logout"
+                      class="hover-img transfrom-180-reverse mb-1"
+                    />
+                    Log Out
+                  </a>
+                </li>
+              </ul>
             </div>
-            <div class="w-75 mx-auto">
-              <h4 class="fw-500 mb-3">Send Massege</h4>
-              <p class="fs-18 mb-4 text-grayClr">
-                You can fill out the form directly below this text, with your
-                name, email, subject, and message.
-              </p>
-              <div class="row">
-                <div class="col-xl-6">
-                  <div class="mb-4">
-                    <input
-                      type="text"
-                      class="form-control border border-placeholder"
-                      id="name"
-                      placeholder="Your Name"
-                    />
-                  </div>
-                </div>
-                <div class="col-xl-6">
-                  <div class="mb-4">
-                    <input
-                      type="tel"
-                      class="form-control border border-placeholder"
-                      id="phone"
-                      placeholder="Phone Number"
-                    />
-                  </div>
-                </div>
-                <div class="col-xl-6">
-                  <div class="mb-4">
-                    <input
-                      type="email"
-                      class="form-control border border-placeholder"
-                      id="email"
-                      placeholder="Email Adress"
-                    />
-                  </div>
-                </div>
-                <div class="col-xl-6">
-                  <div class="mb-4">
-                    <input
-                      type="text"
-                      class="form-control border border-placeholder"
-                      id="subject"
-                      placeholder="Subject"
-                    />
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="mb-4">
-                    <textarea
-                      class="form-control border border-placeholder h-auto resize-none"
-                      id="Massege"
-                      rows="4"
-                      placeholder="Massege"
-                    ></textarea>
-                  </div>
-                </div>
-              </div>
-              <button
-                type="button"
-                class="btn btn-primary mb-4 fw-500 mt-3 mb-4 with-shadow w-48 mx-auto send-message"
-              >
-                Send Massege
-              </button>
-              <a href="https://wa.me/+020100000000" target="_blank" class="hvr-primary fw-500 w-fit mx-auto"
-                >Chat with Consultant</a
-              >
-            </div>
-          </form>
-        </div>
-      </div>
+            <div class="link-content flex-grow-1">
+              <div class="settings-content">
+                <h5 class="fs-5 mb-4">
+                  <img
+                    src="assets/img/message-active.svg"
+                    alt="message"
+                    class="black-img me-1"
+                    width="27"
+                  />
+                  Your Massage
+                </h5>
 
-      <div
-        class="modal fade"
-        id="successModal"
-        tabindex="-1"
-        aria-labelledby="successModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="top-circles"></div>
-            <div class="modal-body">
-              <div class="position-relative z-index-2">
-                <img
-                  src="assets/img/check.svg"
-                  alt="check"
-                  class="d-block mb-4 mx-auto w-25 success-img transfrom-180-reverse"
-                />
-                <h4 class="text-dark mb-3 lh-base text-center">
-                  Your message has been sent successfully.
+                <div class="notifications">
+                  <span>Latest:12/5/2024</span>
+
+                  <ul>
+                    <li
+                      class="mt-3 bg-menuBg p-2 d-flex align-items-center align-items-md-start flex-column flex-md-row"
+                      data-aos="fade-in"
+                      data-aos-offset="0"
+                    >
+                      <div
+                        class="flex-shrink-0 noti-img bg-lightPrimary3 flex-center mb-3 mb-md-0"
+                      >
+                        <img
+                          src="assets/img/logo.svg"
+                          alt="prometric"
+                          class="logo-img"
+                        />
+                      </div>
+                      <div class="flex-grow-1 ms-2">
+                        <div
+                          class="d-flex justify-content-between align-items-center flex-wrap"
+                        >
+                          <h5 class="text-dark fw-bold mb-2 me-3">
+                            Message title
+                          </h5>
+                          <span class="text-lightDark fs-15 mb-2"
+                            >12/5/2024</span
+                          >
+                        </div>
+                        <p class="text-dark fs-15">
+                          New job details. You can view the full details in the
+                          attached link New job details. You can view the full
+                          details in the attached link New job details. You can
+                          view the full details in the attached link New job
+                          details. You can view the full details in the attached
+                          link New job details. You can view the full details in
+                          the attached link New job details. You can view the
+                          full details in the attached link New job details. You
+                          can view the full details in the attached link New job
+                          details. You can view the full details in the attached
+                          link New job details. You can view the full details in
+                          the attached link New job details. You can view the
+                          full details in the attached link New job details. You
+                          can view the full details in the attached link New job
+                          details. You can view the full details in the attached
+                          link New job details. You can view the full details in
+                          the attached link New job details. You can view the
+                          full details in the attached link
+                          <a href="#" class="hvr-primary d-inline-flex"
+                            >http//:www.hskhfksjhfkjfsfs.eg</a
+                          >
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="bottom-circles"></div>
           </div>
         </div>
       </div>
-
-      <!-- end contact content -->
+      <!-- end profile -->
     </main>
     <!-- end page unique content -->
 
@@ -580,7 +620,7 @@
           >
             <img
               src="assets/img/footerLogo.svg"
-              class="footer-logo mb-3"
+              class="footer-logo"
               alt="logo"
             />
             <h2 class="fw-bold mb-2 lh-base w-75">
@@ -594,13 +634,11 @@
                 <h5 class="footer-title mb-3">Quick links</h5>
                 <ul class="footer-links">
                   <li class="mb-1"><a href="index.html">Home</a></li>
-                  <li class="mb-1"><a href="plans.html">Plans</a></li>
                   <li class="mb-1">
-                    <a href="blog.html">Blog</a>
+                    <a href="plans.html">Plans</a>
                   </li>
-                  <li class="mb-1">
-                    <a href="syllabus.html">Syllabus</a>
-                  </li>
+                  <li class="mb-1"><a href="blog.html">Blog</a></li>
+                  <li class="mb-1"><a href="syllabus.html">Syllabus</a></li>
                   <li class="mb-1"><a href="refer.html">Refer & Earn</a></li>
                 </ul>
               </div>
@@ -637,12 +675,8 @@
                 <h5 class="footer-title mb-3">About</h5>
                 <ul class="footer-links">
                   <li class="mb-1"><a href="about.html">About us</a></li>
-                  <li class="mb-1">
-                    <a class="active" href="contact.html">Contact us</a>
-                  </li>
-                  <li class="mb-1">
-                    <a href="faq.html">FAQs</a>
-                  </li>
+                  <li class="mb-1"><a href="contact.html">Contact us</a></li>
+                  <li class="mb-1"><a href="faq.html">FAQs</a></li>
                   <li class="mb-1">
                     <a href="refund.html">Refund policy</a>
                   </li>
@@ -770,16 +804,5 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script src="assets/js/scripts.js"></script>
-    <script>
-       $(document).ready(function () {
-        // Show modal when button is clicked
-        $(".send-message").click(function () {
-          $("#successModal").modal("show");
-          setTimeout(function () {
-            $("#successModal").modal("hide");
-          }, 2000);
-        });
-      });
-    </script>
   </body>
 </html>

@@ -405,6 +405,7 @@ html[dir="rtl"] {
     font-weight: 500;
     .img-container {
       padding: 6px;
+      @extend .general-transition;
       @include mixins.shape(60px);
       @extend .flex-center;
       @include mixins.prefix(
@@ -420,6 +421,9 @@ html[dir="rtl"] {
     &:hover {
       color: #fff;
       background-color: map_get(colors.$theme-colors, primary);
+      .img-container {
+        transform: rotateY(360deg);
+      }
     }
   }
 }

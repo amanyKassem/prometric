@@ -1399,6 +1399,12 @@ html[lang="ar"] {
     width: 100% !important;
   }
 
+  .w-25{
+    &.success-img{
+      width: 100px !important;
+    }
+  }
+
   .modal {
     .w-50 {
       width: 60% !important;

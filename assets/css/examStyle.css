@@ -2967,6 +2967,9 @@ html[lang=ar] #wpp-fix .wpp-link + .contact-wpp {
   .w-25 {
     width: 100% !important;
   }
+  .w-25.success-img {
+    width: 100px !important;
+  }
   .modal .w-50 {
     width: 60% !important;
   }

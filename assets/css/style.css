@@ -2187,7 +2187,7 @@ h2 {
   cursor: pointer;
 }
 
-.general-transition, nav, nav .menu .menu-links li a, .dropdown-content ul li, .user h5, .statistic-item, .exam-categories .category, .some-exams .exam-block .bottom-info .first-info, .some-exams .exam-block .bottom-info .last-info, .top-info .image-container, .plan, .plan .number, .plan .price p, .page-link, .blog-categories-list li a .arrow, .post h5, .syllabus-tabs .nav-link, .refer-content .refer-profit, .contact-form .contact-info .info-icon, .feature .feat-icon, .bubble, .pay-check, .btn-check-gender, .toggle-pass, .pay-content .pay-method-check .check, .remove-result, #wpp-fix.shake .wpp-link::before, #wpp-fix .wpp-link + .contact-wpp .contacting-info, #wpp-fix .wpp-link + .contact-wpp, #wpp-fix .wpp-link, #scroll-top, .top-bar, .select2-results__option--selectable, .form-check-input, .input-group-text.icon, a,
+.general-transition, nav, nav .menu .menu-links li a, .dropdown-content ul li, .user h5, .statistic-item, .exam-categories .category, .exam-categories .category .img-container, .some-exams .exam-block .bottom-info .first-info, .some-exams .exam-block .bottom-info .last-info, .top-info .image-container, .plan, .plan .number, .plan .price p, .page-link, .blog-categories-list li a .arrow, .post h5, .syllabus-tabs .nav-link, .refer-content .refer-profit, .contact-form .contact-info .info-icon, .feature .feat-icon, .bubble, .pay-check, .btn-check-gender, .toggle-pass, .pay-content .pay-method-check .check, .remove-result, #wpp-fix.shake .wpp-link::before, #wpp-fix .wpp-link + .contact-wpp .contacting-info, #wpp-fix .wpp-link + .contact-wpp, #wpp-fix .wpp-link, #scroll-top, .top-bar, .select2-results__option--selectable, .form-check-input, .input-group-text.icon, a,
 button,
 img {
   transition: all 0.5s ease-in-out !important;
@@ -2968,6 +2968,9 @@ html[lang=ar] #wpp-fix .wpp-link + .contact-wpp {
   .w-25 {
     width: 100% !important;
   }
+  .w-25.success-img {
+    width: 100px !important;
+  }
   .modal .w-50 {
     width: 60% !important;
   }
@@ -3636,6 +3639,9 @@ html[dir=rtl] .statistic-item:hover {
 .exam-categories .category:hover {
   color: #fff;
   background-color: #2ecc9b;
+}
+.exam-categories .category:hover .img-container {
+  transform: rotateY(360deg);
 }
 
 .ads .ads-carusel .item {
